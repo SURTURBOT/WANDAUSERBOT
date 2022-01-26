@@ -11,10 +11,10 @@ from userbot.Config import Config
 from .utils import load_abuse, load_addons, load_module, start_assistant, start_spam
 
 l2 = Config.SUDO_HANDLER
-LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
+THANOSBOT_PIC = "https://telegra.ph/file/bdf457aee34ed8791c150.jpg"
 l1 = Config.HANDLER
 
-perf = "[ Pro Lêɠêɳ̃dẞø† ]"
+perf = "[ Pro THANOSBOT ]"
 
 onbot = "start - Check if I am Alive \nping - Pong! \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
 
@@ -32,28 +32,28 @@ plc = os.environ.get("PLUGIN", None)
 async def hekp():
     try:
         os.environ[
-            "PRO_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By PRO-LEGENDBOT"
+            "THANOS_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By PRO-THANOSBOT"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
-                LEGEND_PIC,
-                caption=f"#Start\nPro-LegendBot Has Been Successfully Deployed \nClick Here ~ {Config.BOT_USERNAME}\nAny Query ~ @LegendBot_Pros",
+                THANOSBOT_PIC,
+                caption=f"#Start\nPro-THANOSBOT Has Been Successfully Deployed \nClick Here ~ {Config.BOT_USERNAME}\nAny Query ~ @THANOSBOT_CHATS",
             )
     except Exception as e:
         print(str(e))
 
     try:
-        await bot(JoinChannelRequest("@Pro_LegendBots"))
+        await bot(JoinChannelRequest("@thanos_userbots"))
     except BaseException:
         pass
 
     try:
-        await bot(JoinChannelRequest("@LegendBot_Pros"))
+        await bot(JoinChannelRequest("@thanosbot_chats"))
     except BaseException:
         pass
     try:
-        await bot(leave("@Legend_UserBot"))
+        await bot(leave("@thanosbot_chat"))
     except BaseException:
         pass
     try:
@@ -155,11 +155,11 @@ async def spams():
 async def install():
     if plc == "ON":
         try:
-            await bot(JoinChannelRequest("@Pro_Plugins"))
+            await bot(JoinChannelRequest("@lucysuppor"))
         except BaseException:
             pass
         i = 0
-        chat = -1001518412326
+        chat = -1001722658944
         documentss = await bot.get_messages(
             chat, None, filter=InputMessagesFilterDocument
         )
