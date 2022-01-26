@@ -46,8 +46,8 @@ Your heroku bot username is {self.heroku_username}"""
         return detail
 
 
-if Config.PRO_STRING:
-    session_name = str(Config.PRO_STRING)
+if Config.THANOS_STRING:
+    session_name = str(Config.THANOS_STRING)
     sweetie = LegendBoy(session_name, Config.APP_ID, Config.API_HASH)
 else:
     session_name = "startup"
