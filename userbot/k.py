@@ -68,7 +68,7 @@ CUSTOM_AFK = os.environ.get("CUSTOM_AFK", None)
 
 # Upstream Repo
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/PROBOY-OP/PRO-USERBOT.git"
+    "UPSTREAM_REPO_URL", "https://github.com/thanosuser/THANOS-USERBOT.git"
 )
 
 # Last.fm Module
