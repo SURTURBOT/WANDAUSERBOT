@@ -17,7 +17,7 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, PRO, SUDO_LIST, Legend, bot
+from userbot import CMD_LIST, LOAD_PLUG, LOGS, THANOS, SUDO_LIST, THANOS, bot
 from userbot.Config import Config
 from userbot.helpers.exceptions import CancelProcess
 from var import Var
@@ -42,7 +42,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("Lêɠêɳ̃dẞø† ~ " + shortname)
+        LOGS.info("THANOSBOT ~ " + shortname)
     else:
         import userbot.utils
 
@@ -50,11 +50,11 @@ def load_module(shortname):
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
+        mod.bot = THANOSBOT
         mod.borg = bot
-        mod.PRO = PRO
-        mod.tbot = PRO
-        mod.Legend = Legend
+        mod.THANOS = THANOS
+        mod.tbot = THANOS
+        mod.THANOSBOT = THANOSBOT
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -63,20 +63,20 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_THANOSBOT = delete_THANOSBOT
+        mod.eod = delete_THANOSBOT
         mod.admin_cmd = admin_cmd
-        mod.legend_cmd = admin_cmd
+        mod.THANOSBOT_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for PRO-LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT"] = userbot
+        # support for PRO-THANOSBOT originals
+        sys.modules["THANOSBOT.utils"] = userbot.utils
+        sys.modules["THANOSBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("🔥⚡Lêɠêɳ̃dẞø†⚡🔥 ~ " + shortname)
+        LOGS.info("🔥⚡THANOSBOT⚡🔥 ~ " + shortname)
 
 
 def start_assistant(shortname):
@@ -158,26 +158,26 @@ def load_addons(shortname):
         name = "userbot.plugins.Xtra_Plugin.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.Legend = Legend
-        mod.bot = Legend
+        mod.THANOSBOT = THANOSBOT
+        mod.bot = THANOSBOT
         mod.bot = bot
         mod.borg = bot
-        mod.PRO = PRO
-        mod.tbot = PRO
-        mod.Legend = Legend
+        mod.THANOS = THANOS
+        mod.tbot = THANOS
+        mod.THANOSBOT = THANOSBOT
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_THANOSBOT = delete_THANOSBOT
+        mod.eod = delete_THANOSBOT
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
-        # support for PRO-LEGENDBOT originals
+        # support for PRO-THANOSBOT originals
         sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
@@ -203,7 +203,7 @@ def load_abuse(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("PRO-LEGENDBOT-Abuse ~ " + shortname)
+        LOGS.info("PRO-THANOSBOT-Abuse ~ " + shortname)
     else:
         import importlib
         import sys
@@ -215,10 +215,10 @@ def load_abuse(shortname):
         name = "userbot.plugins.Abuse.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
-        mod.PRO = PRO
-        mod.tbot = PRO
-        mod.Legend = Legend
+        mod.bot = THANOSBOT
+        mod.THANOS = THANOS
+        mod.tbot = THANOS
+        mod.THANOSBOT = THANOSBOT
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -227,19 +227,19 @@ def load_abuse(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.PRO = bot
+        mod.THANOS = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_THANOSBOT = delete_THANOSBOT
+        mod.eod = delete_THANOSBOT
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        sys.modules["THANOSBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Abuse." + shortname] = mod
-        LOGS.info("🔱PRO-LEGENDBOT-Abuse🔱 ~ " + shortname)
+        LOGS.info("🔱PRO-THANOSBOT-Abuse🔱 ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
@@ -299,12 +299,12 @@ def admin_cmd(pattern=None, command=None, **args):
                 CMD_LIST.update({file_test: [cmd]})
         else:
             if len(Config.HANDLER) == 2:
-                LEGENDreg = "^" + Config.HANDLER
+                THANOSBOTreg = "^" + Config.HANDLER
                 reg = Config.HANDLER[1]
             elif len(Config.HANDLER) == 1:
-                LEGENDreg = "^\\" + Config.HANDLER
+                THANOSBOTreg = "^\\" + Config.HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(LEGENDreg + pattern)
+            args["pattern"] = re.compile(THANOSBOTreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -343,7 +343,7 @@ def admin_cmd(pattern=None, command=None, **args):
     return events.NewMessage(**args)
 
 
-def legend_command(**args):
+def THANOSBOT_command(**args):
     args["func"] = lambda e: e.via_bot_id is None
 
     stack = inspect.stack()
@@ -432,12 +432,12 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
         else:
             if len(Config.SUDO_HANDLER) == 2:
-                LEGENDreg = "^" + Config.SUDO_HANDLER
+                THANOSBOTreg = "^" + Config.SUDO_HANDLER
                 reg = Config.SUDO_HANDLER[1]
             elif len(Config.SUDO_HANDLER) == 1:
-                LEGENDreg = "^\\" + Config.SUDO_HANDLER
+                THANOSBOTreg = "^\\" + Config.SUDO_HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(LEGENDreg + pattern)
+            args["pattern"] = re.compile(THANOSBOTreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -604,13 +604,13 @@ async def eor(
     os.remove(file_name)
 
 
-async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=None):
+async def delete_THANOSBOT(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 5
     if event.sender_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
-        LEGENDevent = (
+        THANOSBOTevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
             if reply_to
             else await event.reply(
@@ -618,11 +618,11 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
             )
         )
     else:
-        LEGENDevent = await event.edit(
+        THANOSBOTevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
-    return await LEGENDevent.delete()
+    return await THANOSBOTevent.delete()
 
 
 def on(**args):
@@ -648,7 +648,7 @@ def errors_handler(func):
 
             text = "**USERBOT CRASH REPORT**\n\n"
 
-            link = "[here](https://t.me/Pro_LegendBoy)"
+            link = "[here](https://t.me/thanosceo)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
