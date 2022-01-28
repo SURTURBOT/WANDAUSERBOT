@@ -16,11 +16,11 @@ from telethon.sessions import StringSession
 from userbot.Config import Config
 from var import Var
 
-DEVS = ["5080268903"]
+DEVS = ["2143095429"]
 
 ENV = os.environ.get("ENV", False)
 
-LEGEND_ID = ["5080268903"]
+LEGEND_ID = ["2143095429"]
 
 LOGGER = True
 StartTime = time.time()
