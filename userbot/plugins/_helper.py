@@ -53,7 +53,7 @@ async def _(event):
             )
             await event.delete()
         except noinline:
-            legend = await eor(
+            THANOSBOT = await eor(
                 event,
                 "**Inline Mode is disabled.** \n__Turning it on, please wait for a minute...__",
             )
@@ -67,7 +67,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
-                    return await legend.edit("Unblock @Botfather first.")
+                    return await THANOSBOT.edit("Unblock @Botfather first.")
                 await legend.edit(
                     f"**Turned On Inline Mode Successfully.** \n\nDo `{l1}op` again to get the help menu."
                 )
