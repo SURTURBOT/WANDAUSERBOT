@@ -11,8 +11,8 @@ from . import *
 
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Lêɠêɳ̃dẞø†』"
-legend = bot.uid
-LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
+THANOSBOT = bot.uid
+THANOSBOT = f"[{DEFAULTUSER}](tg://user?id={THANOSBOT})"
 EVAL = os.environ.get("EVAL", None)
 
 
@@ -24,7 +24,7 @@ async def send(event):
     message_id = event.message.id
     thumb = core_pic
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚜ **[Pro-Lêɠêɳ̃dẞø†](https://t.me/LegendBot_Pros)** ⚜"
+    omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {THANOSBOT_mention}\n\n⚜ **[Pro-Lêɠêɳ̃dẞø†](https://t.me/LegendBot_Pros)** ⚜"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
     the_1plugin_file = "./userbot/plugins/Abuse/{}.py".format(input_str)
     the_2plugin_file = "./userbot/plugins/Spam/{}.py".format(input_str)
@@ -126,13 +126,13 @@ async def install(event):
                                 else:
                                     a = "__Installing...__"
                                     b = 1
-                                await legend.edit(a)
-                            return await legend.edit(
-                                f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[Pro-Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
+                                await THANOSBOT.edit(a)
+                            return await THANOSBOT.edit(
+                                f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {THANOSBOT_mention}\n\n{string}\n\n        ⚡ **[Pro-Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
                                 link_preview=False,
                             )
 
-                        return await legend.edit(
+                        return await THANOSBOT.edit(
                             f"Installed module `{os.path.basename(downloaded_file_name)}`"
                         )
                     else:
@@ -143,13 +143,13 @@ async def install(event):
                         )
                 else:
                     return await eod(
-                        legend, "First Turn ON Eval CMD = `.set var EVAL ON`"
+                        THANOSBOT, "First Turn ON Eval CMD = `.set var EVAL ON`"
                     )
             except Exception as e:
-                await eod(legend, f"{e}")
+                await eod(THANOSBOT, f"{e}")
                 return os.remove(download_file_name)
         except Exception as e:
-            await eod(legend, f"**Failed to Install** \n`Error`\n{str(e)}")
+            await eod(THANOSBOT, f"**Failed to Install** \n`Error`\n{str(e)}")
             return os.remove(downloaded_file_name)
 
 
@@ -223,7 +223,7 @@ async def install(event):
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmnds_list.text"
-            LEGEND_file = await bot.send_file(
+            THANOSBOT_file = await bot.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -232,7 +232,7 @@ async def install(event):
                 reply_to=reply_to_id,
             )
             await edit_or_reply(
-                LEGEND_file,
+                THANOSBOT_file,
                 f"**Output Too Large. This is the file for the list of plugins in L𝖊ɠêɳ̃dẞø✞︎**.\n\nBY :- **{DEFAULTUSER}**",
             )
             await event.delete()
