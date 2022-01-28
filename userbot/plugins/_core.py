@@ -89,7 +89,7 @@ async def install(event):
         return
     b = 1
     owo = event.text[9:]
-    legend = await eor(event, "__Installing.__")
+    THANOSBOT = await eor(event, "__Installing.__")
     if event.reply_to_msg_id:
         try:
             downloaded_file_name = (
