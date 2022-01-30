@@ -106,4 +106,4 @@ def no_grp():
     return decorator
 
 
-# PRO-LEGENDBOT
+# THANOS-PRO
