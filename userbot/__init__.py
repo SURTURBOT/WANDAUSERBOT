@@ -20,11 +20,11 @@ DEVS = ["2143095429"]
 
 ENV = os.environ.get("ENV", False)
 
-LEGEND_ID = ["2143095429"]
+THANOS_ID = ["2143095429"]
 
 LOGGER = True
 StartTime = time.time()
-LEGENDversion = "v1.0"
+THANOSBOTversion = "v1.0"
 botversion = "v1.0"
 from logging import DEBUG, INFO, basicConfig, getLogger
 
@@ -45,9 +45,9 @@ LOGS = getLogger(__name__)
 
 
 if Config.PRO_STRING:
-    session = StringSession(str(Config.PRO_STRING))
+    session = StringSession(str(Config.THANOS_STRING))
 else:
-    session = "PRO-LEGENDBOT"
+    session = "THANOSBOT"
 
 try:
     Legend = TelegramClient(
@@ -59,12 +59,12 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    LOGS.error(f"PRO_STRING - {e}")
+    LOGS.error(f"THANOS_STRING - {e}")
     sys.exit()
 
 
 PRO = TelegramClient(
-    session="Legend-Bot",
+    session="THANOSBOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
@@ -73,8 +73,8 @@ PRO = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = Legend
-tbot = PRO
+bot = kbot = THANOSBOT
+tbot = THANOS
 
 
 if not Config.API_HASH:
@@ -102,8 +102,8 @@ if not Config.DB_URI:
     quit(1)
 
 
-if not Config.PRO_STRING:
-    LOGS.warning("Please fill var HELLBOT SESSION to continue.")
+if not Config.THANOS_STRING:
+    LOGS.warning("Please fill var THANOSBOT SESSION to continue.")
     quit(1)
 
 
