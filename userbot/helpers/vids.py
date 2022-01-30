@@ -136,4 +136,4 @@ async def unsave_gif(event, hgif):
         LOGS.info(e)
 
 
-# PRO-LEGENDBOT
+# THANOS-PRO
