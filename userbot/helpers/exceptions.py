@@ -86,4 +86,4 @@ async def progress(
             oldtmp = tmp
 
 
-# PRO-LEGENDBOT
+# THANOS-PRO
