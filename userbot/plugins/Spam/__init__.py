@@ -24,23 +24,23 @@ BOT_TOKEN10 = os.environ.get("BOT_TOKEN10", None)
 
 
 
-bot2 = TelegramClient('LegendBoy2', APP_ID, API_HASH).start(bot_token=BOT_TOKEN2) 
+bot2 = TelegramClient('THANOSBOT2', APP_ID, API_HASH).start(bot_token=BOT_TOKEN2) 
 
-bot3 = TelegramClient('LegendBoy3', APP_ID, API_HASH).start(bot_token=BOT_TOKEN3) 
+bot3 = TelegramClient('THANOSBOT3', APP_ID, API_HASH).start(bot_token=BOT_TOKEN3) 
 
-bot4 = TelegramClient('LegendBoy4', APP_ID, API_HASH).start(bot_token=BOT_TOKEN4) 
+bot4 = TelegramClient('THANOSBOT4', APP_ID, API_HASH).start(bot_token=BOT_TOKEN4) 
 
-bot5 = TelegramClient('LegendBoy5', APP_ID, API_HASH).start(bot_token=BOT_TOKEN5) 
+bot5 = TelegramClient('THANOSBOT5', APP_ID, API_HASH).start(bot_token=BOT_TOKEN5) 
 
-bot6 = TelegramClient('LegendBoy6', APP_ID, API_HASH).start(bot_token=BOT_TOKEN6) 
+bot6 = TelegramClient('THANOSBOT6', APP_ID, API_HASH).start(bot_token=BOT_TOKEN6) 
 
-bot7 = TelegramClient('LegendBoy7', APP_ID, API_HASH).start(bot_token=BOT_TOKEN7) 
+bot7 = TelegramClient('THANOSBOT7', APP_ID, API_HASH).start(bot_token=BOT_TOKEN7) 
 
-bot8 = TelegramClient('LegendBoy8', APP_ID, API_HASH).start(bot_token=BOT_TOKEN8) 
+bot8 = TelegramClient('THANOSBOT8', APP_ID, API_HASH).start(bot_token=BOT_TOKEN8) 
 
-bot9 = TelegramClient('LegendBoy9', APP_ID, API_HASH).start(bot_token=BOT_TOKEN9) 
+bot9 = TelegramClient('THANOSBOT9', APP_ID, API_HASH).start(bot_token=BOT_TOKEN9) 
 
-bot10 = TelegramClient('LegendBoy10', APP_ID, API_HASH).start(bot_token=BOT_TOKEN10) 
+bot10 = TelegramClient('THANOSBOT10', APP_ID, API_HASH).start(bot_token=BOT_TOKEN10) 
 
 
 
