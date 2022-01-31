@@ -7,7 +7,7 @@ from userbot import *
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT User"
 
 
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
