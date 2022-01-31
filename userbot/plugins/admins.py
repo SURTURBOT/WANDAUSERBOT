@@ -69,8 +69,8 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
 NORMAL_PIC = os.environ.get("NORMAL_PIC", None)
 if NORMAL_PIC:
-    LEGEND = [x for x in NORMAL_PIC.split()]
-    PIC = list(LEGEND)
+    THANOSBOT = [x for x in NORMAL_PIC.split()]
+    PIC = list(THANOSBOT)
     help_pic = random.choice(PIC)
 else:
     help_pic = main_pic
@@ -100,7 +100,7 @@ async def set_group_photo(gpic):
             photo = await gpic.client.download_file(replymsg.media.document)
         else:
             await edit_or_reply(gpic, INVALID_MEDIA)
-    legend = None
+    THANOSBOT = None
     if photo:
         try:
             await gpic.client(
@@ -111,14 +111,14 @@ async def set_group_photo(gpic):
                 help_pic,
                 caption=f"⚜ `Group Profile Pic Changed` ⚜\n🔰Chat ~ {gpic.chat.title}",
             )
-            legend = True
+            THANOSBOT = True
         except PhotoCropSizeSmallError:
             await edit_or_reply(gpic, PP_TOO_SMOL)
         except ImageProcessFailedError:
             await edit_or_reply(gpic, PP_ERROR)
         except Exception as e:
             await edit_or_reply(gpic, f"**Error : **`{str(e)}`")
-        if LOGGER and legend:
+        if LOGGER and THANOSBOT:
             await gpic.client.send_message(
                 lg_id,
                 "#GROUPPIC\n"
@@ -147,10 +147,10 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    LEGENDevent = await edit_or_reply(promt, "Promoting...")
+    THANOSBOTevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_init(promt)
     if not rank:
-        rank = "ℓєgєи∂"
+        rank = "тнαησѕ"
     if not user:
         return
     try:
@@ -161,7 +161,7 @@ async def promote(promt):
             caption=f"**⚜Promoted ~** [{user.first_name}](tg://user?id={user.id})⚜\n**Successfully In** ~ `{promt.chat.title}`!! \n**Admin Tag ~**  `{rank}`",
         )
     except BadRequestError:
-        await LEGENDevent.edit(NO_PERM)
+        await THANOSBOTevent.edit(NO_PERM)
         return
     await promt.client.send_message(
         lg_id,
@@ -183,7 +183,7 @@ async def demote(dmod):
     if not admin and not creator:
         await edit_or_reply(dmod, NO_ADMIN)
         return
-    LEGENDevent = await edit_or_reply(dmod, "Demoting...")
+    THANOSBOTevent = await edit_or_reply(dmod, "Demoting...")
     rank = "??????"
     user = await get_user_from_init(dmod)
     user = user[0]
@@ -200,7 +200,7 @@ async def demote(dmod):
     try:
         await dmod.client(EditAdminRequest(dmod.chat_id, user.id, newrights, rank))
     except BadRequestError:
-        await LEGENDevent.edit(NO_PERM)
+        await THANOSBOTevent.edit(NO_PERM)
         return
     await bot.send_file(
         dmod.chat_id,
@@ -225,17 +225,17 @@ async def _ban(event):
         return
     if user.id == event.client.uid:
         return await eod(event, "__You cant ban yourself.__")
-    Legendevent = await edit_or_reply(event, "`Whacking the pest!`")
+    THANOSBOTevent = await edit_or_reply(event, "`Whacking the pest!`")
     try:
         await event.client(EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
-        return await Legendevent.edit(NO_PERM)
+        return await THANOSBOTevent.edit(NO_PERM)
     try:
         reply = await event.get_reply_message()
         if reply:
             await reply.delete()
     except BadRequestError:
-        return await Legendevent.edit(
+        return await THANOSBOTevent.edit(
             "`I dont have message nuking rights! But still he is banned!`"
         )
     if reason:
@@ -281,7 +281,7 @@ async def nothanos(unbon):
     if not admin and not creator:
         await edit_or_reply(unbon, NO_ADMIN)
         return
-    LEGENDevent = await edit_or_reply(unbon, "Unbanning...")
+    THANOSBOTevent = await edit_or_reply(unbon, "Unbanning...")
     user = await get_user_from_event(unbon)
     user = user[0]
     if not user:
@@ -293,7 +293,7 @@ async def nothanos(unbon):
             help_pic,
             f"[{user.first_name}](tg://user?id={user.id})has been unbanned Successfully In Chat: {unbon.chat_title} \nGiving one more chance 😏",
         )
-        await LEGENDevent.delete()
+        await THANOSBOTevent.delete()
         if LOGGER:
             await unbon.client.send_message(
                 lg_id,
@@ -302,7 +302,7 @@ async def nothanos(unbon):
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
-        await LEGENDevent.edit("Sorry I Can't Unban This Retard!")
+        await THANOSBOTevent.edit("Sorry I Can't Unban This Retard!")
 
 
 @command(incoming=True)
@@ -530,12 +530,12 @@ async def kick(usr):
     if not user:
         await edit_or_reply(usr, "Couldn't fetch user.")
         return
-    LEGENDevent = await edit_or_reply(usr, "Kicking...")
+    THANOSBOTevent = await edit_or_reply(usr, "Kicking...")
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
         await sleep(0.5)
     except Exception as e:
-        await LEGENDevent.edit(NO_PERM + f"\n{str(e)}")
+        await THANOSBOTevent.edit(NO_PERM + f"\n{str(e)}")
         return
     if reason:
         await bot.send_file(
@@ -544,7 +544,7 @@ async def kick(usr):
             f"🔶Kicked [{user.first_name}](tg://user?id={user.id})!\n🔶яєαѕοи: {reason}",
         )
     else:
-        await LEGENDevent.edit(f"Kicked [{user.first_name}](tg://user?id={user.id})!")
+        await THANOSBOTevent.edit(f"Kicked [{user.first_name}](tg://user?id={user.id})!")
     if LOGGER:
         await usr.client.send_message(
             lg_id,
