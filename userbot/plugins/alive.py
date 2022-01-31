@@ -9,7 +9,7 @@ from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from userbot import *
-from userbot import LEGENDversion
+from userbot import THANOSBOTversion
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from userbot.helpers.events import reply_id
@@ -18,8 +18,8 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 from . import *
 
-LEGEND_IMG = "https://telegra.ph/file/153977a71b928874151a5.jpg"
-CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@LegendBot_Pros"
+THANOSBOT_IMG = "https://telegra.ph/file/153977a71b928874151a5.jpg"
+CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@thanosbot_chats"
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="legend$"))
@@ -39,19 +39,19 @@ async def amireallyalive(alive):
                 c.append(d)
         alive_emoji = random.choice(c)
     if LEGEND_IMG:
-        LEGEND_caption = f"**LegendBot is Up And Running**\n\n"
-        LEGEND_caption += f"      🔰Bot Status🔰 \n"
-        LEGEND_caption += f"{alive_emoji} **LegendBo† version**   ~ {LEGENDversion}\n"
-        LEGEND_caption += (
+        THANOSBOT_caption = f"**LegendBot is Up And Running**\n\n"
+        THANOSBOT_caption += f"      🔰Bot Status🔰 \n"
+        THANOSBOT_caption += f"{alive_emoji} **LegendBo† version**   ~ {THANOSBOTversion}\n"
+        THANOSBOT_caption += (
             f"{alive_emoji} **Telethon version**   ~ `{version.__version__}`\n"
-        )
-        LEGEND_caption += (
+  Q      )
+        THANOSBOT_caption += (
             f"{alive_emoji} **Python version**    ~ `{python_version()}`\n"
         )
-        LEGEND_caption += f"{alive_emoji} **Uptime**           ~ `{uptime}`\n"
-        LEGEND_caption += f"{alive_emoji} **Master**          ~ `{Config.ALIVE_NAME}`"
+        THANOSBOT_caption += f"{alive_emoji} **Uptime**           ~ `{uptime}`\n"
+        THANOSBOT_caption += f"{alive_emoji} **Master**          ~ `{Config.ALIVE_NAME}`"
         await alive.client.send_file(
-            alive.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
+            alive.chat_id, THANOSBOT_IMG, caption=THANOSBOT_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
@@ -68,7 +68,7 @@ msg = (
      {Config.ALIVE_MSG}
     ** Bot Status **
 **🔰 Owner   :** **{Config.ALIVE_NAME}**
-**✨ LegendBot  :** {LEGENDversion}
+**✨ LegendBot  :** {THANOSBOTversion}
 **✨ Telethon  :** {version.__version__}
 **✨ Abuse    :**  {abuse_m}
 **✨ Sudo    :**  {is_sudo}
@@ -83,9 +83,9 @@ botname = Config.BOT_USERNAME
 async def legend_a(event):
     try:
         legend = await bot.inline_query(botname, "alive")
-        await legend[0].click(event.chat_id)
+        await THANOSBOT[0].click(event.chat_id)
         await event.delete()
-        if event.sender_id == Pro_Userboy:
+        if event.sender_id == THANOSCEO:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
@@ -99,7 +99,7 @@ file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
 """=======================CONSTANTS====================== """
 pm_caption = f"**╭────────────**\n"
 pm_caption += f"┣✨ Owner   ~ {Config.ALIVE_NAME}\n"
-pm_caption += f"┣✨ Lêɠêɳ̃dẞø† ~ {LEGENDversion}\n"
+pm_caption += f"┣✨ Lêɠêɳ̃dẞø† ~ {THANOSBOTversion}\n"
 pm_caption += f"┣✨ ProBoy   ~ [Owner](https://t.me/Pro_Userboy)\n"
 pm_caption += f"┣✨ Support ~ [Group](https://t.me/LegendBot_Pros)\n"
 pm_caption += f"┣✨ Repo   ~ [Repo](https://github.com/PROBOY-OP/LegendBot)\n"
