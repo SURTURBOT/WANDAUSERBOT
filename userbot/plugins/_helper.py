@@ -109,7 +109,7 @@ async def yardim(event):
 
 @bot.on(admin_cmd(pattern="ihelp(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="ihelp(?: |$)(.*)", allow_sudo=True))
-async def THANOSBOTt(event):
+async def THANOSBOT(event):
     if event.fwd_from:
         return
     args = event.pattern_match.group(1).lower()
