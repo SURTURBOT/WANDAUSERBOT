@@ -9,16 +9,16 @@ from userbot import ALIVE_NAME, BIO_MSG
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Legendary LegendBot"
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Legendary THANOSBOT"
 DEL_TIME_OUT = 60
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT User"
 
 
 @bot.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND = await edit_or_reply(event, "`Starting AutoName Please Wait`")
+    THANOSBOT = await edit_or_reply(event, "`Starting THANOS AutoName Please Wait`")
     if event.fwd_from:
         return
 
@@ -60,7 +60,7 @@ async def _(event):
 
         await asyncio.sleep(DEL_TIME_OUT)
 
-    await LEGEND.edit(f"Auto Name has been started my Master")
+    await THANOSBOT.edit(f"Auto Name has been started my OWNER")
 
 
 @bot.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
