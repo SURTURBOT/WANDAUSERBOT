@@ -5,7 +5,7 @@ from sqlalchemy import Column, PickleType, UnicodeText, distinct, func
 from . import BASE, SESSION
 
 
-class Legend_GlobalCollection(BASE):
+class THANOSBOT_GlobalCollection(BASE):
     __tablename__ = "legend_globalcollection"
     keywoard = Column(UnicodeText, primary_key=True)
     contents = Column(PickleType, primary_key=True, nullable=False)
@@ -15,7 +15,7 @@ class Legend_GlobalCollection(BASE):
         self.contents = tuple(contents)
 
     def __repr__(self):
-        return "<Legend Global Collection lists '%s' for %s>" % (
+        return "<THANOSBOT Global Collection lists '%s' for %s>" % (
             self.contents,
             self.keywoard,
         )
