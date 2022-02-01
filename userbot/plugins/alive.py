@@ -38,7 +38,7 @@ async def amireallyalive(alive):
             for d in b:
                 c.append(d)
         alive_emoji = random.choice(c)
-    if LEGEND_IMG:
+    if THANOSBOT_IMG:
         THANOSBOT_caption = f"**LegendBot is Up And Running**\n\n"
         THANOSBOT_caption += f"      🔰Bot Status🔰 \n"
         THANOSBOT_caption += f"{alive_emoji} **LegendBo† version**   ~ {THANOSBOTversion}\n"
