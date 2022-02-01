@@ -20,7 +20,7 @@ async def spam(e):
         await asyncio.wait([e.respond(message) for i in range(counter)])
 
     elif e.reply_to_msg_id and smex.media:
-        counter = int(legend[0])
+        counter = int(THANOSBOT[0])
         if counter > 100:
             return await e.reply(error, parse_mode=None, link_preview=None)
         for _ in range(counter):
@@ -28,7 +28,7 @@ async def spam(e):
             await gifspam(e, smex)
     elif e.reply_to_msg_id and smex.text:
         message = smex.text
-        counter = int(legend[0])
+        counter = int(THANOSBOT[0])
         if counter > 100:
 
             return await e.reply(error, parse_mode=None, link_preview=None)
