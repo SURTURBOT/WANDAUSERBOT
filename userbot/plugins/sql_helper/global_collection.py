@@ -6,7 +6,7 @@ from . import BASE, SESSION
 
 
 class THANOSBOT_GlobalCollection(BASE):
-    __tablename__ = "legend_globalcollection"
+    __tablename__ = "THANOSBOT_globalcollection"
     keywoard = Column(UnicodeText, primary_key=True)
     contents = Column(PickleType, primary_key=True, nullable=False)
 
@@ -43,7 +43,7 @@ COLLECTION_SQL_ = COLLECTION_SQL()
 
 def add_to_collectionlist(keywoard, contents):
     with THANOSBOT_GLOBALCOLLECTION:
-        keyword_items = Legend_GlobalCollection(keywoard, tuple(contents))
+        keyword_items = THANOSBOT_GlobalCollection(keywoard, tuple(contents))
 
         SESSION.merge(keyword_items)
         SESSION.commit()
