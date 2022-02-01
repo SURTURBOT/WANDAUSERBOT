@@ -74,7 +74,7 @@ alive_txt = (
 
 
 def button(page, modules):
-    Row = legend_row
+    Row = THANOSBOT_row
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::2], modules[1::2])))
@@ -87,7 +87,7 @@ def button(page, modules):
         buttons.append(
             [
                 custom.Button.inline(
-                    f"{legend_emoji1} " + pair + f" {legend_emoji2}",
+                    f"{THANOSBOT_emoji1} " + pair + f" {THANOSBOT_emoji2}",
                     data=f"Information[{page}]({pair})",
                 )
                 for pair in pairs
