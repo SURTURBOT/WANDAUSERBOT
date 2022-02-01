@@ -15,7 +15,7 @@ echo """
 ┃╰━╯┃╰━╯┃╱┃┃
 ╰━━━┻━━━╯╱╰╯
 """
-rm -rf PRO-USERBOT
-git clone https://github.com/PROBOY-OP/PRO-USERBOT
-cd PRO-USERBOT
+rm -rf THANOS-USERBOT
+git clone https://github.com/SURTURBOT/THANOS-USERBOT
+cd THANOS-USERBOT
 python3 -m userbot
