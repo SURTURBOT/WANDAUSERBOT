@@ -6,10 +6,10 @@ from . import *
 
 PM_IMG = "https://telegra.ph/file/c26fc61e904476083baa7.jpg"
 pm_caption = f"⚜『Lêɠêɳ̃dẞø†』Is Ôñĺîne⚜ \n\n"
-pm_caption += f"Ôwñêř ~ 『{legend_mention}』\n"
+pm_caption += f"Ôwñêř ~ 『{THANOSBOT_mention}』\n"
 pm_caption += f"**╭───────────**\n"
 pm_caption += f"┣Ťêlethon ~ `1.15.0` \n"
-pm_caption += f"┣『Lêɠêɳ̃dẞø†』~ `{LEGENDversion}` \n"
+pm_caption += f"┣『Lêɠêɳ̃dẞø†』~ `{THANOSBOTversion}` \n"
 pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/Pro_LegendBots)\n"
 pm_caption += f"┣**License** ~ [License v3.0](github.com/LegendBot/LEGENBOT/blob/master/LICENSE)\n"
 pm_caption += f"┣Copyright ~ By [『Lêɠêɳ̃dẞø†』 ](https://t.me/LegendBot_Pros)\n"
