@@ -332,7 +332,7 @@ async def baguette(text):
     if not THANOSBOTurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
-        f.write(requests.get(legend).content)
+        f.write(requests.get(THANOSBOT).content)
     img = Image.open("temp.png").convert("RGB")
     img.save("temp.jpg", "jpeg")
     return "temp.jpg"
