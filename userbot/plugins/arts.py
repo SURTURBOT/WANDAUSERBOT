@@ -68,7 +68,7 @@ A = (
 
 @bot.on(admin_cmd(pattern="sthink (.*)"))
 @bot.on(sudo_cmd(pattern="sthink (.*)", allow_sudo=True))
-async def legend(think):
+async def THANOSBOT(think):
     if think.fwd_from:
         return
     name = think.pattern_match.group(1)
@@ -95,7 +95,7 @@ async def legend(think):
 
 @bot.on(admin_cmd(pattern="sfrog (.*)"))
 @bot.on(sudo_cmd(pattern="sfrog (.*)", allow_sudo=True))
-async def legend(frogsay):
+async def THANOSBOT(frogsay):
     if frogsay.fwd_from:
         return
     name = frogsay.pattern_match.group(1)
