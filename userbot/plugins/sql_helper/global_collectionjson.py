@@ -4,8 +4,8 @@ from sqlalchemy_json import MutableJson, NestedMutableJson
 from . import BASE, SESSION
 
 
-class Legend_GlobalCollection_Json(BASE):
-    __tablename__ = "legend_globalcollectionjson"
+class THANOSBOT_GlobalCollection_Json(BASE):
+    __tablename__ = "THANOSBOT_globalcollectionjson"
     keywoard = Column(UnicodeText, primary_key=True)
     json = Column(MutableJson)
     njson = Column(NestedMutableJson)
@@ -16,12 +16,12 @@ class Legend_GlobalCollection_Json(BASE):
         self.njson = njson
 
 
-Legend_GlobalCollection_Json.__table__.create(checkfirst=True)
+THANOSBOT_GlobalCollection_Json.__table__.create(checkfirst=True)
 
 
 def get_collection(keywoard):
     try:
-        return SESSION.query(Legend_GlobalCollection_Json).get(keywoard)
+        return SESSION.query(THANOSBOT_GlobalCollection_Json).get(keywoard)
     finally:
         SESSION.close()
 
