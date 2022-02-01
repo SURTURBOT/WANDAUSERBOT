@@ -176,7 +176,7 @@ async def THANOSBOT(trumpsay):
 
 @bot.on(admin_cmd(pattern="schina (.*)"))
 @bot.on(sudo_cmd(pattern="schina (.*)", allow_sudo=True))
-async def legend(ckmkb):
+async def THANOSBOT(ckmkb):
     if ckmkb.fwd_from:
         return
     name = ckmkb.pattern_match.group(1)
@@ -204,7 +204,7 @@ async def legend(ckmkb):
 
 @bot.on(admin_cmd(pattern=r"sshit$"))
 @bot.on(sudo_cmd(pattern="sshit$", allow_sudo=True))
-async def legend(shit):
+async def THANOSBOT(shit):
     if shit.fwd_from:
         return
     await edit_or_reply(shit, A)
