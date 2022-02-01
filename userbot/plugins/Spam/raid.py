@@ -337,10 +337,10 @@ async def spam(e):
     if ABUSE == "ON":
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
-        legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        THANOSBOT = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         await e.get_reply_message()
-        if len(legend) == 2:
-            message = str(legend[1])
+        if len(THANOSBOT) == 2:
+            message = str(THANOSBOT[1])
             print(message)
             a = await e.client.get_entity(message)
             g = a.id
