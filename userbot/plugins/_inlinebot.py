@@ -20,9 +20,9 @@ from userbot.helpers.ffunctions.utils import get_readable_time
 from . import *
 
 DEFAULTUSER = alive_name = Config.ALIVE_NAME
-legend_row = Config.BUTTONS_IN_HELP
-legend_emoji1 = Config.HELP_EMOJI1 or "✥"
-legend_emoji2 = Config.HELP_EMOJI2 or "✥"
+THANOSBOT_row = Config.BUTTONS_IN_HELP
+THANOSBOT_emoji1 = Config.HELP_EMOJI1 or "✥"
+THANOSBOT_emoji2 = Config.HELP_EMOJI2 or "✥"
 mssge = cstm_pmp = (
     Config.PM_MSG
     or "I am Assistant Of My Owner\nI am Here To Protect My Owner From Scanner"
