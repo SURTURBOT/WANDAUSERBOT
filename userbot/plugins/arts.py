@@ -122,7 +122,7 @@ async def THANOSBOT(frogsay):
 
 @bot.on(admin_cmd(pattern="sdead (.*)"))
 @bot.on(sudo_cmd(pattern="sdead (.*)", allow_sudo=True))
-async def legend(deadfrog):
+async def THANOSBOT(deadfrog):
     if deadfrog.fwd_from:
         return
     name = deadfrog.pattern_match.group(1)
@@ -149,7 +149,7 @@ async def legend(deadfrog):
 
 @bot.on(admin_cmd(pattern="strump (.*)"))
 @bot.on(sudo_cmd(pattern="strump (.*)", allow_sudo=True))
-async def legend(trumpsay):
+async def THANOSBOT(trumpsay):
     if trumpsay.fwd_from:
         return
     name = trumpsay.pattern_match.group(1)
