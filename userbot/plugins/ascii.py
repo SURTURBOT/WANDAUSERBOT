@@ -81,7 +81,7 @@ async def _(event):
             pic = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await legend.edit("Please unblock @Lines50Bot and try again")
+            await THANOSBOT.edit("Please unblock @Lines50Bot and try again")
             return
         await THANOSBOT.delete()
         await event.client.send_file(
