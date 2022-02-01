@@ -215,7 +215,7 @@ async def drawText(image_path, text):
             )
             current_h += u_height + pad
 
-    image_name = "legend.webp"
+    image_name = "THANOSBOT.webp"
     img.save(image_name, "WebP")
     return image_name
 
