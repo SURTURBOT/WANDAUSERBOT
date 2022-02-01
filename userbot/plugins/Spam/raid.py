@@ -431,7 +431,7 @@ async def _(e):
         THANOSBOT = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         await e.get_reply_message()
         if len(e.text) > 11:
-            message = str(legend[0])
+            message = str(THANOSBOT[0])
             a = await e.client.get_entity(message)
             g = a.id
             que[g] = []
