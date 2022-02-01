@@ -15,7 +15,7 @@ mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
 
 @bot.on(admin_cmd(pattern="car (.*)"))
 @bot.on(sudo_cmd(pattern="car (.*)", allow_sudo=True))
-async def legend(carry):
+async def THANOSBOT(carry):
     if carry.fwd_from:
         return
     name = carry.pattern_match.group(1)
@@ -27,7 +27,7 @@ async def legend(carry):
 
 @bot.on(admin_cmd(pattern="ded (.*)"))
 @bot.on(sudo_cmd(pattern="ded (.*)", allow_sudo=True))
-async def legend(ded):
+async def THANOSBOT(ded):
     if ded.fwd_from:
         return
     name = ded.pattern_match.group(1)
