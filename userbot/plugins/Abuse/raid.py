@@ -333,14 +333,14 @@ async def _(event):
 async def spam(e):
     if e.fwd_from:
         return
-    legend = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+    THANOSBOT = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
     await e.get_reply_message()
     if e.reply_to_msg_id:
         a = await e.get_reply_message()
         b = await e.client.get_entity(a.sender_id)
         g = b.id
         c = b.first_name
-        counter = int(legend[0])
+        counter = int(THANOSBOT[0])
         username = f"[{c}](tg://user?id={g})"
         for _ in range(counter):
             reply = random.choice(RAID)
