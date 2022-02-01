@@ -85,8 +85,8 @@ async def anilist(event):
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(lege):
-    legend = lege.pattern_match.group(1)
-    if not legend:
+    THANOSBOT = lege.pattern_match.group(1)
+    if not THANOSBOT:
         if lege.is_reply:
             (await lege_.get_reply_message()).message
         else:
@@ -109,8 +109,8 @@ async def nope(lege):
 @bot.on(admin_cmd(pattern="manga(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
 async def nope(lege_):
-    legend = lege_.pattern_match.group(1)
-    if not legend:
+    THANOSBOT = lege_.pattern_match.group(1)
+    if not THANOSBOT:
         if lege_.is_reply:
             (await lege_.get_reply_message()).message
         else:
@@ -133,8 +133,8 @@ async def nope(lege_):
 @bot.on(admin_cmd(pattern="character(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
 async def nope(lege_):
-    legend = lege_.pattern_match.group(1)
-    if not legend:
+    THANOSBOT = lege_.pattern_match.group(1)
+    if not THANOSBOT:
         if lege_.is_reply:
             (await lege_.get_reply_message()).message
         else:
