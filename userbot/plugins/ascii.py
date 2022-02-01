@@ -29,7 +29,7 @@ async def _(event):
     if reply_message.sender.bot:
         await edit_or_reply(event, "Reply to actual мє∂נα ιмαgє.😒🤐")
         return
-    legend = await edit_or_reply(event, "Wait making ASCII...🤓🔥🔥")
+    THANOSBOT = await edit_or_reply(event, "Wait making ASCII...🤓🔥🔥")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -38,14 +38,14 @@ async def _(event):
             await event.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await legend.edit("`Please unblock @asciiart_bot and try again`")
+            await THANOSBOT.edit("`Please unblock @asciiart_bot and try again`")
             return
         if response.text.startswith("Forward"):
-            await legend.edit(
+            await THANOSBOT.edit(
                 "`can you kindly disable your forward privacy settings for good?`"
             )
         else:
-            await legend.delete()
+            await THANOSBOT.delete()
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
@@ -71,7 +71,7 @@ async def _(event):
     if reply_message.sender.bot:
         await edit_or_reply(event, "Reply to actual мє∂ια message.😒🤐")
         return
-    legend = await edit_or_reply(event, "`Processing`")
+    THANOSBOT = await edit_or_reply(event, "`Processing`")
     async with event.client.conversation(chat) as conv:
         try:
             await conv.send_message("/start")
@@ -83,7 +83,7 @@ async def _(event):
         except YouBlockedUserError:
             await legend.edit("Please unblock @Lines50Bot and try again")
             return
-        await legend.delete()
+        await THANOSBOT.delete()
         await event.client.send_file(
             event.chat_id,
             pic,
