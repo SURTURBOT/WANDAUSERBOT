@@ -9,8 +9,8 @@ from userbot.cmdhelp import *
 from userbot.Config import Config
 from userbot.utils import *
 
-LEGEND_row = Config.BUTTONS_IN_HELP
-LEGEND_emoji = Config.HELP_EMOJI1
+THANOSBOT_row = Config.BUTTONS_IN_HELP
+THANOSBOT_emoji = Config.HELP_EMOJI1
 
 from . import *
 
