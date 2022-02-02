@@ -14,7 +14,7 @@ l2 = Config.SUDO_HANDLER
 THANOSBOT_PIC = "https://telegra.ph/file/bdf457aee34ed8791c150.jpg"
 l1 = Config.HANDLER
 
-perf = "[ Pro THANOSBOT ]"
+perf = "[ ＴＨΛＮ♢Ｓ－ＰＲ♢ ]"
 
 onbot = "start - Check if I am Alive \nping - Pong! \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
 
@@ -33,12 +33,12 @@ async def hekp():
     try:
         os.environ[
             "THANOS_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By PRO-THANOSBOT"
+        ] = "String Is A Sensitive Data \nSo Its Protected By ＴＨΛＮ♢Ｓ－ＰＲ♢"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
                 THANOSBOT_PIC,
-                caption=f"#Start\nPro-THANOSBOT Has Been Successfully Deployed \nClick Here ~ {Config.BOT_USERNAME}\nAny Query ~ @THANOSBOT_CHATS",
+                caption=f"#Start\n 💞ＴＨΛＮ♢Ｓ－ＰＲ♢ Has Been Successfully Deployed \nClick Here ~ {Config.BOT_USERNAME}\nAny Query ~ @THANOSBOT_CHATS",
             )
     except Exception as e:
         print(str(e))
