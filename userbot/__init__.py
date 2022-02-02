@@ -74,7 +74,7 @@ PRO = TelegramClient(
 
 
 bot = kbot = THANOSBOT
-tbot = THANOS
+tbot = THANOSBOT
 
 
 if not Config.API_HASH:
