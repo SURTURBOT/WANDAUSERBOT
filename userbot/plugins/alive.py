@@ -82,7 +82,7 @@ botname = Config.BOT_USERNAME
 @bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
 async def legend_a(event):
     try:
-        legend = await bot.inline_query(botname, "alive")
+        THANOSBOT = await bot.inline_query(botname, "alive")
         await THANOSBOT[0].click(event.chat_id)
         await event.delete()
         if event.sender_id == THANOSCEO:
