@@ -38,15 +38,15 @@ async def start(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     replied_user.user.first_name
     vent = event.chat_id
-    starttext = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered By [『Lêɠêɳ̃dẞø†』](https://t.me/Pro_LegendBots)"
+    starttext = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered By [THANOS-PRO](https://t.me/THANOSBOT_CHATS)"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
             message=f"Hi Sir/Miss, It's Me {bot_id}, Your Assistant ! \nHow Can I help U?",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/LegendBot_Pros"),
-                    Button.url(" Updates ", "https://t.me/Pro_LegendBots"),
+                    Button.url(" Support ", "https://t.me/THANOSBOT_CHATS"),
+                    Button.url(" Updates ", "https://t.me/THANOS_USERBOTS"),
                 ],
                 [
                     custom.Button.inline("Users", data="users"),
@@ -66,8 +66,8 @@ async def start(event):
             link_preview=False,
             buttons=[
                 [
-                    Button.url(" Repo ", "https://github.com/PROBOY-OP/PRO-LEGENDBOT"),
-                    Button.url(" Support ", "https://t.me/LegendBot_Pros"),
+                    Button.url(" Repo ", "https://github.com/THANOSUSER/THANOS-PRO"),
+                    Button.url(" Support ", "https://t.me/THANOSBOT_CHATS"),
                 ],
             ],
         )
@@ -77,7 +77,7 @@ async def start(event):
 async def users(event):
     if event.query.user_id == bot.uid:
         total_users = get_all_users()
-        users_list = "⚜List Of Total Users In Bot.⚜ \n\n"
+        users_list = "💞List Of Total Users In Bot.💔 \n\n"
         for starked in total_users:
             users_list += ("==> {} \n").format(int(starked.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
@@ -169,7 +169,7 @@ async def starkisnoob(event):
 
 @tgbot.on(events.NewMessage(pattern="^/help", func=lambda e: e.sender_id == bot.uid))
 async def starkislub(event):
-    grabonx = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /hack- hack anyone through string session \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
+    grabonx = "Hello Here Are Some Commands \n➤ /start - Check if THANOS IS ALIVE \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /hack- hack anyone through string session \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
     await event.reply(grabonx)
 
 
