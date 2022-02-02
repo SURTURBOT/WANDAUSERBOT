@@ -44,7 +44,7 @@ else:
 LOGS = getLogger(__name__)
 
 
-if Config.PRO_STRING:
+if Config.THANOS_STRING:
     session = StringSession(str(Config.THANOS_STRING))
 else:
     session = "THANOSBOT"
