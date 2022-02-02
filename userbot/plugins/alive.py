@@ -18,19 +18,19 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 from . import *
 
-THANOSBOT_IMG = "https://telegra.ph/file/153977a71b928874151a5.jpg"
+THANOSBOT_IMG = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
 CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@thanosbot_chats"
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="legend$"))
-@bot.on(sudo_cmd(pattern="legend$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="thanos$"))
+@bot.on(sudo_cmd(pattern="thanos$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
     reply_to_id = await reply_id(alive)
     uptime = get_readable_time((time.time() - StartTime))
     uptime = uptime
-    about = os.environ.get("ALIVE_EMOJI", None) or "✥"
+    about = os.environ.get("ALIVE_EMOJI", None) or "💞"
     if about is not None:
         b = about.split()
         c = []
@@ -39,9 +39,9 @@ async def amireallyalive(alive):
                 c.append(d)
         alive_emoji = random.choice(c)
     if THANOSBOT_IMG:
-        THANOSBOT_caption = f"**LegendBot is Up And Running**\n\n"
-        THANOSBOT_caption += f"      🔰Bot Status🔰 \n"
-        THANOSBOT_caption += f"{alive_emoji} **LegendBo† version**   ~ {THANOSBOTversion}\n"
+        THANOSBOT_caption = f"**тнαησѕ-ρяσ ιѕ αℓινє**\n\n"
+        THANOSBOT_caption += f"      💞тнαησѕ ѕтαтυѕ💞 \n"
+        THANOSBOT_caption += f"{alive_emoji} **тнαησs version**   ~ {THANOSBOTversion}\n"
         THANOSBOT_caption += (
             f"{alive_emoji} **Telethon version**   ~ `{version.__version__}`\n"
         )
@@ -64,11 +64,11 @@ async def amireallyalive(alive):
 msg = (
     gvarstatus("ALIVE_TEMPLATE")
     or f"""
-**  ⚜️ Lêɠêɳ̃dẞø† is Online ⚜️**
+**  ⚜️ тнαησѕ  is Online ⚜️**
      {Config.ALIVE_MSG}
     ** Bot Status **
 **🔰 Owner   :** **{Config.ALIVE_NAME}**
-**✨ LegendBot  :** {THANOSBOTversion}
+**✨ тнαησѕ  :** {THANOSBOTversion}
 **✨ Telethon  :** {version.__version__}
 **✨ Abuse    :**  {abuse_m}
 **✨ Sudo    :**  {is_sudo}
@@ -78,8 +78,8 @@ msg = (
 botname = Config.BOT_USERNAME
 
 
-@bot.on(admin_cmd(pattern="alive$"))
-@bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="fuck$"))
+@bot.on(admin_cmd(pattern="fuck$", allow_sudo=True))
 async def THANOSBOT_a(event):
     try:
         THANOSBOT = await bot.inline_query(botname, "alive")
@@ -91,19 +91,19 @@ async def THANOSBOT_a(event):
         await eor(event, msg)
 
 
-file1 = "https://te.legra.ph/file/2426eab17330c6e6310ea.mp4"
-file2 = "https://te.legra.ph/file/11ec9dd576ee5536125b2.jpg"
-file3 = "https://te.legra.ph/file/d2a5265abdc4e73af1f94.jpg"
-file4 = "https://te.legra.ph/file/d17467283e73c884834a5.jpg"
-file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+file1 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
+file2 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
+file3 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
+file4 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
+file5 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
 """=======================CONSTANTS====================== """
-pm_caption = f"**╭────────────**\n"
-pm_caption += f"┣✨ Owner   ~ {Config.ALIVE_NAME}\n"
-pm_caption += f"┣✨ Lêɠêɳ̃dẞø† ~ {THANOSBOTversion}\n"
-pm_caption += f"┣✨ ProBoy   ~ [Owner](https://t.me/Pro_Userboy)\n"
-pm_caption += f"┣✨ Support ~ [Group](https://t.me/LegendBot_Pros)\n"
-pm_caption += f"┣✨ Repo   ~ [Repo](https://github.com/PROBOY-OP/LegendBot)\n"
-pm_caption += f"**╰────────────**\n"
+pm_caption = f"**╭────⇌тнαησѕ⇋────**\n"
+pm_caption += f"┣❉ Owner   ~ {Config.ALIVE_NAME}\n"
+pm_caption += f"┣❉ тнαησѕ ~ {THANOSBOTversion}\n"
+pm_caption += f"┣❉ ProBoy   ~ [Owner](https://t.me/Pro_Userboy)\n"
+pm_caption += f"┣❉ Support ~ [Group](https://t.me/LegendBot_Pros)\n"
+pm_caption += f"┣❉ Repo   ~ [Repo](https://github.com/PROBOY-OP/LegendBot)\n"
+pm_caption += f"**╰────⇌тнαησѕ⇋────**\n"
 
 
 @borg.on(admin_cmd(pattern=r"about"))
