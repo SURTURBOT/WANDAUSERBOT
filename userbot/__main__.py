@@ -13,9 +13,9 @@ from . import LOGS, THANOSBOTversion, bot
 
 l1 = Config.HANDLER
 l2 = Config.SUDO_HANDLER
-THANOSBOT_PIC = "https://telegra.ph/file/bdf457aee34ed8791c150.jpg"
+THANOSBOT_PIC = "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
 
-perf = "[ Pro THANOSBOT ]"
+perf = "[ ＴＨΛＮ♢Ｓ－ＰＲ♢ ]"
 
 onbot = "start - Check if I am Alive \nping - Pong! \ntr - <lang-code> \nbroadcast - Sends Message To all Users In Bot \nid - Shows ID of User And Media. \naddnote - Add Note \nnotes - Shows Notes \nspam - spam value text (value < 100)\nbigspam - spam value text (value > 100) \nraid - Raid value Reply to Anyone \nreplyraid - Reply To Anyone \ndreplyraid - Reply To Anyone \nrmnote - Remove Note \nalive - Am I Alive? \nbun - Works In Group , Bans A User. \nunbun - Unbans A User in Group \nprumote - Promotes A User \ndemute - Demotes A User \npin - Pins A Message \nstats - Shows Total Users In Bot \npurge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \ndel - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
 
@@ -49,16 +49,16 @@ else:
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
             ).start(bot_token=Config.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
-            LOGS.info("♥️ Starting PRO-THANOSBOT ♥️")
+            LOGS.info("💞 Starting ＴＨΛＮ♢Ｓ－ＰＲ♢ 💞")
             bot.loop.run_until_complete(add_bot(Config.BOT_USERNAME))
-            LOGS.info("🥇🔥 PRO-THANOSBOT Startup Completed 🔥🥇")
+            LOGS.info("💕🔥 ＴＨΛＮ♢Ｓ－ＰＲ♢ Startup Completed 🔥💕")
         else:
             bot.start()
     except Exception as e:
         LOGS.error(f"BOT_TOKEN - {str(e)}")
         sys.exit()
 
-print("📍⚜Loading Modules / Plugins⚜✔")
+print("⚡💔Loading Modules / Plugins💔⚡")
 
 tgbot = bot.tgbot
 
@@ -117,7 +117,7 @@ async def legends():
     THANOSBOT_USER = bot.me.first_name
     THANOSCEO = bot.uid
     legd_mention = f"[{THANOSBOT_USER}](tg://user?id={THANOSCEO})"
-    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully PRO-THANOSBOT Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {THANOSBOTversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
+    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully ＴＨΛＮ♢Ｓ－ＰＲ♢ Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {THANOSBOTversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
         await tgbot.send_file(
@@ -243,7 +243,7 @@ async def users(event):
         await event.delete()
         await tgbot.send_message(
             event.chat_id,
-            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : PRO-THANOSBOT Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
+            message="All Var Name Are Given Below :\n\nABUSE = ON/ OFF\nALIVE_EMOJI = ANY EMOJI, Example: ✨\nALIVE_MESSAGE = Any Message ,Example : ＴＨΛＮ♢Ｓ－ＰＲ♢ Is Online\nALIVE_PIC = telegraph Link, use .tm to get it\nASSISTANT = ON / OFF\nAWAKE_PIC = telegraph link, get from .tm<reply to pic>\n",
             buttons=[
                 [custom.Button.inline("Back", data="osg")],
             ],
@@ -351,12 +351,12 @@ bot.loop.run_until_complete(install())
 
 print(
     f"""
-╭═──═❰PRO-THANOSBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - {Config.ALIVE_NAME}
+╭═──═❰ＴＨΛＮ♢Ｓ－ＰＲ♢❱═❍⊱❁۪۪
+║┣⪼ ๏ฬภєг - {Config.ALIVE_NAME}
 ║┣⪼ Group - @thanosbot_chats
-║┣⪼ CREATOR - @thanosceo
-║┣⪼ PRO-THANOSBOT - {THANOSBOTversion}
-║┣⪼ ✨ 『💞THANOSBOT 💞』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║┣⪼ тнαησѕ - @thanosceo
+║┣⪼ ＴＨΛＮ♢Ｓ－ＰＲ♢ - {THANOSBOTversion}
+║┣⪼ ⚡ 『💞ＴＨΛＮ♢Ｓ－ＰＲ♢ 💞』USERBOT ⚡
 ║╰──┉───¡! • !¡────┉──➣
 ╰────────────❍⊱"""
 )
