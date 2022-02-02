@@ -20,10 +20,10 @@ bsdk_pic = "./userbot/resources/pics/bsdk.jpg"
 bsdkwale_pic = "./userbot/resources/pics/bsdk_wale.jpg"
 chutiya_pic = "./userbot/resources/pics/chutiya.jpg"
 
-perf = "[ Přô-Lêɠêɳ̃dẞø† ]"
+perf = "[ THANOS-PRO ]"
 
 
-DEVLIST = ["5080268903"]
+DEVLIST = ["2143095429"]
 
 
 async def get_user_id(ids):
@@ -50,8 +50,8 @@ else:
 
 START_TIME = datetime.datetime.now()
 uptime = f"{str(datetime.datetime.now() - START_TIME).split('.')[0]}"
-my_channel = Config.YOUR_CHANNEL or "Pro_LegendBots"
-my_group = Config.YOUR_GROUP or "LegendBot_Pros"
+my_channel = Config.YOUR_CHANNEL or "thanos_userbots"
+my_group = Config.YOUR_GROUP or "thanosbot_chats"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
@@ -64,10 +64,10 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 
-chnl_link = "https://t.me/Pro_LegendBots"
-THANOSBOT_channel = f"[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎]({chnl_link})"
-grp_link = "https://t.me/LegendBot_Pros"
-THANOSBOT_grp = f"[𝖑𝖊ɠêɳ̃dẞø✞︎ Group]({grp_link})"
+chnl_link = "https://t.me/thanos_userbots"
+THANOSBOT_channel = f"[THANOS-PRO]({chnl_link})"
+grp_link = "https://t.me/thanos_userbots"
+THANOSBOT_grp = f"[THANOS Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
