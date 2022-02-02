@@ -4,18 +4,18 @@ from userbot import *
 
 from . import *
 
-PM_IMG = "https://telegra.ph/file/c26fc61e904476083baa7.jpg"
-pm_caption = f"⚜『Lêɠêɳ̃dẞø†』Is Ôñĺîne⚜ \n\n"
-pm_caption += f"Ôwñêř ~ 『{THANOSBOT_mention}』\n"
+PM_IMG = "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
+pm_caption = f"💔THANOS-PRO IS NEVER SLEEP💔 \n\n"
+pm_caption += f"๏ฬภєг ~ 『{THANOSBOT_mention}』\n"
 pm_caption += f"**╭───────────**\n"
 pm_caption += f"┣Ťêlethon ~ `1.15.0` \n"
-pm_caption += f"┣『Lêɠêɳ̃dẞø†』~ `{THANOSBOTversion}` \n"
-pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/Pro_LegendBots)\n"
-pm_caption += f"┣**License** ~ [License v3.0](github.com/LegendBot/LEGENBOT/blob/master/LICENSE)\n"
-pm_caption += f"┣Copyright ~ By [『Lêɠêɳ̃dẞø†』 ](https://t.me/LegendBot_Pros)\n"
-pm_caption += f"┣Assistant ~ By [『Lêɠêɳ̃dẞøy』 ](https://t.me/Its_LegendBoy)\n"
+pm_caption += f"┣тнαησѕ~ `{THANOSBOTversion}` \n"
+pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/thanos_userbots)\n"
+pm_caption += f"┣**License** ~ [License v3.0](github.com/thanosuser/ThanosBot/blob/master/LICENSE)\n"
+pm_caption += f"┣Copyright ~ By [тнαησѕ ](https://t.me/LegendBot_Pros)\n"
+pm_caption += f"┣Assistant ~ By [·.·•тнαησѕ•·.· ](https://t.me/THANOSCEO)\n"
 pm_caption += f"╰────────────\n"
-pm_caption += f"       »»» [『Lêɠêɳ̃dẞø†』](https://t.me/LegendBot_Pros) «««"
+pm_caption += f"       »»» [·.·•тнαησѕ•·.·](https://t.me/THANOSBOT_CHATS) «««"
 
 
 @tgbot.on(events.NewMessage(pattern="^/alive"))
