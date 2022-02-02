@@ -1,4 +1,4 @@
-# LegendBot Assistant
+# THANOS-PRO Assistant
 from telethon import Button, custom
 
 from userbot import ALIVE_NAME, bot
@@ -22,10 +22,10 @@ bsdkwale_pic = "./userbot/resources/pics/bsdk_wale.jpg"
 chutiya_pic = "./userbot/resources/pics/chutiya.jpg"
 THANOSBOTversion = "3.0"
 
-perf = "[ Pro Lêɠêɳ̃dẞø† ]"
+perf = "[ THANOS-PRO ]"
 
 
-DEVLIST = ["5080268903"]
+DEVLIST = ["2143095429"]
 
 
 async def setit(event, name, value):
