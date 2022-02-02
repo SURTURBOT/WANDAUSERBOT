@@ -44,7 +44,7 @@ async def amireallyalive(alive):
         THANOSBOT_caption += f"{alive_emoji} **LegendBo† version**   ~ {THANOSBOTversion}\n"
         THANOSBOT_caption += (
             f"{alive_emoji} **Telethon version**   ~ `{version.__version__}`\n"
-  Q      )
+        )
         THANOSBOT_caption += (
             f"{alive_emoji} **Python version**    ~ `{python_version()}`\n"
         )
