@@ -4,7 +4,7 @@ from userbot import *
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import admin_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOS"
 
 
 @borg.on(admin_cmd(outgoing=True, pattern="bufferedd( (.*)|$)"))
