@@ -76,7 +76,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("🔥⚡THANOSBOT⚡🔥 ~ " + shortname)
+        LOGS.info("🔥⚡ＴＨΛＮ♢Ｓ－ＰＲ♢⚡🔥 ~ " + shortname)
 
 
 def start_assistant(shortname):
@@ -88,8 +88,8 @@ def start_assistant(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        print("Starting Your Assistant Bot.")
-        print("Assistant Sucessfully imported " + shortname)
+        print("Starting thanos Assistant Bot.")
+        print("thanos Assistant Sucessfully imported " + shortname)
     else:
         path = Path(f"userbot/plugins/assistant/{shortname}.py")
         name = "userbot.plugins.assistant.{}".format(shortname)
@@ -98,7 +98,7 @@ def start_assistant(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
-        print("[🤴Assistant🤴 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
+        print("[💙тнαησѕ Assistant💙 4.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
 
 
 def start_spam(shortname):
@@ -114,8 +114,8 @@ def start_spam(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        print("Starting Your Spam Bot.")
-        print("SpamBot Sucessfully imported " + shortname)
+        print("Starting тнαησѕ Spam Bot.")
+        print("тнαησѕ SpamBot Sucessfully imported " + shortname)
     else:
         import importlib
         import sys
@@ -128,7 +128,7 @@ def start_spam(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["Spam" + shortname] = mod
-        print("[🔰Spam🔰 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
+        print("[💔тнαησѕ Spam💔 4.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
 
 
 def load_addons(shortname):
@@ -146,7 +146,7 @@ def load_addons(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("♦️Extra Plugin♦️ ~ " + shortname)
+        LOGS.info("💕тнαησѕ Extra Plugin💕 ~ " + shortname)
     else:
         import importlib
         import sys
@@ -185,7 +185,7 @@ def load_addons(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Xtra_Plugin." + shortname] = mod
-        LOGS.info("📍Extra Plugin📍 ~ " + shortname)
+        LOGS.info("💓тнαησѕ Extra Plugin💓 ~ " + shortname)
 
 
 def load_abuse(shortname):
@@ -203,7 +203,7 @@ def load_abuse(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("PRO-THANOSBOT-Abuse ~ " + shortname)
+        LOGS.info("THANOS-PRO-Abuse ~ " + shortname)
     else:
         import importlib
         import sys
@@ -239,7 +239,7 @@ def load_abuse(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Abuse." + shortname] = mod
-        LOGS.info("🔱PRO-THANOSBOT-Abuse🔱 ~ " + shortname)
+        LOGS.info("⚡THANOS-PRO-Abuse⚡ ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
@@ -659,7 +659,7 @@ def errors_handler(func):
             ftext += "\nyou may not report this error if you've"
             ftext += "\nany confidential data here, no one will see your data\n\n"
 
-            ftext += "--------BEGIN USERBOT TRACEBACK LOG--------"
+            ftext += "--------BEGIN THANOS USERBOT TRACEBACK LOG--------"
             ftext += "\nDate: " + date
             ftext += "\nGroup ID: " + str(errors.chat_id)
             ftext += "\nSender ID: " + str(errors.sender_id)
@@ -669,7 +669,7 @@ def errors_handler(func):
             ftext += str(traceback.format_exc())
             ftext += "\n\nError text:\n"
             ftext += str(sys.exc_info()[1])
-            ftext += "\n\n--------END USERBOT TRACEBACK LOG--------"
+            ftext += "\n\n--------END THANOS USERBOT TRACEBACK LOG--------"
 
             command = 'git log --pretty=format:"%an: %s" -5'
 
