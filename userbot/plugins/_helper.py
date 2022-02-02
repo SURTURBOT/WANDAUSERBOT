@@ -17,10 +17,9 @@ else:
     botname = f"@{mybot}"
 
 msg = f"""
-**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 𝙻𝚎𝚐𝚎𝚗𝚍𝙱𝚘𝚝 ⚜**
+**💞 LEGENDARY AF THANOS-PRO💞**
 
-  •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/PROBOY-OP/LegendBot)
-  •        [♦️ Deploy ♦️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FPROBOY-OP%2FPRO-LEGENDBOT&template=https%3A%2F%2Fgithub.com%2FPROBOY-OP%2FPRO-LEGENDBOT)
+  •        [💞 𝚁𝚎𝚙𝚘 💞](https://github.com/THANOSUSER/THANOS-PRO)
 
   •  ©️ {THANOSBOT_channel} ™
 """
@@ -69,7 +68,7 @@ async def _(event):
                 except YouBlockedUserError:
                     return await THANOSBOT.edit("Unblock @Botfather first.")
                 await THANOSBOT.edit(
-                    f"**Turned On Inline Mode Successfully.** \n\nDo `{l1}op` again to get the help menu."
+                    f"**thanos Turned On the Inline Mode Successfully.** \n\nDo `{l1}op` again to get the help menu."
                 )
             await bot.delete_messages(
                 conv.chat_id,
@@ -82,7 +81,7 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="op ?(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern="priya ?(.*)", outgoing=True))
 async def yardim(event):
     if event.fwd_from:
         return
@@ -153,13 +152,13 @@ async def _(event):
 
     logger.info(result)  # pylint:disable=E0602
 
-    await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву **Lêɠêɳ̃dẞø†** вσт")
+    await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву **THANOS** вσт")
 
 
 CmdHelp("helper").add_command("repo", None, "To Get Repo And Repl Link").add_command(
     "help", None, "To Get Help Menu"
 ).add_command(
-    "op", "<plugin name>", "To Get Detail About Plugin", "op alive"
+    "priya", "<plugin name>", "To Get Detail About Plugin", "priya alive"
 ).add_command(
     "ihelp", "<Pluggin Name>", "To get detail about any plugin"
 ).add()
