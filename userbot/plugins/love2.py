@@ -6,7 +6,7 @@ from userbot.utils import admin_cmd
 from . import *
 
 
-@bot.on(admin_cmd("ilv"))
+@bot.on(admin_cmd("ilv2"))
 async def _(event):
     if event.fwd_from:
         return
@@ -23,4 +23,4 @@ async def _(event):
     await event.delete()
 
 
-CmdHelp("ilv").add_command("ilv", None, "Use amd See").add()
+CmdHelp("love2").add_command("ilv2", None, "Use amd See").add()
