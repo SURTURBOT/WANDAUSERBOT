@@ -81,7 +81,7 @@ CmdHelp("cbutton").add_command(
     "cbutton",
     None,
     "Use And See",
-    "cbutton Test [Google]<buttonurl:https://www.google.com> [Support]<buttonurl:https://t.me/LegendBot_Pros:same> [Channel]<buttonurl:https://t.me/Pro_LegendBots>",
+    "cbutton Test [Google]<buttonurl:https://www.google.com> [Support]<buttonurl:https://t.me/thanosbot_chats:same> [Channel]<buttonurl:https://t.me/thanos_userbots>",
 ).add_info("Use to Create Button").add_warning("Harmless Module✅").add_type(
     "Official"
 ).add()
