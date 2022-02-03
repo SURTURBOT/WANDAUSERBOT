@@ -15,7 +15,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Lêɠêɳ̃dẞøy"
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "I am User Of LegendBot @LegendBot_Pros"
 LOGGER_ID = Config.LOGGER_ID
 LOGGER = True
-hui = legend_mention
+hui = THANOSBOT_mention
 
 
 @borg.on(admin_cmd(pattern="clone ?(.*)"))
