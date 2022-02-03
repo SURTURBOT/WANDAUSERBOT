@@ -18,7 +18,7 @@ class Development(Config):
   # After cloning the repo and installing requirements...
   # String session will be saved in your saved message of telegram.
   # Put that string here.
-  PRO_STRING = "Your value"
+  THANOS_STRING = "Your value"
 
   # Create a bot in @botfather and fill the following values with bot token and username.
   BOT_TOKEN = "Your value" #token
