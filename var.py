@@ -5,7 +5,7 @@ class Var(object):
     APP_ID = int(os.environ.get("APP_ID", 6))
     # 6 is a placeholder
     API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
-    PRO_STRING = os.environ.get("PRO_STRING", None)
+    THANOS_STRING = os.environ.get("THANOS_STRING", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", None)
     LOGGER = True
