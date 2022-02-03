@@ -1,4 +1,4 @@
-# LegendBot
+# THANOSBOTBot
 import asyncio
 from time import sleep
 
@@ -39,7 +39,7 @@ async def _(event):
     )
     if not result.participant.admin_rights.ban_users:
         return await eod(event, "No immunity for this action!!")
-    legend = await eor(event, "**Black Magics Started... Lets See**")
+    THANOSBOT = await eor(event, "**Black Magics Started... Lets See**")
     admins = await event.client.get_participants(
         event.chat_id, filter=ChannelParticipantsAdmins
     )
@@ -56,7 +56,7 @@ async def _(event):
         except Exception as e:
             LOGS.info(str(e))
             await asyncio.sleep(0.5)
-    await legend.edit("**Bleck Magik Done...🤣**")
+    await THANOSBOT.edit("**Bleck Magik Done...🤣**")
     await bot.send_message(
         Config.LOGGER_ID,
         f"#KICKALL \n\nKicked Out  `{success}`  of  `{total}`  members",
@@ -71,7 +71,7 @@ async def _(event):
     )
     if not result:
         return await eod(event, "Immunity Low!!")
-    legend = await eor(event, "**Bleck Magik Begins..**")
+    THANOSBOT = await eor(event, "**Bleck Magik Begins..**")
     admins = await event.client.get_participants(
         event.chat_id, filter=ChannelParticipantsAdmins
     )
@@ -90,7 +90,7 @@ async def _(event):
         except Exception as e:
             LOGS.info(str(e))
             await asyncio.sleep(0.5)
-    await legend.edit("**Bleck Magik Completed...**")
+    await THANOSBOT.edit("**Bleck Magik Completed...**")
     await bot.send_message(
         Config.LOGGER_ID,
         f"#BANALL \n\nSucessfully banned  `{success}`  out of  `{total}`  members!!",
@@ -175,7 +175,7 @@ async def _(event):
             if "m" in input_str:
                 status, e = await ban_user(event.chat_id, i, rights)
                 if not status:
-                    await eod(legend, "I need admin priveleges to perform this action!")
+                    await eod(THANOSBOT, "I need admin priveleges to perform this action!")
                     e.append(str(e))
                     break
                 else:
@@ -252,7 +252,7 @@ UserStatusOnline: {}
 UserStatusRecently: {}
 Bots: {}
 None: {}"""
-        await legend.edit(required_string.format(c, p, d, y, m, w, o, q, r, b, n))
+        await THANOSBOT.edit(required_string.format(c, p, d, y, m, w, o, q, r, b, n))
         await asyncio.sleep(5)
     await legend.edit(
         """Total: {} users
