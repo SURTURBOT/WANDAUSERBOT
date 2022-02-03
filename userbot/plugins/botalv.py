@@ -6,7 +6,7 @@ from userbot.utils import *
 
 # -------------------------------------------------------------------------------
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOS"
 
 ludosudo = Config.SUDO_USERS
 
@@ -15,9 +15,9 @@ if ludosudo:
 else:
     sudou = "False"
 
-legend = bot.uid
+THANOSBOT = bot.uid
 
-mention = f"[{DEFAULTUSER}](tg://user?id={legend})"
+mention = f"[{DEFAULTUSER}](tg://user?id={THANOSBOT})"
 
 
 PM_IMG = "https://telegra.ph/file/4f03f6d4e9521902eb57f.jpg"
