@@ -105,7 +105,7 @@ async def killer():
             await asyncio.sleep(1)
             await bot.send_message("@BotFather", botname)
             await asyncio.sleep(1)
-            await bot.send_file("@BotFather", "userbot/resources/pics/main.jpg")
+            await bot.send_file("@BotFather", "https://telegra.ph/file/bdf457aee34ed8791c150.jpg)
             await asyncio.sleep(2)
         except Exception as e:
             print(e)
@@ -119,7 +119,7 @@ async def legends():
     legd_mention = f"[{THANOSBOT_USER}](tg://user?id={THANOSCEO})"
     yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully ＴＨΛＮ♢Ｓ－ＰＲ♢ Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {THANOSBOTversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
-        TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
+        TRY = [[Button.inline("💙 Start 💙", data="start")]]
         await tgbot.send_file(
             bot.me.id, THANOSBOT_PIC, caption=yescaption, buttons=TRY, incoming=True
         )
