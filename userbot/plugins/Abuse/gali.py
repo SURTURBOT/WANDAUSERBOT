@@ -30,7 +30,7 @@ async def yashraid(event):
         await THANOSBOT.send_message(kek, "AUR GANND")
         await THANOSBOT.send_message(kek, "MAR MARKE")
         await THANOSBOT.send_message(kek, "EK KAR DIYAA")
-        await THANOSBOT.send_message(kek, "LEGEND MEMBER IS ALWAYS ON FIRE")
+        await THANOSBOT.send_message(kek, "THANOS MEMBER IS ALWAYS ON FIRE")
         await THANOSBOT.send_message(kek, "😂")
         await THANOSBOT.send_message(kek, "MADERRRRCHODDO")
         await THANOSBOT.send_message(kek, "TUM SABB KAA")
@@ -38,7 +38,7 @@ async def yashraid(event):
         await THANOSBOT.send_message(kek, "TUM SABB KAA")
         await THANOSBOT.send_message(kek, " BAAAP HAII")
         await THANOSBOT.send_message(
-            kek, "LEGEND HAI HM HMKO KAHTE H OP AUR BETE TUM LEGEND KE LAND KI TOPI"
+            kek, "THANOS HAI HM HMKO KAHTE H OP AUR BETE TUM THANOS KE LAND KI TOPI"
         )
         await THANOSBOT.send_message(kek, "😂")
         await THANOSBOT.send_message(kek, "TERI GAMD TOD DI JAYEGI MADDRCHOD")
@@ -174,7 +174,7 @@ async def yashraid(event):
         await THANOSBOT.send_message(kek, "KOOO CHOOOOOOODDDDD KRRR CHOD DIYAA GANDUUU")
         await THANOSBOT.send_message(
             kek,
-            "TELEGRAM ME RAHNA HAI TO LEGEND KO PAPA BOLNA PAREGA WARNA TUMHARII BHN XUDEGI AISE HI ROJ",
+            "TELEGRAM ME RAHNA HAI TO THANOS KO PAPA BOLNA PAREGA WARNA TUMHARII BHN XUDEGI AISE HI ROJ",
         )
 
 
