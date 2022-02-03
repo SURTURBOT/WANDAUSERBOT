@@ -8,17 +8,17 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 @bot.on(admin_cmd("gencc$"))
 @bot.on(sudo_cmd("gencc$", allow_sudo=True))
-async def _(LEGENDevent):
-    if LEGENDevent.fwd_from:
+async def _(THANOSBOTevent):
+    if THANOSBOTevent.fwd_from:
         return
-    LEGENDcc = Faker()
-    LEGENDname = LEGENDcc.name()
-    LEGENDadre = LEGENDcc.address()
-    LEGENDcard = LEGENDcc.credit_card_full()
+    THANOSBOTcc = Faker()
+    THANOSBOTname = THANOSBOTcc.name()
+    THANOSBOTadre = THANOSBOTcc.address()
+    THANOSBOTcard = THANOSBOTcc.credit_card_full()
 
     await edit_or_reply(
-        LEGENDevent,
-        f"__**👤 NAME :- **__\n`{LEGENDname}`\n\n__**🏡 ADDRESS :- **__\n`{LEGENDadre}`\n\n__**💸 CARD :- **__\n`{LEGENDcard}`",
+        THANOSBOTevent,
+        f"__**👤 NAME :- **__\n`{THANOSBOTname}`\n\n__**🏡 ADDRESS :- **__\n`{THANOSBOTadre}`\n\n__**💸 CARD :- **__\n`{THANOSBOTcard}`",
     )
 
 
@@ -27,7 +27,7 @@ async def _(LEGENDevent):
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    THANOSBOT_input = event.pattern_match.group(1)
     chat = "@szbinscheckerbot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
@@ -35,7 +35,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=2143004427)
             )
-            await event.client.send_message(chat, f"/bin {LEGEND_input}")
+            await event.client.send_message(chat, f"/bin {THANOSBOT_input}")
             response = await response
         except YouBlockedUserError:
             await event.reply("Please Unblock @szbinscheckerbot")
@@ -50,7 +50,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    THANOSBOT_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
@@ -58,7 +58,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=1247032902)
             )
-            await event.client.send_message(chat, f"/register {LEGEND_input}")
+            await event.client.send_message(chat, f"/register {THANOSBOT_input}")
             response = await response
         except YouBlockedUserError:
             await event.reply("Please Unblock @carol5_bot")
@@ -73,7 +73,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    THANOSBOT_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
@@ -81,7 +81,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=1247032902)
             )
-            await event.client.send_message(chat, f"/password {LEGEND_input}")
+            await event.client.send_message(chat, f"/password {THANOSBOT_input}")
             response = await response
         except YouBlockedUserError:
             await event.reply("Please Unblock @carol5_bot")
