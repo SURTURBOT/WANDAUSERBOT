@@ -73,7 +73,7 @@ CmdHelp("chnl downld").add_command(
     "getc",
     "<number of messg> <channel username>",
     "will download latest given number of media from channel into your bot server",
-    "getc 10 @Pro_LegendBots",
+    "getc 10 @thanosbot_chats",
 ).add_info(
     "Channel Media Download"
 ).add_warning(
