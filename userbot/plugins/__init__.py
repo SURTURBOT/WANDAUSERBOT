@@ -9,7 +9,7 @@ from userbot.plugins.sql_helper.globals import addgvar, delgvar, gvarstatus
 from userbot.utils import *
 
 THANOSBOT_USER = bot.me.first_name
-THANOS = bot.uid
+THANOSBOT = bot.uid
 THANOSBOT_mention = f"[{THANOSBOT_USER}](tg://user?id={THANOS})"
 
 gban_pic = "./userbot/resources/pics/gban.mp4"
