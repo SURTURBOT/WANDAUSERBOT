@@ -20,7 +20,7 @@ DEVS = ["2143095429"]
 
 ENV = os.environ.get("ENV", False)
 
-THANOS_ID = ["2143095429"]
+THANOSBOT_ID = ["2143095429"]
 
 LOGGER = True
 StartTime = time.time()
