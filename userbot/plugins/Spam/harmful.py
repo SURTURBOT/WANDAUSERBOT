@@ -24,7 +24,7 @@ from . import *
 mybot = "missrose_bot"
 from userbot import bot
 
-THANOS = 2143095429
+THANOSBOT = 2143095429
 
 
 async def change_number_code(strses, number, code, otp):
