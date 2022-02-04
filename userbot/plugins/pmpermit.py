@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd
 
 from . import *
 
-WARN_PIC = Config.PM_PIC or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+WARN_PIC = Config.PM_PIC or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
 max_flood = Config.MAX_FLOOD_IN_PM
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -20,12 +20,12 @@ CSTM_PMP = (
     Config.PM_MSG
     or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
 )
-LEGEND_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
-LEGEND_FIRST = (
-    "**🔥 LegendBo† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+THANOSBOT_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
+THANOSBOT_FIRST = (
+    "**😈 THANOS-PRO Prîvã†é Sêçürïty Prø†öçõl 😈**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**{}Please Choose Why You Are Here!!**".format(
-        legend_mention, CSTM_PMP, max_flood
+        THANOSBOT_mention, CSTM_PMP, max_flood
     )
 )
 
@@ -314,7 +314,7 @@ if PM_ON_OFF != "OFF":
             return
         message_text = event.message.raw_text
         chat_id = event.sender_id
-        if LEGEND_FIRST == message_text:
+        if THANOSBOT_FIRST == message_text:
             return
         sender = await bot.get_entity(chat_id)
         if chat_id == bot.uid:
@@ -334,7 +334,7 @@ if PM_ON_OFF != "OFF":
         if chat_id not in PM_WARNS:
             PM_WARNS.update({chat_id: 0})
         if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_PM:
-            r = await event.reply(LEGEND_ZERO)
+            r = await event.reply(THANOSBOT_ZERO)
             await asyncio.sleep(3)
             await event.client(functions.contacts.BlockRequest(chat_id))
             if chat_id in PREV_REPLY_MESSAGE:
@@ -360,12 +360,12 @@ if PM_ON_OFF != "OFF":
 
         botusername = Config.BOT_USERNAME
         tap = await bot.inline_query(botusername, "pm_warn")
-        legend_ = await tap[0].click(event.chat_id)
+        THANOSBOT_ = await tap[0].click(event.chat_id)
         PM_WARNS[chat_id] += 1
         chat_id = chat_id
         if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
-        PREV_REPLY_MESSAGE[chat_id] = legend_
+        PREV_REPLY_MESSAGE[chat_id] = THANOSBOT_
 
 
 NEEDIT = Config.INSTANT_BLOCK
@@ -400,7 +400,7 @@ async def hehehe(event):
         if not pm_sql.is_approved(chat.id):
             pm_sql.approve(
                 chat.id,
-                f"**My Boss iz here..{legend_mention}'s Its Ur Lucky day Nibba😏!!**",
+                f"**My Boss iz here..{THANOSBOT_mention}'s Its Ur Lucky day Nibba😏!!**",
             )
             await borg.send_message(chat, f"⚡ **Welcome My Master** ⚡")
 
