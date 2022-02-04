@@ -10,7 +10,7 @@ from userbot.utils import *
 
 THANOSBOT_USER = bot.me.first_name
 THANOSBOT = bot.uid
-THANOSBOT_mention = f"[{THANOSBOT_USER}](tg://user?id={THANOS})"
+THANOSBOT_mention = f"[{THANOSBOT_USER}](tg://user?id={THANOSBOT})"
 
 gban_pic = "./userbot/resources/pics/gban.mp4"
 main_pic = "./userbot/resources/pics/main.jpg"
