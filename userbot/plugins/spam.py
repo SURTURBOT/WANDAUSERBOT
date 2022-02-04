@@ -5,7 +5,7 @@ from userbot.Config import Config
 from userbot.plugins.sql_helper.globals import *
 from userbot.utils import admin_cmd, sudo_cmd
 
-from . import legend_mention
+from . import THANOSBOT_mention
 
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
