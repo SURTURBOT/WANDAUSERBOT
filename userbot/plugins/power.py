@@ -1,9 +1,9 @@
 import os
 import sys
 
-from userbot import HEROKU_APP, LEGENDversion, bot
+from userbot import HEROKU_APP, THANOSBOTversion, bot
 from userbot.cmdhelp import CmdHelp
-from userbot.helpers.runner import reload_LEGENDBOT
+from userbot.helpers.runner import reload_THANOSBOT
 from userbot.utils import admin_cmd, eor, sudo_cmd
 
 
@@ -16,7 +16,7 @@ async def _(event):
     await event.edit("Rєϐοοτιиg **[ ██░ ]** ...\nωαιτ ƒєω мιиυτє☢️")
     await event.edit("Rєϐοοτιиg **[ ███ ]** ...\nωαιτ ƒєω мιиυτєѕ☢️")
     await event.edit(
-        f"Rebooted LegendBot - {LEGENDversion} **[ ⚡ ]** ...\n**Type `.ping` or `.legend` after 5min to check if I am working**"
+        f"Rebooted THANOS-PRO - {THANOSBOTversion} **[ ⚡ ]** ...\n**Type `.ping` or `.THANOS` after 5min to check if I am working**"
     )
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -28,7 +28,7 @@ async def _(event):
     if event.fwd_from:
         return
     await event.edit(
-        "**[ ! ]** `⚰️Turning off bot now ... Manually turn me on later or follow step of update in @LegendBot_Pros` ಠ_ಠ"
+        "**[ ! ]** `⚰️Turning off thanos-Pro now ... Manually turn me on later or follow step of update in @thanos_userbots "
     )
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["userbot"].scale(0)
@@ -39,8 +39,8 @@ async def _(event):
 @bot.on(admin_cmd(pattern="reload$"))
 @bot.on(sudo_cmd(pattern="reload$", allow_sudo=True))
 async def rel(event):
-    await eor(event, "Reloading Lêɠêɳ̃dẞø†... Wait for few seconds...")
-    await reload_LEGENDBOT()
+    await eor(event, "Reloading THANOS-PRO... Wait for few seconds...")
+    await reload_THANOSBOT()
 
 
 CmdHelp("power").add_command(
