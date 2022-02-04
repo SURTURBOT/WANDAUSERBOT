@@ -71,33 +71,6 @@ def load_module(shortname):
         # support for PRO-THANOSBOT originals
         sys.modules["THANOSBOT.utils"] = userbot.utils
         sys.modules["THANOSBOT"] = userbot
-        # support for paperplaneextended
-        sys.modules["userbot.events"] = userbot.utils
-        spec.loader.exec_module(mod)
-      
-        path = Path(f"userbot/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.bot = THANOSBOT
-        mod.borg = bot
-        mod.THANOSBOT = THANOSBOT
-        mod.tbot = THANOSBOT
-        mod.THANOSBOT = THANOSBOT
-        mod.tgbot = bot.tgbot
-        mod.Var = Var
-        mod.command = command
-        mod.logger = logging.getLogger(shortname)
-        # support for uniborg
-        sys.modules["uniborg.util"] = userbot.utils
-        mod.Config = Config
-        mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
-        mod.admin_cmd = admin_cmd
-        mod.legend_cmd = admin_cmd
-        mod.sudo_cmd = sudo_cmd
-        # support for PRO-LEGENDBOT originals
         sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["LEGENDBOT"] = userbot
         # support for paperplaneextended
