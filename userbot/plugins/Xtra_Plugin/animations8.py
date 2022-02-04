@@ -130,9 +130,9 @@ async def _(event):
 
 @bot.on(sudo_cmd(pattern="istars$", allow_sudo=True))
 
-async def ammastar(LEGENDstar):
+async def ammastar(THANOSBOTstar):
 
-    if LEGENDstar.fwd_from:
+    if THANOSBOTstar.fwd_from:
 
         return
 
@@ -140,7 +140,7 @@ async def ammastar(LEGENDstar):
 
     animation_ttl = range(0, 11)
 
-    await edit_or_reply(LEGENDstar, "I am A Star")
+    await edit_or_reply(THANOSBOTstar, "I am A Star")
 
     animation_chars = [
 
@@ -160,7 +160,7 @@ async def ammastar(LEGENDstar):
 
         await asyncio.sleep(animation_interval)
 
-        await LEGENDstar.edit(animation_chars[i % 11])
+        await THANOSBOTstar.edit(animation_chars[i % 11])
 
 @bot.on(admin_cmd(pattern=r"lmoons", outgoing=True))
 
