@@ -79,11 +79,11 @@ def load_module(shortname):
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
+        mod.bot = THANOSBOT
         mod.borg = bot
         mod.PRO = PRO
         mod.tbot = PRO
-        mod.Legend = Legend
+        mod.THANOSBOT = THANOSBOT
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
