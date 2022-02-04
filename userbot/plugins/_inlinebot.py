@@ -126,7 +126,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     apn.append(y)
             HELP_MESSAGE = (
                 os.environ.get("HELP_MESSAGE", None)
-                or f"『{THANOSBOT_mention}』\n\n💕 𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 ⚡ `{len(CMD_HELP)}`\n💞 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⚡ `{len(apn)}`\n📖 Pαցҽ⭆ 1/{veriler[0]}"
+                or f"『{THANOSBOT_mention}』\n\n💕 ᵀᴼᵀᴬᴸ ᴹᴼᴰᵁᴸᴱˢ ᴵᴺˢᵀᴬᴸᴸᴱᴰ ⚡ `{len(CMD_HELP)}`\n💞 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⚡ `{len(apn)}`\n📖 Pαցҽ⭆ 1/{veriler[0]}"
             )
             if HELP_MESSAGE:
                 b = HELP_MESSAGE.split(", ")
@@ -137,7 +137,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 help_msg = random.choice(c)
             HELP_PIC = (
                 os.environ.get("HELP_PIC", None)
-                or "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+                or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
             )
             if HELP_PIC is not None:
                 b = HELP_PIC.split()
@@ -180,7 +180,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+                ALV_PIC = "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
             pp = Config.ALIVE_MSG
             if pp is not None:
                 b = pp.split(", ")
@@ -289,7 +289,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 THANOSBOT_pic = random.choice(c)
             else:
-                THANOSBOT_pic = "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+                THANOSBOT_pic = "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
             result = builder.photo(
                 file=THANOSBOT_pic,
                 text=lege_nd,
@@ -344,7 +344,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+                ALV_PIC = "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
