@@ -94,9 +94,9 @@ async def _(event):
 
             await event.client.send_read_acknowledge(conv.chat_id)
 
-@bot.on(admin_cmd(pattern="line ?(.*)"))
+@bot.on(admin_cmd(pattern="lines ?(.*)"))
 
-@bot.on(sudo_cmd(pattern="line ?(.*)", allow_sudo=True))
+@bot.on(sudo_cmd(pattern="lines ?(.*)", allow_sudo=True))
 
 async def _(event):
 
