@@ -17,7 +17,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 CARBONLANG = "auto"
 LANG = "en"
 
-from . import
+from . import *
 
 @bot.on(admin_cmd("^Eviral", incoming=True))
 async def piro(event):
