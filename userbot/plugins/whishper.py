@@ -1,4 +1,4 @@
-# Made by @Pro_Userboy for @LegendBot_Pros
+# Made by @THANOSCEO for @LUCYHELP
 
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import *
