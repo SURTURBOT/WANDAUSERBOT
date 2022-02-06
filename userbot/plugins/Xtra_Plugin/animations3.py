@@ -4,7 +4,7 @@ from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND user"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THAONS user"
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="kiler( (.*)|$)"))
