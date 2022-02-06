@@ -1,4 +1,4 @@
-
+#mode by LEGENDX-PRO
 
 echo """
  
