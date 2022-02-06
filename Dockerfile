@@ -68,3 +68,4 @@ WORKDIR /root/userbot/
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
 CMD ["bash","./THANOS/start.sh"]
+
