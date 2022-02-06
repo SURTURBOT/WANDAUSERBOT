@@ -9,9 +9,9 @@ from userbot.utils import sudo_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Your Lover"
 
-legend = LegendBot.uid
+THANOSBOT = THANOSBOT.uid
 
-LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
+THANOSBOT = f"[{DEFAULTUSER}](tg://user?id={THANOSBOT})"
 
 
 @bot.on(admin_cmd(pattern="hvd$"))
