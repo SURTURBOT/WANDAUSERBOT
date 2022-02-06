@@ -7,7 +7,7 @@ from userbot import *
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOS"
 
 
 @bot.on(admin_cmd(pattern=f"indflag$", outgoing=True))
