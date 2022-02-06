@@ -106,4 +106,4 @@ CmdHelp("zombies").add_command(
     "Addons"
 ).add()
 
-# LegendBot
+# THANOS-PRO
