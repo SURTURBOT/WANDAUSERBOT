@@ -51,7 +51,7 @@ async def _(event):
 @bot.on(admin_cmd(pattern=r"trc", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"trc", allow_sudo=True))
 async def _(THANOSBOT):
-    if LEGEND.fwd_from:
+    if THANOSBOT.fwd_from:
         return
     await edit_or_reply(
         THANOSBOT,
