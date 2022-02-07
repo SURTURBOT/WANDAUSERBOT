@@ -18,14 +18,14 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY or None
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
-UPSTREAM_REPO_BRANCH = "Pro"
+UPSTREAM_REPO_BRANCH = "THANOS"
 
 UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
 REPO_REMOTE_NAME = "temponame"
-IFFUCI_ACTIVE_BRANCH_NAME = "Pro"
+IFFUCI_ACTIVE_BRANCH_NAME = "THANOS"
 NO_HEROKU_APP_CFGD = "No Heroku App Found!"
-HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/Pro"
+HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/THANOS"
 RESTARTING_APP = "Restarting Heroku App..."
 IS_SELECTED_DIFFERENT_BRANCH = (
     "looks like a custom branch {branch_name} "
@@ -34,22 +34,22 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = Config.UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = "**The LegendBot** is up-to-date sir."
+BOT_IS_UP_TO_DATE = "**THANOS-PRO** is up-to-date sir."
 NEW_BOT_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating your LegendBot ..."
+    "updating your THANOS-PRO ..."
 )
 NEW_UP_DATE_FOUND = (
-    "New update found for {branch_name}\n" "`updating your LegendBot...`"
+    "New update found for {branch_name}\n" "`updating your THANOS-PRO...`"
 )
 REPO_REMOTE_NAME = "temponame"
-IFFUCI_ACTIVE_BRANCH_NAME = "Pro"
+IFFUCI_ACTIVE_BRANCH_NAME = "THANOS"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
 NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 
-PRO_LEGENDBOT_info = (
-    "https://raw.githubusercontent.com/LegendBot/PRO-USERBOT/Pro/proboy-info.json"
+THANOS-PRO_info = (
+    "https://raw.githubusercontent.com/SURTURBOT/THANOS-USERBOT/THANOS/THANOS-info.json"
 )
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 requirements_path = os.path.join(
@@ -57,13 +57,13 @@ requirements_path = os.path.join(
 )
 
 
-async def legend_info(PRO_LEGENDBOT_info):
-    infos = requests.get(PRO_LEGENDBOT_info).json()
-    _version = infos["LegendBot-INFO"]["version"]
-    _release = infos["LegendBot-INFO"]["release-date"]
-    _branch = infos["LegendBot-INFO"]["branch"]
-    _author = infos["LegendBot-INFO"]["author"]
-    _auturl = infos["LegendBot-INFO"]["author-url"]
+async def THANOSBOT_info(THANOS-PRO_info):
+    infos = requests.get(THANOS-PRO_info).json()
+    _version = infos["THANOSBOT-INFO"]["version"]
+    _release = infos["THANOSBOT-INFO"]["release-date"]
+    _branch = infos["THANOSBOT-INFO"]["branch"]
+    _author = infos["THANOSBOT-INFO"]["author"]
+    _auturl = infos["THANOSBOT-INFO"]["author-url"]
     return _version, _release, _branch, _author, _auturl
 
 
@@ -105,7 +105,7 @@ async def print_changelogs(event, ac_br, changelog):
             event.chat_id,
             "output.txt",
             reply_to=event.id,
-            thumb=legend_logo1,
+            thumb=THANOSBOT_logo1,
         )
         os.remove("output.txt")
     else:
@@ -138,7 +138,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "✅ Successfully updated Legendẞø†!\n\nBot is restarting please wait for a minute."
+        "✅ Successfully updated THANOS-PRO!\n\nBot is restarting please wait for a minute."
     )
     args = [sys.executable, "-m", "userbot"]
     os.execle(sys.executable, *args, os.environ)
@@ -154,7 +154,7 @@ async def upstream(event):
     force_update = False
     if HEROKU_API_KEY is None or HEROKU_APP_NAME is None:
         return await edit_or_reply(
-            event, "Set  `HEROKU_APP_NAME`  and  `HEROKU_API_KEY`  to update your bot 🥴"
+            event, "Set  `HEROKU_APP_NAME`  and  `HEROKU_API_KEY`  to update your THANOS-PRO 🥴"
         )
     try:
         txt = "😕 `Updater cannot continue due to some problems occured`\n\n**LOGTRACE:**\n"
@@ -177,14 +177,14 @@ async def upstream(event):
         origin = repo.create_remote("upstream", off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head("Pro", origin.refs.Pro)
-        repo.heads.Pro.set_tracking_branch(origin.refs.Pro)
-        repo.heads.Pro.checkout(True)
+        repo.create_head("THANOS", origin.refs.THANOS)
+        repo.heads.THANOS.set_tracking_branch(origin.refs.THANOS)
+        repo.heads.THANOS.checkout(True)
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
             f"`Looks like you are using your own custom git branch ( {ac_br} ). "
-            "Please checkout to official branch that is ( Pro )`"
+            "Please checkout to official branch that is ( THANOS )`"
         )
         return repo.__del__()
     try:
@@ -196,9 +196,9 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if changelog == "" and not force_update:
         await event.edit(
-            "\n**😎 Lêɠêɳ̃dẞø† is UP-TO-DATE.**"
-            f"\n\n**Version :**  {LEGENDversion}"
-            f"\n**Owner :**  {legend_mention}"
+            "\n**😎 THANOS-PRO is UP-TO-DATE.**"
+            f"\n\n**Version :**  {THANOSBOTversion}"
+            f"\n**Owner :**  {THANOSBOT_mention}"
             "\nRelease Date : 16 December 2021"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
         )
@@ -207,14 +207,14 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            f"🌚 Do `.update build` to update your **Legendẞø†** !!"
+            f"🌚 Do `.update build` to update your **THANOS-PRO** !!"
         )
 
     if force_update:
         await event.edit(
-            "\n**😎 Lêɠêɳ̃dẞø† is UP-TO-DATE.**"
-            f"\n\n**Version :**  {LEGENDversion}"
-            f"\n**Owner :**  {legend_mention}"
+            "\n**😎 THANOS-PRO is UP-TO-DATE.**"
+            f"\n\n**Version :**  {THANOSBOTversion}"
+            f"\n**Owner :**  {THANOSBOT_mention}"
             "\nRelease Date : 16 December 2021"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
         )
@@ -231,11 +231,11 @@ async def upstream(event):
         event,
         "`Hard-Update In Progress... \nPlease wait until docker build is finished...`",
     )
-    off_repo = "https://github.com/PROBOY-OP/LegendBot"
+    off_repo = "https://github.com/SURTURBOT/THANOS-PRO"
     os.chdir("/app")
-    git_legend = f"rm -rf .git"
+    git_THANOSBOT = f"rm -rf .git"
     try:
-        await runcmd(git_legend)
+        await runcmd(git_THANOSBOT)
     except BaseException:
         pass
     txt = "😕 `Updater cannot continue due to some problems occured`\n\n**LOGTRACE:**\n"
@@ -251,9 +251,9 @@ async def upstream(event):
         repo = Repo.init()
         origin = repo.create_remote("upstream", off_repo)
         origin.fetch()
-        repo.create_head("Pro", origin.refs.Pro)
-        repo.heads.Pro.set_tracking_branch(origin.refs.Pro)
-        repo.heads.Pro.checkout(True)
+        repo.create_head("THANOS", origin.refs.THANOS)
+        repo.heads.THANOS.set_tracking_branch(origin.refs.THANOS)
+        repo.heads.THANOS.checkout(True)
     try:
         repo.create_remote("upstream", off_repo)
     except BaseException:
@@ -262,10 +262,10 @@ async def upstream(event):
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     _version, _release, _branch, _author, _auturl = await legend_info(
-        PRO_LEGENDBOT_info
+        THANOS-PRO_info
     )
     await event.edit(
-        f"<b><i>Lêɠêɳ̃dẞø† Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>",
+        f"<b><i>THANOS-PRO Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>",
         link_preview=False,
         parse_mode="HTML",
     )
@@ -279,8 +279,8 @@ async def upstream(event):
         repo = git.Repo.init()
         origin = repo.create_remote(REPO_REMOTE_NAME, OFFICIAL_UPSTREAM_REPO)
         origin.fetch()
-        repo.create_head(IFFUCI_ACTIVE_BRANCH_NAME, origin.refs.Pro)
-        repo.heads.Pro.checkout(True)
+        repo.create_head(IFFUCI_ACTIVE_BRANCH_NAME, origin.refs.THANOS)
+        repo.heads.THANOS.checkout(True)
 
     active_branch_name = repo.active_branch.name
     if active_branch_name != IFFUCI_ACTIVE_BRANCH_NAME:
@@ -395,7 +395,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         else:
             remote = repo.create_remote("heroku", heroku_git_url)
         try:
-            remote.push(refspec="HEAD:refs/heads/Pro", force=True)
+            remote.push(refspec="HEAD:refs/heads/THANOS", force=True)
         except Exception as error:
             await event.edit(f"{txt}\n**Error log:**\n`{error}`")
             return repo.__del__()
@@ -405,7 +405,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         await event.edit(
-            f"**Your Lêɠêɳ̃dẞø† Is UpToDate**\n\n**Version :**  __{LEGENDversion}__\n**Oɯɳҽɾ :**  {legend_mention}"
+            f"**Your THANOS-PRO Is UpToDate**\n\n**Version :**  __{THANOSBOTversion}__\n**Oɯɳҽɾ :**  {THANOSBOT_mention}"
         )
     else:
         await event.edit(
