@@ -50,11 +50,11 @@ async def _(event):
 
 @bot.on(admin_cmd(pattern=r"trc", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"trc", allow_sudo=True))
-async def _(LEGEND):
+async def _(THANOSBOT):
     if LEGEND.fwd_from:
         return
     await edit_or_reply(
-        LEGEND,
+        THANOSBOT,
         "**•ALL COUNTRY LANGUAGE CODE CAN BE FOUND HERE** \n ⚡ [HERE](http://www.lingoes.net/en/translator/langcode.htm) ⚡",
     )
 
