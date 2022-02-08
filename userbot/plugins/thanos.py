@@ -3,8 +3,8 @@ import asyncio
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@bot.on(admin_cmd(pattern="thanos$", outgoing=True))
-@bot.on(sudo_cmd(pattern="thanos$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="thanosd$", outgoing=True))
+@bot.on(sudo_cmd(pattern="thanoss$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -26,4 +26,4 @@ async def _(event):
 
 from userbot.cmdhelp import CmdHelp
 
-CmdHelp("thanos").add_command("Thanos", None, "Use and See").add()
+CmdHelp("thanoss").add_command("Thanos", None, "Use and See").add()
