@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd, edit_or_reply, eor, sudo_cmd
 
 from . import THANOSBOT_mention
 
-LEGEND_NAME = Config.ALIVE_NAME or "Legendẞø†"
+THANOSBOT_NAME = Config.ALIVE_NAME or "THANOSBOT"
 lg_id = Config.LOGGER_ID
 
 telegraph = Telegraph()
