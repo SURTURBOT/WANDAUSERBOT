@@ -5,14 +5,14 @@ from userbot import ALIVE_NAME, bot
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import admin_cmd
 
-LEGEND = str(ALIVE_NAME) if ALIVE_NAME else "Du"
+THANOSBOT = str(ALIVE_NAME) if ALIVE_NAME else "Du"
 
 running_processes: dict = {}
 
 
 @bot.on(admin_cmd(pattern="term(?: |$|\n)([\s\S]*)"))
 async def dc(event):
-    await event.edit(f"{LEGEND}: Running Terminal.....")
+    await event.edit(f"{THANOSBOT}: Running Terminal.....")
     message = str(event.chat_id) + ":" + str(event.message.id)
     if running_processes.get(message, False):
         await event.edit("A process for this event is already running!")
@@ -22,7 +22,7 @@ async def dc(event):
         await event.edit(" Give a command or use .help terminal.")
         return
     if cmd in ("userbot.session", "env", "printenv"):
-        return await event.edit(f"{LEGEND}: Privacy Error, This command not permitted")
+        return await event.edit(f"{THANOSBOT}: Privacy Error, This command not permitted")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -46,7 +46,7 @@ async def dc(event):
         event.chat_id,
         "term.txt",
         reply_to=event.id,
-        caption=f"{LEGEND}: Output too large, sending as file",
+        caption=f"{THANOSBOT}: Output too large, sending as file",
     )
     os.remove("term.txt")
     return
