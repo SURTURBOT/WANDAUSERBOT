@@ -9,17 +9,17 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
 
-        await edit_or_reply(event, "`Testing LegendBot`")
+        await edit_or_reply(event, "`Testing THANOSBOT`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LegendBot.`")
+        await edit_or_reply(event, "`Testing THANOSBOT.`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LegendBot..`")
+        await edit_or_reply(event, "`Testing THANOSBOT..`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LegendBot...`")
+        await edit_or_reply(event, "`Testing THANOSBOT...`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LegendBot....`")
+        await edit_or_reply(event, "`Testing THANOSBOT....`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LegendBot.....`")
+        await edit_or_reply(event, "`Testing THANOSBOT.....`")
         await asyncio.sleep(2)
         await edit_or_reply(event, "__Testing Successful__")
         await asyncio.sleep(2)
@@ -27,11 +27,11 @@ async def _(event):
         await asyncio.sleep(2)
         await edit_or_reply(event, "__Output Generated Successfully__")
         await asyncio.sleep(2)
-        await edit_or_reply(event, "**SAVING OUTPUT TO LegendBot LOCAL DATABASE**")
+        await edit_or_reply(event, "**SAVING OUTPUT TO THANOSBOT LOCAL DATABASE**")
         await asyncio.sleep(3.5)
         await edit_or_reply(
             event,
-            "Your [LegendBot](https:/t.me/LegendBot_Pros) is working Fine...\n       Join @LegendBot_Pros For Any Help......",
+            "Your [THANOSBOT](https:/t.me/thanosbot_chats) is working Fine...\n       Join @thanosbot_chats For Any Help......",
         )
 
 
