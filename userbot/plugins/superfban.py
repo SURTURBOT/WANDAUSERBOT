@@ -15,7 +15,7 @@ from . import ALIVE_NAME
 
 naam = str(ALIVE_NAME)
 
-bots = "@PglRobot"
+bots = "@LUCY_MANAGER2_bot"
 
 LOGGER_ID = Config.LOGGER_ID
 
