@@ -53,7 +53,7 @@ async def _(event):
                     await event.client.forward_messages(event.chat_id, fedstat)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_bot `and retry!")
+                await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and retry!")
     else:
         async with event.client.conversation(bots) as conv:
             try:
@@ -69,11 +69,11 @@ async def _(event):
                     await event.client.forward_messages(event.chat_id, fedstat)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
+                await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and try again!")
 
 
-@bot.on(admin_cmd("pglinfo ?(.*)"))
-@bot.on(sudo_cmd("pglinfo ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("lucyinfo ?(.*)"))
+@bot.on(sudo_cmd("lucyinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -96,7 +96,7 @@ async def _(event):
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_bot `and retry!")
+                await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and retry!")
     else:
         async with event.client.conversation(bots) as conv:
             try:
@@ -107,7 +107,7 @@ async def _(event):
                 await event.client.forward_messages(event.chat_id, audio)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
+                await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and try again!")
 
 
 @bot.on(admin_cmd("superfinfo ?(.*)"))
@@ -126,7 +126,7 @@ async def _(event):
                 await event.client.forward_messages(event.chat_id, fedinfo)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_bot `and retry!")
+                await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and retry!")
     else:
         async with event.client.conversation(bots) as conv:
             try:
@@ -137,7 +137,7 @@ async def _(event):
                 await event.client.forward_messages(event.chat_id, fedinfo)
                 await event.delete()
             except YouBlockedUserError:
-                await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
+                await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and try again!")
 
 
 @bot.on(admin_cmd("supermyfeds ?(.*)"))
@@ -159,7 +159,7 @@ async def _(event):
                 await event.client.forward_messages(event.chat_id, myfed)
                 await event.delete()
         except YouBlockedUserError:
-            await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
+            await event.edit("**Error:** `unblock` @LUCY_MANAGER2_bot `and try again!")
 
 
 @bot.on(admin_cmd(pattern=r"superplist ?(.*)", outgoing=True))
@@ -357,7 +357,7 @@ async def _(event):
         chat = await event.get_chat()
     if not len(fedList):
         for a in range(3):
-            async with event.client.conversation("@PglRobot") as bot_conv:
+            async with event.client.conversation("@LUCY_MANAGER2_bot") as bot_conv:
                 await bot_conv.send_message("/start")
                 await bot_conv.send_message("/myfeds")
                 await asyncio.sleep(3)
@@ -450,7 +450,7 @@ async def _(event):
         chat = await event.get_chat()
     fedList = []
     for a in range(3):
-        async with event.client.conversation("@PglRobot") as bot_conv:
+        async with event.client.conversation("@LUCY_MANAGER2_bot") as bot_conv:
             await bot_conv.send_message("/start")
             await bot_conv.send_message("/myfeds")
             response = await bot_conv.get_response()
