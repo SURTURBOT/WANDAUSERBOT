@@ -15,7 +15,7 @@ async def stats(
     event: NewMessage.Event,
 ) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
-    LEGEND = await edit_or_reply(event, "`Collecting stats...`")
+    THANOSBOT = await edit_or_reply(event, "`Collecting stats wait...`")
     start_time = time.time()
     private_chats = 0
     bots = 0
@@ -63,22 +63,22 @@ async def stats(
         unread += dialog.unread_count
     stop_time = time.time() - start_time
     full_name = inline_mention(await event.client.get_me())
-    response = f"❣️**𝚂𝚝𝚊𝚝𝚜 𝙵𝚘𝚛  {full_name}**❣️\n\n"
-    response += f"🌷**Private stats** : {private_chats} \n"
-    response += f"🔥               **Users** : `{private_chats - bots}` \n"
-    response += f"🔥                 **Bots** : `{bots}` \n"
-    response += f"🔥              **Groups** : {groups} \n"
-    response += f"🔥           **Channels** : {broadcast_channels} \n"
-    response += f"♥️**Admins iи gяουρѕ** : {admin_in_groups} \n"
+    response = f"💞**ŞtคtŞ f໐r  {full_name}**💞\n\n"
+    response += f"⚡**Private stats** : {private_chats} \n"
+    response += f"✨               **Users** : `{private_chats - bots}` \n"
+    response += f"✨                 **Bots** : `{bots}` \n"
+    response += f"✨              **Groups** : {groups} \n"
+    response += f"✨           **Channels** : {broadcast_channels} \n"
+    response += f"⚡**ΛDMIП IП GЯӨЦPƧ** : {admin_in_groups} \n"
     response += f"             `Creator : {creator_in_groups}` \n"
-    response += f"     `Admin яιgнτѕ : {admin_in_groups - creator_in_groups}` \n"
-    response += f"♥️**Admin iи cнαииєℓѕ** : {admin_in_broadcast_channels} \n"
+    response += f"     `ǟɖʍɨռ ʀɨɢɦȶֆ : {admin_in_groups - creator_in_groups}` \n"
+    response += f"⚡**ΛDMIП IП ᄃΉΛППΣᄂƧ** : {admin_in_broadcast_channels} \n"
     response += f"                 `Creator : {creator_in_channels}` \n"
-    response += f"        `Admin яιgнτѕ : {admin_in_broadcast_channels - creator_in_channels}` \n"
-    response += f"⚜                 **Unread** : {unread} \n"
+    response += f"        `ǟɖʍɨռ ʀɨɢɦȶֆ : {admin_in_broadcast_channels - creator_in_channels}` \n"
+    response += f"⚡                 **Unread** : {unread} \n"
     response += f" **Unread мємτιοиѕ** : {unread_mentions} \n\n"
     response += f"       __ιτ τοοκ :__ {stop_time:.02f}s \n"
-    response += f"ƒɾσɱ ƭɦε ∂αƭαɓαรε σƒ:-[♥️𝖑𝖊ɠêɳ̃dẞø✞︎♥️](https://t.me/LegendBot_Pros)"
+    response += f"FЯӨM ƬΉΣ DΛƬΛBΛƧΣ ӨF:-[⚡•°тнαησѕ-ρяσ°•⚡](https://t.me/+cJG1PbKtpPVmNDg5)"
     await LEGEND.edit(response)
 
 
