@@ -82,14 +82,14 @@ async def sticklet(event):
         ((512 - width) / 2, (512 - height) / 2), sticktext, font=font, fill=(R, G, B)
     )
     image_stream = io.BytesIO()
-    image_stream.name = "LegendBot.webp"
+    image_stream.name = "THANOSBOT.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
     # finally, reply the sticker
     await event.client.send_file(
         event.chat_id,
         image_stream,
-        caption="Legend's Sticklet",
+        caption="THANOSBOT's Sticklet",
         reply_to=event.message.reply_to_msg_id,
     )
     # cleanup
