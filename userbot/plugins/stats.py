@@ -79,7 +79,7 @@ async def stats(
     response += f" **Unread мємτιοиѕ** : {unread_mentions} \n\n"
     response += f"       __ιτ τοοκ :__ {stop_time:.02f}s \n"
     response += f"FЯӨM ƬΉΣ DΛƬΛBΛƧΣ ӨF:-[⚡•°тнαησѕ-ρяσ°•⚡](https://t.me/+cJG1PbKtpPVmNDg5)"
-    await LEGEND.edit(response)
+    await THANOSBOT.edit(response)
 
 
 def make_mention(user):
