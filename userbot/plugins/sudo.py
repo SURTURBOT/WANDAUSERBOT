@@ -41,7 +41,7 @@ async def sudo(event):
 
 @bot.on(admin_cmd(pattern="addsudo(?: |$)"))
 async def add(event):
-    ok = await eor(event, "**⌛ Adding Sudo Users...**")
+    ok = await eor(event, "** Adding Sudo User wait...**")
     bot = "SUDO_USERS"
     if Config.HEROKU_APP_NAME is not None:
         app = Heroku.app(Config.HEROKU_APP_NAME)
@@ -67,7 +67,7 @@ async def add(event):
 
 @bot.on(admin_cmd(pattern="rmsudo"))
 async def remove_sudo(event):
-    Heroku = heroku3.from_key(LEGEND)
+    Heroku = heroku3.from_key(THANOSBOT)
     app = Heroku.app(LOP)
     heroku_var = app.config()
     if not event.is_reply:
@@ -98,7 +98,7 @@ async def remove_sudo(event):
 @bot.on(admin_cmd("listsudo"))
 async def sudolists(event):
     op = await event.edit("Checking All Sudos")
-    Heroku = heroku3.from_key(LEGEND)
+    Heroku = heroku3.from_key(THANOSBOT)
     app = Heroku.app(LOP)
     app.config()
     if not sudousers:
@@ -107,8 +107,8 @@ async def sudolists(event):
     sudoz = "**»Sudo List«**"
     for sudo in sudos:
         k = await bot.get_entity(int(sudo))
-        pro = f"\n[**Name:** {k.first_name} \n**Username:~** @{k.username or None}]\n"
-        sudoz += pro
+        THANOSBOT = f"\n[**Name:** {k.first_name} \n**Username:~** @{k.username or None}]\n"
+        sudoz += THANOSBOT
     await op.edit(sudoz)
 
 
