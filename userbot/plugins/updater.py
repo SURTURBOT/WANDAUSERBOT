@@ -48,7 +48,7 @@ IFFUCI_ACTIVE_BRANCH_NAME = "THANOS"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
 NO_HEROKU_APP_CFGD = "no heroku application found, but a key given? 😕 "
 
-THANOS-PRO_info = (
+THANOS_info = (
     "https://raw.githubusercontent.com/SURTURBOT/THANOS-USERBOT/THANOS/THANOS-info.json"
 )
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -57,8 +57,8 @@ requirements_path = os.path.join(
 )
 
 
-async def THANOSBOT_info(THANOS-PRO_info):
-    infos = requests.get(THANOS-PRO_info).json()
+async def THANOSBOT_info(THANOS_info):
+    infos = requests.get(THANOS_info).json()
     _version = infos["THANOSBOT-INFO"]["version"]
     _release = infos["THANOSBOT-INFO"]["release-date"]
     _branch = infos["THANOSBOT-INFO"]["branch"]
