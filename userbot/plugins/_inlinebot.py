@@ -99,7 +99,7 @@ def button(page, modules):
             custom.Button.inline(
                 f"⌫ ẞαƈƙ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
-            custom.Button.inline(f"🔥 ❌ 🔥", data="close"),
+            custom.Button.inline(f"⚡️ ❌ ⚡️", data="close"),
             custom.Button.inline(
                 f"ɳ̃êӿ† ⌦", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
@@ -126,7 +126,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     apn.append(y)
             HELP_MESSAGE = (
                 os.environ.get("HELP_MESSAGE", None)
-                or f"『{THANOSBOT_mention}』\n\n💕 ᵀᴼᵀᴬᴸ ᴹᴼᴰᵁᴸᴱˢ ᴵᴺˢᵀᴬᴸᴸᴱᴰ ⚡ `{len(CMD_HELP)}`\n💞 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⚡ `{len(apn)}`\n📖 Pαցҽ⭆ 1/{veriler[0]}"
+                or f"『{THANOSBOT_mention}』\n\n🔱 ᵀᴼᵀᴬᴸ ᴹᴼᴰᵁᴸᴱˢ ᴵᴺˢᵀᴬᴸᴸᴱᴰ 🔱 `{len(CMD_HELP)}`\n🔱 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 🔱 `{len(apn)}`\n🔱 Pαցҽ⭆ 1/{veriler[0]}"
             )
             if HELP_MESSAGE:
                 b = HELP_MESSAGE.split(", ")
@@ -565,7 +565,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
-                f"{THANOSBOT_mention}\n\n🍁 𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`\n⚡ 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⭆ `{len(apn)}`\n📖 Pαցҽ⭆ 1/{veriler[0]}\n",
+                f"『{THANOSBOT_mention}』\n\n🔱 ᵀᴼᵀᴬᴸ ᴹᴼᴰᵁᴸᴱˢ ᴵᴺˢᵀᴬᴸᴸᴱᴰ 🔱 `{len(CMD_HELP)}`\n🔱 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜 🔱 `{len(apn)}`\n🔱 Pαցҽ⭆ 1/{veriler[0]}\n",
                 buttons=veriler[1],
                 link_preview=False,
             )
