@@ -27,16 +27,16 @@ async def spammer(e):
 
 @bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
-async def bigspam(LEGEND):
-    if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
-        LEGEND_msg = LEGEND.text
-        PRO_LEGENDBOT_count = int(LEGEND_msg[9:13])
-        LEGEND_spam = str(LEGEND.text[13:])
-        for i in range(1, PRO_LEGENDBOT_count):
-            await LEGEND.respond(LEGEND_spam)
-        await LEGEND.delete()
-        if LOGGER:
-            await LEGEND.client.send_message(
+async def bigspam(THANOSBOT):
+    if not THANOSBOT.text[0].isalpha() and THANOSBOT.text[0] not in ("/", "#", "@", "!"):
+        THANOSBOT_msg = THANOSBOT.text
+        PRO_LEGENDBOT_count = int(THANOSBOT_msg[9:13])
+        THANOSBOT_spam = str(THANOSBOT.text[13:])
+        for i in range(1, THANOSBOT_count):
+            await THANOSBOT.respond(THANOSBOT_spam)
+        await THANOSBOT.delete()
+        if LOGGER:THANOSBOT.delete()
+            await THANOSBOT.client.send_message(
                 LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 
@@ -87,11 +87,11 @@ async def tiny_pic_spam(e):
         )
 
 
-@bot.on(admin_cmd("wspam (.*)"))
-@bot.on(sudo_cmd(pattern="wspam (.*)", allow_sudo=True))
+@bot.on(admin_cmd("rspam (.*)"))
+@bot.on(sudo_cmd(pattern="rspam (.*)", allow_sudo=True))
 async def spam(event):
     wspam = str("".join(event.text.split(maxsplit=1)[1:]))
-    message = wspam.split()
+    message = rspam.split()
     await event.delete()
     for word in message:
         await event.respond(word)
@@ -99,13 +99,13 @@ async def spam(event):
         if event.is_private:
             await event.client.send_message(
                 lg_id,
-                "#WSPAM\n"
+                "#RSPAM\n"
                 + f"Word Spam was executed successfully in [User](tg://user?id={event.chat_id}) chat with : `{message}`",
             )
         else:
             await event.client.send_message(
                 lg_id,
-                "#WSPAM\n"
+                "#RSPAM\n"
                 + f"Word Spam was executed successfully in {legend_mention} chat with : `{message}`",
             )
 
@@ -155,10 +155,10 @@ CmdHelp("spam").add_command(
     "cspam",
     "<sentence>",
     "Spam the chat with every letter in given sentence as new message",
-    "cspam LegendBot IS OP",
+    "cspam THANOSBOT IS OP",
 ).add_command(
-    "wspam",
+    "rspam",
     "<sentence>",
     "Spams the chat with every word in given sentence as new message",
-    "wspam LegendBot IS OP",
+    "rspam THANOSBOT IS OP",
 ).add()
