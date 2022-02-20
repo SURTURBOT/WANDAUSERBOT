@@ -20,9 +20,9 @@ from userbot.helpers.ffunctions.utils import get_readable_time
 from . import *
 
 DEFAULTUSER = alive_name = Config.ALIVE_NAME
-legend_row = Config.BUTTONS_IN_HELP
-legend_emoji1 = Config.HELP_EMOJI1 or "✥"
-legend_emoji2 = Config.HELP_EMOJI2 or "✥"
+thanos_row = Config.BUTTONS_IN_HELP
+thanos_emoji1 = Config.HELP_EMOJI1 or "✥"
+thanos_emoji2 = Config.HELP_EMOJI2 or "✥"
 mssge = cstm_pmp = (
     Config.PM_MSG
     or "I am Assistant Of My Owner\nI am Here To Protect My Owner From Scanner"
@@ -44,7 +44,7 @@ USER_BOT_WARN_ZERO = (
     "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blocked and Reported**"
 )
 
-LEGEND_FIRST = "__{}__\n**Please choose why u are here.** ♥️!!"
+THANOS_FIRST = "__{}__\n**Please choose why u are here.** ♥️!!"
 
 about = Config.ALIVE_EMOJI
 if about is not None:
@@ -63,8 +63,10 @@ alive_txt = (
          {}
 
          {}Bo† Status{}
-{} **LegendBo† version:** {}
+{} **ThanosPro-Bo† version:** {}
 {} **Telethon version :** {}
+{} **Python :** {}
+{} **Linux-Mix  :** {}
 {} **Uptime  :** {}
 {} **Abuse :** {}
 {} **ßudø  :** {}
@@ -74,7 +76,7 @@ alive_txt = (
 
 
 def button(page, modules):
-    Row = legend_row
+    Row = thanos_row
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::2], modules[1::2])))
@@ -87,7 +89,7 @@ def button(page, modules):
         buttons.append(
             [
                 custom.Button.inline(
-                    f"{legend_emoji1} " + pair + f" {legend_emoji2}",
+                    f"{thanos_emoji1} " + pair + f" {thanos_emoji2}",
                     data=f"Information[{page}]({pair})",
                 )
                 for pair in pairs
@@ -97,11 +99,11 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-                f"⌫ ẞαƈƙ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+                f"✘ ẞαƈƙ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
-            custom.Button.inline(f"🔥 ❌ 🔥", data="close"),
+            custom.Button.inline(f"💥 ✘ 💥", data="close"),
             custom.Button.inline(
-                f"ɳ̃êӿ† ⌦", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+                f"ɳ̃êӿ† ✘", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -117,7 +119,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "LEGENDBOT_help":
+        if event.query.user_id == bot.uid and query == "THANOSBOT_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
@@ -126,7 +128,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     apn.append(y)
             HELP_MESSAGE = (
                 os.environ.get("HELP_MESSAGE", None)
-                or f"『{legend_mention}』\n\n⭐ 𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 ⭆ `{len(CMD_HELP)}`\n🔥 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⭆ `{len(apn)}`\n📖 Pαցҽ⭆ 1/{veriler[0]}"
+                or f"『{thanos_mention}』\n\n𓆩༒©𝙼𝚘𝚍𝚞𝚕𝚎𝚜༒𓆪┣⪼ `{len(CMD_HELP)}`\n𓆩༒©𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜༒𓆪┣⪼⭆ `{len(apn)}`\n𓆩༒©Pαցҽ༒𓆪┣⪼ 1/{veriler[0]}"
             )
             if HELP_MESSAGE:
                 b = HELP_MESSAGE.split(", ")
@@ -164,7 +166,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 result = builder.article(
                     text="Check Group Inline Permission Or",
-                    title="LegendBot Alive",
+                    title="ThanosPro-Bot Alive",
                     buttons=veriler[1],
                     link_preview=False,
                 )
@@ -190,13 +192,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 Msg = random.choice(c)
             else:
-                Msg = " Pro LegendBot Is Up"
-            leg_end = alive_txt.format(
+                Msg = " Pro ThanosBot Is Up"
+            tha_nos = alive_txt.format(
                 Msg,
                 alive_emoji,
                 alive_emoji,
                 alive_emoji,
-                LEGENDversion,
+                THANOSversion,
                 alive_emoji,
                 version.__version__,
                 alive_emoji,
@@ -206,12 +208,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 alive_emoji,
                 is_sudo,
                 alive_emoji,
+                Python,
+                alive_emoji,
+                Linux-Mix
+                alive_emoji,
                 Config.BOY_OR_GIRL,
             )
             alv_btn = [
                 [
                     Button.url(
-                        f"{LEGEND_USER}", f"tg://openmessage?user_id={Pro_Userboy}"
+                        f"{THANOS_USER}", f"tg://openmessage?user_id={THANOS_BOY}"
                     )
                 ],
                 [
@@ -222,22 +228,22 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     ALV_PIC,
-                    text=leg_end,
+                    text=tha_nos,
                     buttons=alv_btn,
                     link_preview=False,
                 )
             elif ALV_PIC:
                 result = builder.document(
                     ALV_PIC,
-                    text=leg_end,
-                    title="LegendBot Alive",
+                    text=tha_nos,
+                    title="ThanosPro-Bot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
-                    text=leg_end,
-                    title="LegendBot Alive",
+                    text=tha_nos,
+                    title="ThanosPro-Bot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
@@ -245,7 +251,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             fsub_btn = [
                 [
                     Button.url(
-                        f"{LEGEND_USER}", f"tg://openmessage?user_id={Pro_Userboy}"
+                        f"{THANOS_USER}", f"tg://openmessage?user_id={THANOS_BOY}"
                     )
                 ],
                 [
@@ -279,7 +285,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     link_preview=False,
                 )
         elif event.query.user_id == bot.uid and query == "pm_warn":
-            lege_nd = LEGEND_FIRST.format(mssge)
+            than_os = THANOS_FIRST.format(mssge)
             PM_PIC = Config.PM_PIC
             if PM_PIC is not None:
                 b = PM_PIC.split()
@@ -287,12 +293,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 if len(b) >= 1:
                     for d in b:
                         c.append(d)
-                legend_pic = random.choice(c)
+                thanos_pic = random.choice(c)
             else:
-                legend_pic = "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+                thanos_pic = "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
             result = builder.photo(
-                file=legend_pic,
-                text=lege_nd,
+                file=thanos_pic,
+                text=than_os,
                 buttons=[
                     [
                         custom.Button.inline("📝 Request 📝", data="req"),
@@ -305,10 +311,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚜ Legendary Af Pro - LegendBot ⚜**",
+                text=f"**⚜ Legendary Af Pro - ThanosPro-Bot ⚜**",
                 buttons=[
                     [Button.url("♥️ Tutorial ♥", "https://youtu.be/9dQgdUJfk_k")],
-                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/PROBOY-OP/LegendBot")],
+                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/SURTURBOT/THANOS-USERBOT")],
                     [
                         Button.url(
                             "💞 Deploy 💞",
@@ -328,7 +334,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             buttons = [
                 (
-                    Button.url("Sources", "https://github.com/PROBOY-OP/PRO-LEGENDBOT"),
+                    Button.url("Sources", "https://github.com/SURTURBOT/THANOS-USERBOT"),
                     Button.url(
                         "Deploy",
                         "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FPROBOY-OP%2FPRO-LEGENDBOT&template=https%3A%2F%2Fgithub.com%2FPROBOY-OP%2FPRO-LEGENDBOT",
@@ -350,14 +356,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
             )
             text, msg_entities = await event.client._parse_message_text(
-                "𝗗𝗘𝗣𝗟𝗢𝗬 𝗬𝗢𝗨𝗥 𝗢𝗪𝗡 𝗣𝗥𝗢 𝗟𝗘𝗚𝗘𝗡𝗗 𝗕𝗢𝗧", "md"
+                "𝗗𝗘𝗣𝗟𝗢𝗬 𝗬𝗢𝗨𝗥 𝗢𝗪𝗡 𝗣𝗥𝗢 THANOS 𝗕𝗢𝗧", "md"
             )
             result = types.InputBotInlineResult(
                 id=str(uuid4()),
                 type="photo",
-                title="LEGENDBOT",
+                title="THANOSPRO-BOT",
                 description="Deploy yourself",
-                url="https://github.com/PROBOY-OP/PRO-USERBOT",
+                url="https://github.com/SURTURBOT/THANOS-USERBOT",
                 thumb=photo,
                 content=photo,
                 send_message=types.InputBotInlineMessageMediaAuto(
@@ -373,22 +379,22 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🔰 This is Pro-Lêɠêɳ̃dẞø† PM Security for {legend_mention} to keep away unwanted retards from spamming PM..."
+                f"🔰 This is Pro-Thanosẞø† PM Security for {legend_mention} to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
-    async def on_pm_click(legend):
-        if legend.query.user_id == bot.uid:
-            fck_bit = f"Oh! C'mon Master {legend_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+    async def on_pm_click(thanos):
+        if thanos.query.user_id == bot.uid:
+            fck_bit = f"Oh! C'mon Master {thanos_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+            await thanos.answer(fck_bit, cache_time=0, alert=True)
             return
-        await legend.get_chat()
-        legend.query.user_id
-        await legend.edit(
+        await thaons.get_chat()
+        thanos.query.user_id
+        await thanos.edit(
             "Oh You Wanna Talk With My Master\n\nPls Wait Dear \n\n**Btw** **You Can Wait For My Master**"
         )
         await asyncio.sleep(2)
-        await legend.edit(
+        await thanos.edit(
             "Which Type Of Request U Want?",
             buttons=[
                 [Button.inline("Register", data="school")],
@@ -397,37 +403,37 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         )
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"tg_okay")))
-    async def yeahbaba(legend):
-        if legend.query.user_id == bot.uid:
+    async def yeahbaba(thanos):
+        if thanos.query.user_id == bot.uid:
             fck_bit = f"Oh! C'mon Master.This Is for other users"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+            await thanos.answer(fck_bit, cache_time=0, alert=True)
         else:
-            await legend.edit(
-                f"✅ **Request Registered** \n\n{legend_mention} will now decide to talk with u or not\n😐 Till then wait patiently and don't spam!!"
+            await thanos.edit(
+                f"✅ **Request Registered** \n\n{thanos_mention} will now decide to talk with u or not\n😐 Till then wait patiently and don't spam!!"
             )
-            target = await legend.client(GetFullUserRequest(legend.query.user_id))
+            target = await thanos.client(GetFullUserRequest(legend.query.user_id))
             first_name = html.escape(target.user.first_name)
-            ok = legend.query.user_id
+            ok = thanos.query.user_id
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-                tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+                tosend = f"**👀 Hey {thanos_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
                 await bot.send_message(LOG_GP, tosend)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"school")))
-    async def yeahbaba(legend):
-        if legend.query.user_id == bot.uid:
+    async def yeahbaba(thanos):
+        if thanos.query.user_id == bot.uid:
             fck_bit = f"This Is For Other user"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+            await thanos.answer(fck_bit, cache_time=0, alert=True)
         else:
-            await legend.edit(
-                f"✅ **Request Registered** \n\n{legend_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
+            await thanos.edit(
+                f"✅ **Request Registered** \n\n{thanos_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
             )
-            target = await legend.client(GetFullUserRequest(legend.query.user_id))
+            target = await thanos.client(GetFullUserRequest(thanos.query.user_id))
             first_name = html.escape(target.user.first_name)
-            ok = legend.query.user_id
+            ok = thanos.query.user_id
             if first_name is not None:
                 first_name = first_name.replace("\u2060", "")
-            tosend = f"**👀 Hey {legend_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+            tosend = f"**👀 Hey {thanos_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
             await bot.send_message(LOG_GP, tosend)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
@@ -438,7 +444,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {legend_mention} to come. Till then keep patience and don't spam."
+                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {thanos_mention} to come. Till then keep patience and don't spam."
             )
             target = await event.client(GetFullUserRequest(event.query.user_id))
             ok = event.query.user_id
@@ -449,18 +455,18 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await bot.send_message(LOG_GP, tosend)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
-    async def on_pm_click(legend):
-        if legend.query.user_id == bot.uid:
-            fck_bit = f"Oh! C'mon Master{legend_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
-            await legend.answer(fck_bit, cache_time=0, alert=True)
+    async def on_pm_click(thanos):
+        if thanos.query.user_id == bot.uid:
+            fck_bit = f"Oh! C'mon Master{thanos_mention} Im Try To Get Rid Of This Nigga Pls Dont Touch"
+            await thanos.answer(fck_bit, cache_time=0, alert=True)
             return
-        await legend.get_chat()
-        legend_id = legend.query.user_id
-        await legend.edit("Okay let Me Think🤫")
+        await thanos.get_chat()
+        thanos_id = thanos.query.user_id
+        await thanos.edit("Okay let Me Think🤫")
         await asyncio.sleep(2)
-        await legend.edit("Okay Giving You A Chance🤨")
+        await thanos.edit("Okay Giving You A Chance🤨")
         await asyncio.sleep(2)
-        await legend.edit(
+        await thanos.edit(
             "Will You Spam?",
             buttons=[
                 [Button.inline("Yes", data="lemme_ban")],
@@ -469,54 +475,54 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         )
         await bot.send_message(
             LOG_GP,
-            message=f"Hello, Master  [Nibba](tg://user?id={legend_id}). Wants To Request Something.",
-            buttons=[Button.url("Contact Him", f"tg://user?id=legend_id")],
+            message=f"Hello, Master  [Nibba](tg://user?id={thanos_id}). Wants To Request Something.",
+            buttons=[Button.url("Contact Him", f"tg://user?id=thanos_id")],
         )
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hmm")))
-    async def yes_ucan(legend):
-        if legend.query.user_id == bot.uid:
+    async def yes_ucan(thanos):
+        if thanos.query.user_id == bot.uid:
             lmaoo = "You Are Not Requesting , Lol."
-            await legend.answer(lmaoo, cache_time=0, alert=True)
+            await thanos.answer(lmaoo, cache_time=0, alert=True)
             return
-        await legend.get_chat()
+        await thanos.get_chat()
         await asyncio.sleep(2)
-        legend.query.user_id
-        await legend.edit("Okay You Can Wait Till Wait")
+        thanos.query.user_id
+        await thanos.edit("Okay You Can Wait Till Wait")
         hmmmmm = "Okay Kindly wait  i will inform you"
         await bot.send_message(legend.query.user_id, hmmmmm)
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lemme_ban")))
-    async def yes_ucan(legend):
-        if legend.query.user_id == bot.uid:
+    async def yes_ucan(thanos):
+        if thanos.query.user_id == bot.uid:
             lmaoo = "You Are Not Requesting , Lol."
-            await legend.answer(lmaoo, cache_time=0, alert=True)
+            await thanos.answer(lmaoo, cache_time=0, alert=True)
             return
-        await legend.get_chat()
+        await thanos.get_chat()
         await asyncio.sleep(2)
-        legend_id = legend.query.user_id
-        await legend.edit("Get Lost Retard")
+        thanos_id = thanos.query.user_id
+        await thanos.edit("Get Lost Retard")
         ban = f"Pahli Fursat Me Nikal\nU Are Blocked"
-        await bot.send_message(legend.query.user_id, ban)
-        await bot(functions.contacts.BlockRequest(legend.query.user_id))
+        await bot.send_message(thanos.query.user_id, ban)
+        await bot(functions.contacts.BlockRequest(thanos.query.user_id))
         await bot.send_message(
             LOG_GP,
-            message=f"Hello, Master  [Nibba](tg://user?id={legend_id}). Has Been Blocked Due to Choose Spam",
-            buttons=[Button.url("Contact Him", f"tg://user?id=legend_id")],
+            message=f"Hello, Master  [Nibba](tg://user?id={thanos_id}). Has Been Blocked Due to Choose Spam",
+            buttons=[Button.url("Contact Him", f"tg://user?id=thanos_id")],
         )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
     async def on_pm_click(event):
         hunter = (event.data_match.group(2)).decode("UTF-8")
-        legend = hunter.split("+")
-        if not event.sender_id == int(legend[0]):
+        thanos = hunter.split("+")
+        if not event.sender_id == int(thanos[0]):
             return await event.answer("This Ain't For You!!", alert=True)
         try:
-            await bot(GetParticipantRequest(int(legend[1]), int(legend[0])))
+            await bot(GetParticipantRequest(int(thanos[1]), int(thanos[0])))
         except UserNotParticipantError:
             return await event.answer("You need to join the channel first.", alert=True)
         await bot.edit_permissions(
-            event.chat_id, int(legend[0]), send_message=True, until_date=None
+            event.chat_id, int(thanos[0]), send_message=True, until_date=None
         )
         await event.edit("Yay! You can chat now !!")
 
@@ -543,16 +549,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             veriler = custom.Button.inline(
-                f"{legend_emoji1} OPEN MENU {legend_emoji2}", data="reopen"
+                f"{thanos_emoji1} OPEN MENU {thanos_emoji2}", data="reopen"
             )
             await event.edit(
-                f"My Master {Config.ALIVE_NAME} has Been Closed Menu\n\n               [©️Lêɠêɳ̃dẞø†]({chnl_link})",
+                f"My Master {Config.ALIVE_NAME} has Been Closed Menu\n\n               [©️ThanosPro-ẞø†]({chnl_link})",
                 buttons=veriler,
                 link_preview=False,
             )
         else:
             await event.answer(
-                "Deploy Ur Own     ©Pro-Lêɠêɳ̃dẞø†", cache_time=0, alert=True
+                "Deploy Ur Own     ©Pro-Thanosẞø†", cache_time=0, alert=True
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
@@ -565,13 +571,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
-                f"{legend_mention}\n\n⭐ 𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`\n🔥 𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⭆ `{len(apn)}`\n📖 Pαցҽ⭆ 1/{veriler[0]}\n",
+                f"{thanos_mention}\n\n𓆩༒©𝙼𝚘𝚍𝚞𝚕𝚎𝚜༒𓆪┣⪼ `{len(CMD_HELP)}`\n𓆩༒©𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜༒𓆪┣⪼⭆ `{len(apn)}`\n𓆩༒©Pαցҽ༒𓆪┣⪼ 1/{veriler[0]}\n",
                 buttons=veriler[1],
                 link_preview=False,
             )
         else:
             return await event.answer(
-                "Deploy Ur Own  ©Pro-Lêɠêɳ̃dẞø†",
+                "Deploy Ur Own  ©Pro-Thanosẞø†",
                 cache_time=0,
                 alert=True,
             )
@@ -599,7 +605,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         buttons.append(
             [
                 custom.Button.inline(
-                    f"{legend_emoji1} Help Menu {legend_emoji2}", data=f"page({page})"
+                    f"{thanos_emoji1} Help Menu {thanos_emoji2}", data=f"page({page})"
                 )
             ]
         )
@@ -611,7 +617,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Deploy Ur Own. ©Pro-Lêɠêɳ̃dẞø†™",
+                "Deploy Ur Own. ©Pro-Thanosẞø†™",
                 cache_time=0,
                 alert=True,
             )
@@ -652,7 +658,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result,
                 buttons=[
                     custom.Button.inline(
-                        f"{legend_emoji1} Return {legend_emoji2}",
+                        f"{thanos_emoji1} Return {thanos_emoji2}",
                         data=f"Information[{page}]({cmd})",
                     )
                 ],
@@ -660,7 +666,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Deploy Ur Own ©Pro-Lêɠêɳ̃dẞø†™ ",
+                "Deploy Ur Own ©Pro-Thanosẞø†™ ",
                 cache_time=0,
                 alert=True,
             )
