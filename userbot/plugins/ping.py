@@ -7,10 +7,10 @@ from ..cmdhelp import CmdHelp
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
-legend = borg.uid
-LEGEND_IMG = os.environ.get(
-    "PING_PIC", "https://te.legra.ph/file/a59da36828333262c9848.jpg"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOS User"
+thanos = borg.uid
+THANOS_IMG = os.environ.get(
+    "PING_PIC", "https://te.legra.ph/file/26aa060c22fa187fc4255.jpg"
 )
 
 start = datetime.datetime.now()
@@ -71,11 +71,11 @@ async def _(event):
     if event.fwd_from:
         return
     event = await edit_or_reply(event, "**(❛ ᑭσɳց ❜!**")
-    if LEGEND_IMG:
-        legend_caption = (
-            f"**💞Pong💞**\n\n   🔸️ {ms}\n   🔹️ **𝙼𝚢** **𝙼𝚊𝚜𝚝𝚎𝚛** ~『{legend_mention}』"
+    if THANOS_IMG:
+        thanos_caption = (
+            f"**💞Pong💞**\n\n   🔸️ {ms}\n   🔹️ **𝙼𝚢** **𝙼𝚊𝚜𝚝𝚎𝚛** ~『{thaons_mention}』"
         )
-        await event.client.send_file(event.chat_id, LEGEND_IMG, caption=legend_caption)
+        await event.client.send_file(event.chat_id, THANOS_IMG, caption=thanos_caption)
         await event.delete()
 
 
