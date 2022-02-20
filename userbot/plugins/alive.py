@@ -69,6 +69,8 @@ msg = (
     ** Bot Status **
 **🔰 Owner   :** **{Config.ALIVE_NAME}**
 **✨ тнαησѕ  :** {THANOSBOTversion}
+**✨ Python   :**{[9.0.8](https://t.me/LEGENDHACKER_IIN)}
+**✨ Linux-Mix :**{[Linux](https://cdimage.kali.org/kali-images/kali-weekly/)}
 **✨ Telethon  :** {version.__version__}
 **✨ Abuse    :**  {abuse_m}
 **✨ Sudo    :**  {is_sudo}
