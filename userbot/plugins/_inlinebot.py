@@ -210,7 +210,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 alive_emoji,
                 Python,
                 alive_emoji,
-                Linux-Mix
+                Linux-Mix,
                 alive_emoji,
                 Config.BOY_OR_GIRL,
             )
