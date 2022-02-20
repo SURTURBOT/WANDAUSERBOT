@@ -34,14 +34,14 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = Config.UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = "**THANOS-PRO** is up-to-date sir."
+BOT_IS_UP_TO_DATE = "**Pro~ThanosBot V-9.0.8** is up-to-date sir. Wait a 5Min"
 NEW_BOT_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating your THANOS-PRO ..."
+    "On updating your Pro~ThanosBot ..."
 )
 NEW_UP_DATE_FOUND = (
-    "New update found for {branch_name}\n" "`updating your THANOS-PRO...`"
+    "New update found for {branch_name}\n" "`On updating your Pro~ThanosBot...`"
 )
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "THANOS"
@@ -138,7 +138,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "✅ Successfully updated THANOS-PRO!\n\nBot is restarting please wait for a minute."
+        "✅ Successfully updated Pro~ThanosBot !\n\nBot is restarting please wait for a minute."
     )
     args = [sys.executable, "-m", "userbot"]
     os.execle(sys.executable, *args, os.environ)
