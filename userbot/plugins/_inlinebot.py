@@ -89,7 +89,7 @@ def button(page, modules):
         buttons.append(
             [
                 custom.Button.inline(
-                    f"{thanos_emoji1} " + pair + f" {THANOSBOT_emoji2}",
+                    f"{THANOSBOT_emoji1} " + pair + f" {THANOSBOT_emoji2}",
                     data=f"Information[{page}]({pair})",
                 )
                 for pair in pairs
