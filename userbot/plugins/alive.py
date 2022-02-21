@@ -70,7 +70,7 @@ msg = (
 **🔰 Owner   :** **{Config.ALIVE_NAME}**
 **✨ тнαησѕ  :** {THANOSBOTversion}
 **✨ Python   :**{python_version}
-**✨ Linux-Mix :**{[Linux](https://cdimage.kali.org/kali-images/kali-weekly/)}
+**✨ Linux-Mix :**{python_version}
 **✨ Telethon  :** {version.__version__}
 **✨ Abuse    :**  {abuse_m}
 **✨ Sudo    :**  {is_sudo}
