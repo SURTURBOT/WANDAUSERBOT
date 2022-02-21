@@ -30,13 +30,13 @@ async def spammer(e):
 async def bigspam(THANOSBOT):
     if not THANOSBOT.text[0].isalpha() and THANOSBOT.text[0] not in ("/", "#", "@", "!"):
         THANOSBOT_msg = THANOSBOT.text
-        PRO_LEGENDBOT_count = int(THANOSBOT_msg[9:13])
+        THANOSBOT_count = int(THANOSBOT_msg[9:13])
         THANOSBOT_spam = str(THANOSBOT.text[13:])
         for i in range(1, THANOSBOT_count):
             await THANOSBOT.respond(THANOSBOT_spam)
         await THANOSBOT.delete()
         if LOGGER:THANOSBOT.delete()
-            await THANOSBOT.client.send_message(
+            await THANOS.client.send_message(
                 LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 
