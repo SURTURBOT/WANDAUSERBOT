@@ -36,7 +36,7 @@ async def bigspam(THANOSBOT):
             await THANOSBOT.respond(THANOSBOT_spam)
         await THANOSBOT.delete()
         if LOGGER:THANOSBOT.delete()
-            await THANOS.client.send_message(
+            await event.client.send_message(
                 LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 
