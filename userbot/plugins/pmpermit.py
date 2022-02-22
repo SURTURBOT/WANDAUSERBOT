@@ -38,7 +38,7 @@ async def approve_p_m(event):
         )
         firstname = replied_user.user.first_name
         if str(event.chat_id) in DEVLIST:
-            await eod(event, "**I can't block my creator !!**")
+            await eod(event, "**I can't block my OWNER RISHABH IS GOOD 😎 !!**")
             return
         if pm_sql.is_approved(event.chat_id):
             pm_sql.disapprove(event.chat_id)
@@ -57,7 +57,7 @@ async def approve_p_m(event):
         replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
         firstname = replied_user.user.first_name
         if str(reply_s.sender_id) in DEVLIST:
-            await eod(event, "**I can't Block My Creator !!**")
+            await eod(event, "**I can't Block My Owner rishabh !!**")
             return
         if pm_sql.is_approved(event.chat_id):
             pm_sql.disapprove(event.chat_id)
@@ -158,7 +158,7 @@ if PM_ON_OFF != "OFF":
             replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
             firstname = replied_user.user.first_name
             if str(reply_s.sender_id) in DEVLIST:
-                await eod(event, "**I can't Block My Creator !!**")
+                await eod(event, "**I can't Block My Owner rishabh!!**")
                 return
             if pm_sql.is_approved(event.chat_id):
                 pm_sql.disapprove(event.chat_id)
@@ -194,7 +194,7 @@ if PM_ON_OFF != "OFF":
                 await asyncio.sleep(3)
                 await event.delete()
             elif pm_sql.is_approved(chats.id):
-                hel_ = await event.edit("Already In Approved List!!")
+                hel_ = await event.edit("αℓяєα∂у ιη αρρяσνє∂ ℓιѕт!!")
                 await asyncio.sleep(3)
                 await hel_.delete()
         elif event.is_group:
@@ -227,7 +227,7 @@ if PM_ON_OFF != "OFF":
             chat = await event.get_chat()
             if str(event.chat_id) in DEVLIST:
                 await event.edit(
-                    "**Unable to disapprove this user. Seems like God !!**"
+                    "**Unable to disapprove RISHABH. Seems like God !!**"
                 )
                 return
             if pm_sql.is_approved(chat.id):
@@ -250,7 +250,7 @@ if PM_ON_OFF != "OFF":
                 return
             if str(reply_s.sender_id) in DEVLIST:
                 await event.edit(
-                    "**Unable to disapprove this user. Seems like God !!**"
+                    "**Unable to disapprove RISHABH. Seems like God !!**"
                 )
                 return
             if pm_sql.is_approved(reply_s.sender_id):
@@ -381,7 +381,7 @@ if NEEDIT == "ON":
         sender = await bot.get_entity(chat_id)
         if chat_id == bot.uid:
             return
-        if chat_id == 5080268903:
+        if chat_id == 2143095429:
             return
         if sender.bot:
             return
@@ -391,7 +391,7 @@ if NEEDIT == "ON":
             await bot(functions.contacts.BlockRequest(chat_id))
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(5080268903)))
+@bot.on(events.NewMessage(incoming=True, from_users=(2143095429)))
 async def hehehe(event):
     if event.fwd_from:
         return
@@ -402,7 +402,7 @@ async def hehehe(event):
                 chat.id,
                 f"**My Boss iz here..{THANOSBOT_mention}'s Its Ur Lucky day Nibba😏!!**",
             )
-            await borg.send_message(chat, f"⚡ **Welcome My Master** ⚡")
+            await borg.send_message(chat, f"⚡ **Welcome My Master rishabh** ⚡")
 
 
 CmdHelp("pm_permit").add_command(
