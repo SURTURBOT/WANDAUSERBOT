@@ -18,7 +18,7 @@ async def _(event):
         )
     if x == 2:
         await event.edit(
-            "DON'T TRY TO KNOW ABUOT ME I M LEGEND✌️ @Pro_Userboy\nfrom: @LegendBot_Pros"
+            "DON'T TRY TO KNOW ABUOT ME I M THANOS✌️ @THANOSCEO\nfrom: @THANOSCEO"
         )
     if x == 3:
         await event.edit(
