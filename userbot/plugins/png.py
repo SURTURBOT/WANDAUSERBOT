@@ -13,7 +13,7 @@ from userbot.utils import *
 
 from . import *
 
-LEGEND = [
+THANOSBOT = [
     "Wait Few Minute...",
     "Wait A Sec Processing...",
 ]
@@ -46,7 +46,7 @@ async def kang(args):
                 message.media.document.attributes[1].alt
                 emojibypass = True
         elif "tgsticker" in message.media.document.mime_type:
-            await args.edit(f"`{random.choice(LEGEND)}`")
+            await args.edit(f"`{random.choice(THANOSBOT)}`")
             await bot.download_file(message.media.document, "AnimatedSticker.tgs")
 
             attributes = message.media.document.attributes
@@ -84,9 +84,9 @@ async def kang(args):
 
         packname = f"{user.username}"
         packnick = (
-            f"{legend} Vol.{pack}"
-            if legend
-            else f"@{user.username}'s legend Vol.{pack}"
+            f"{THANOSBOT} Vol.{pack}"
+            if THANOSBOT
+            else f"@{user.username}'s THANOSBOT Vol.{pack}"
         )
         file = io.BytesIO()
         await args.delete()
