@@ -1,10 +1,5 @@
-# Made By @Pro_Userboy. Keep Credit if you are gonna copy paste it. LOL NOOBS....
-# Happy New Year plugin by Pro_Userboy for LegendBot
-# Kangers keep credits...
-# Now in LegendBot
-
-# credits to legend, john snow
-# credits to legend, john snow
+# credits to rishabh
+# credits to rishabh
 import asyncio
 import random
 
@@ -113,4 +108,4 @@ async def _(event):
 CmdHelp("new_year").add_command(
     "hny", None, "Wishes happy new year on behalf of you"
 ).add()
-# credits to legend, john snow
+# credits to rishabh
