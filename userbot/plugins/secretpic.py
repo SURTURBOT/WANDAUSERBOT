@@ -1,7 +1,7 @@
 from . import *
 
 
-@bot.on(admin_cmd(pattern="spic"))
+@bot.on(admin_cmd(pattern="sp"))
 async def oho(event):
     if not event.is_reply:
         return await event.edit("Reply to a self distructing pic !.!.!")
@@ -11,14 +11,14 @@ async def oho(event):
         event.chat_id,
         pic,
         caption=f"""
-  OwO!! LoL, Destruction Mode Pic Destroyed!!
-  Pic captured By Lêɠêɳ̃dẞø†
-🌚🌝
+  OwO!! LoL, Destruction Mode Pic Destroyed sed🤣🤣🤣!!
+  Pic captured By THANOSBOT
+😎😎
   """,
     )
     await event.delete()
 
 
 CmdHelp("secretpic").add_command(
-    "spic", "This Command Can Capture The Self Destruction Picture"
+    "sp", "This Command Can Capture The Self Destruction Picture"
 ).add_info("Capture 🤫 Pic.").add_warning("✅ Harmless Module.").add()
