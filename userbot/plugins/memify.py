@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 from . import *
 
-path = "./legendmify/"
+path = "./thanosbotmify/"
 if not os.path.isdir(path):
     os.makedirs(path)
 
@@ -32,7 +32,7 @@ async def _(event):
     legend = await _reply.download_media()
     if legend.endswith((".tgs")):
         legen_ = await eor(event, "**Memifying 🌚🌝**")
-        cmd = ["lottie_convert.py", legend, "pic.png"]
+        cmd = ["lottie_convert.py", THANOSBOT, "pic.png"]
         file = "pic.png"
         process = await asyncio.create_subprocess_exec(
             *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
@@ -47,7 +47,7 @@ async def _(event):
         file = "pic.png"
     else:
         await eor(event, "**Memifying 🌚🌝**")
-        img = cv2.VideoCapture(legend)
+        img = cv2.VideoCapture(THANOSBOT)
         tal, semx = img.read()
         cv2.imwrite("pic.png", semx)
         file = "pic.png"
@@ -57,7 +57,7 @@ async def _(event):
     )
     await legen_.delete()
     try:
-        os.remove(legend)
+        os.remove(THANOSBOT)
         os.remove(file)
     except BaseException:
         pass
@@ -68,7 +68,7 @@ async def _(event):
 @bot.on(sudo_cmd(pattern="doge(?: |$)(.*)", allow_sudo=True))
 async def nope(event):
     legend = event.pattern_match.group(1)
-    if not legend:
+    if not THANOSBOT:
         if event.is_reply:
             (await event.get_reply_message()).message
         else:
@@ -95,8 +95,8 @@ async def nope(event):
 @bot.on(admin_cmd(pattern="gg(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="gg(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
-    legend = kraken.pattern_match.group(1)
-    if not legend:
+    THANOSBOT = kraken.pattern_match.group(1)
+    if not THANOSBOT:
         if kraken.is_reply:
             (await kraken.get_reply_message()).message
         else:
@@ -124,7 +124,7 @@ async def nope(kraken):
 @bot.on(sudo_cmd(pattern="honk(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     legend = kraken.pattern_match.group(1)
-    if not legend:
+    if not THANOSBOT:
         if kraken.is_reply:
             (await kraken.get_reply_message()).message
         else:
@@ -187,8 +187,8 @@ async def _(event):
     if not (_reply and (_reply.media)):
         legen_ = await eod(event, "`Can't memify this 🥴`")
         return
-    legend = await _reply.download_media()
-    if legend.endswith((".tgs")):
+    THANOSBOT = await _reply.download_media()
+    if THANOSBOT.endswith((".tgs")):
         legen_ = await eor(event, "**Memifying 🌚🌝**")
         cmd = ["lottie_convert.py", legend, "pic.png"]
         file = "pic.png"
@@ -205,7 +205,7 @@ async def _(event):
         file = "pic.png"
     else:
         legen_ = await eor(event, "**Memifying 🌚🌝**")
-        img = cv2.VideoCapture(legend)
+        img = cv2.VideoCapture(THANOSBOT)
         tal, semx = img.read()
         cv2.imwrite("pic.png", semx)
         file = "pic.png"
