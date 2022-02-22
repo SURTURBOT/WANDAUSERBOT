@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 # ================= CONSTANT =================
 
 
-LEGENDOSTR = [
+THANOSBOTOSTR = [
     "`Hi !`",
     "`‘Ello, gov'nor!`",
     "`What’s crackin’?`",
@@ -111,7 +111,7 @@ async def cri(e):
 async def hoi(hello):
     """Greet everyone!"""
     if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
-        await edit_or_reply(hello, random.choice(LEGENDOSTR))
+        await edit_or_reply(hello, random.choice(THANOSBOTOSTR))
 
 
 @bot.on(admin_cmd(pattern="shrug$", outgoing=True))
