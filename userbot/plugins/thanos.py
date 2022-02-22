@@ -3,7 +3,7 @@ import asyncio
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@bot.on(admin_cmd(pattern="thanosd$", outgoing=True))
+@bot.on(admin_cmd(pattern="thanoss$", outgoing=True))
 @bot.on(sudo_cmd(pattern="thanoss$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -12,7 +12,7 @@ async def _(event):
     animation_ttl = range(0, 16)
     #  input_str = event.pattern_match.group(1)
     #   if input_str == "thanos":
-    await edit_or_reply(event, "Thanos")
+    await edit_or_reply(event, "Thanoss")
     animation_chars = [
         "JINGLE BELLS",
         "THANOS SMELL LOKI NECKED SNAPPED AWAY",
@@ -26,4 +26,4 @@ async def _(event):
 
 from userbot.cmdhelp import CmdHelp
 
-CmdHelp("thanoss").add_command("Thanos", None, "Use and See").add()
+CmdHelp("thanoss").add_command("Thanoss", None, "Use and See").add()
