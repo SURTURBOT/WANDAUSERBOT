@@ -2,9 +2,9 @@ from userbot.cmdhelp import CmdHelp
 from userbot.utils import *
 
 
-@bot.on(admin_cmd(pattern=r"shout", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"shout", allow_sudo=True))
-async def shout(args):
+@bot.on(admin_cmd(pattern=r"shouts", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"shouts", allow_sudo=True))
+async def shouts(args):
     if args.fwd_from:
         return
     else:
@@ -23,6 +23,6 @@ async def shout(args):
         await args.edit("`" + msg + "`")
 
 
-CmdHelp("shout").add_command(
-    "shout", "<text>", "Shouts your message in meme way.", ".shout hello"
+CmdHelp("shouts").add_command(
+    "shouts", "<text>", "Shouts your message in meme way.", ".shouts Thanos"
 ).add()
