@@ -36,8 +36,8 @@ from userbot.utils import admin_cmd, edit_or_reply, progress, sudo_cmd
 @bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(aura):
-    LEGEND = aura.pattern_match.group(1)
-    if not LEGEND:
+    THANOSBOT = aura.pattern_match.group(1)
+    if not THANOSBOT:
         if aura.is_reply:
             (await aura.get_reply_message()).message
         else:
@@ -46,7 +46,7 @@ async def nope(aura):
             )
             return
 
-    troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(LEGEND))}")
+    troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(THANOSBOT))}")
 
     await troll[0].click(
         aura.chat_id,
@@ -228,7 +228,7 @@ async def _(event):
         event.chat_id,
         f"{hell_data['id']}.mp4",
         supports_streaming=True,
-        caption=f"**✘ Video :** `{title}` \n\n**✘ By :** {legend_mention}",
+        caption=f"**✘ Video :** `{title}` \n\n**✘ By :** {THANOSBOT_mention}",
         thumb=thumb_name,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
             progress(d, t, event, c_time, "Uploading..", f"{hell_data['title']}.mp4")
@@ -381,7 +381,7 @@ async def _(event):
             await borg.send_file(
                 event.chat_id,
                 songh,
-                caption="🔆**Here's the requested song!**🔆\n`Check out` [LegendBot](https://t.me/LEGENDSupport)",
+                caption="🔆**Here's the requested song!**🔆\n`Check out` [THANOSBOT](https://t.me/+cJG1PbKtpPVmNDg5)",
             )
             await event.delete()
         except YouBlockedUserError:
