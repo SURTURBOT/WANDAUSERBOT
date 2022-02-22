@@ -72,7 +72,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=1031952739)
             )
-            await conv.send_message(f"/qcolor {LEGEND}")
+            await conv.send_message(f"/qcolor {THANOSBOT}")
             await asyncio.sleep(4)
             await bot.forward_messages(chat, reply_message)
             response = await response
