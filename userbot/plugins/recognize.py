@@ -24,7 +24,7 @@ async def _(event):
     if reply_message.sender.bot:
         await edit_or_reply(event, "Reply to actual users message.")
         return
-    LEGEND = await edit_or_reply(event, "recognizeing this media")
+    THANOSBOT = await edit_or_reply(event, "recognizeing this media")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -34,15 +34,15 @@ async def _(event):
             response = await response
         except YouBlockedUserError:
             await event.reply("unblock @Rekognition_Bot and try again")
-            await LEGEND.delete()
+            await THANOSBOT.delete()
             return
         if response.text.startswith("See next message."):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=461083923)
             )
             response = await response
-            LEGEND = response.message.message
-            await edit_or_reply(event, LEGEND)
+            THANOSBOT = response.message.message
+            await edit_or_reply(event, THANOSBOT)
 
         else:
             await edit_or_reply(event, "sorry, I couldnt find it")
