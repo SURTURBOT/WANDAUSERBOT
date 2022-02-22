@@ -129,7 +129,7 @@ async def parse_ocr_space_api(event):
     except Exception as e:
         await edit_or_reply(
             event,
-            "Errors.\n `{}`\nReport This to @LegendBot_Pros\n\n`{}`".format(
+            "Errors.\n `{}`\nReport This to @thanos_pro\n\n`{}`".format(
                 str(e), json.dumps(test_file, sort_keys=True, indent=4)
             ),
         )
