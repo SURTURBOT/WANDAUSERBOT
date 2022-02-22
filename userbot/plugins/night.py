@@ -15,7 +15,7 @@ USER_night = {}
 night_time = None
 last_night_message = {}
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT"
 
 
 @borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
