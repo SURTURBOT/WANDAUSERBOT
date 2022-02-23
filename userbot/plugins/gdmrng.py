@@ -19,7 +19,7 @@ async def xd(event):
             except:
                 lol += 1
     await event.reply(
-        f"I hope your morning is as bright and gorgeous as your smile.[Lêɠêɳ̃dẞø†](https://t.me/Pro_LegendBots)"
+        f"I hope your morning is as bright and gorgeous as your smile.[Շђคภ๏ร๒๏ץ ](https://t.me/+cJG1PbKtpPVmNDg5)"
     )
 
 
@@ -41,7 +41,7 @@ async def xd(event):
             except:
                 lol += 1
     await event.reply(
-        f"I hope your morning is as bright and gorgeous as your smile.[Lêɠêɳ̃dẞø†](https://t.me/Pro_LegendBots)"
+        f"I hope your morning is as bright and gorgeous as your smile.[Շђคภ๏ร๒๏ץ ](https://t.me/+cJG1PbKtpPVmNDg5)"
     )
 
 
