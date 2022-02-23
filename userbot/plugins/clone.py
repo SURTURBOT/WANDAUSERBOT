@@ -10,9 +10,9 @@ from userbot.utils import admin_cmd
 
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Lêɠêɳ̃dẞøy"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Շђคภ๏ร๒๏ץ"
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "I am User Of LegendBot @LegendBot_Pros"
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "I am User Of THANOSBOT"
 LOGGER_ID = Config.LOGGER_ID
 LOGGER = True
 hui = THANOSBOT_mention
