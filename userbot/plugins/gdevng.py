@@ -19,7 +19,7 @@ async def xd(event):
             except:
                 lol += 1
     await event.reply(
-        f"Good evening! I hope you had a good and productive day. Cheer up![Lêɠêɳ̃dẞø†](https://t.me/LegendBot_Pros"
+        f"Good evening! I hope you had a good and productive day. Cheer up![THANOSBOT](https://t.me/+cJG1PbKtpPVmNDg5"
     )
 
 
