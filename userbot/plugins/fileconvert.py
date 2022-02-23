@@ -25,13 +25,13 @@ if not os.path.isdir("./temp"):
 
 @bot.on(admin_cmd(pattern="stim$"))
 @bot.on(sudo_cmd(pattern="stim$", allow_sudo=True))
-async def _(LEGEND):
-    if LEGEND.fwd_from:
+async def _(THANOSBOT):
+    if THANOSBOT.fwd_from:
         return
-    reply_to_id = LEGEND.message.id
-    if LEGEND.reply_to_msg_id:
-        reply_to_id = LEGEND.reply_to_msg_id
-    event = await edit_or_reply(LEGEND, "Converting.....")
+    reply_to_id = THANOSBOT.message.id
+    if THANOSBOT.reply_to_msg_id:
+        reply_to_id = THANOSBOT.reply_to_msg_id
+    event = await edit_or_reply(THANOSBOT, "Converting.....")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -40,11 +40,11 @@ async def _(LEGEND):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await LEGEND.client.download_media(
+        downloaded_file_name = await THANOSBOT.client.download_media(
             reply_message, downloaded_file_name
         )
         if os.path.exists(downloaded_file_name):
-            caat = await LEGEND.client.send_file(
+            caat = await THANOSBOT.client.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -60,13 +60,13 @@ async def _(LEGEND):
 
 @bot.on(admin_cmd(pattern="itom$"))
 @bot.on(sudo_cmd(pattern="itom$", allow_sudo=True))
-async def _(LEGEND):
-    if LEGEND.fwd_from:
+async def _(THANOSBOT):
+    if THANOSBOT.fwd_from:
         return
-    reply_to_id = LEGEND.message.id
-    if LEGEND.reply_to_msg_id:
-        reply_to_id = LEGEND.reply_to_msg_id
-    event = await edit_or_reply(LEGEND, "Converting.....")
+    reply_to_id = THANOSBOT.message.id
+    if THANOSBOT.reply_to_msg_id:
+        reply_to_id = THANOSBOT.reply_to_msg_id
+    event = await edit_or_reply(THANOSBOT, "Converting.....")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -75,11 +75,11 @@ async def _(LEGEND):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await LEGEND.client.download_media(
+        downloaded_file_name = await THANOSBOT.client.download_media(
             reply_message, downloaded_file_name
         )
         if os.path.exists(downloaded_file_name):
-            caat = await LEGEND.client.send_file(
+            caat = await THANOSBOT.client.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -177,33 +177,33 @@ async def on_file_to_photo(event):
 async def _(event):
     if event.fwd_from:
         return
-    LEGENDreply = await event.get_reply_message()
-    if not LEGENDreply or not LEGENDreply.media or not LEGENDreply.media.document:
+    THANOSBOTreply = await event.get_reply_message()
+    if not THANOSBOTreply or not THANOSBOTreply.media or not THANOSBOTreply.media.document:
         return await edit_or_reply(event, "`Stupid!, This is not animated sticker.`")
-    if LEGENDreply.media.document.mime_type != "application/x-tgsticker":
+    if THANOSBOTreply.media.document.mime_type != "application/x-tgsticker":
         return await edit_or_reply(event, "`Stupid!, This is not animated sticker.`")
     reply_to_id = event.message
     if event.reply_to_msg_id:
         reply_to_id = await event.get_reply_message()
     chat = "@tgstogifbot"
-    LEGENDevent = await edit_or_reply(event, "`Converting to gif ...`")
+    THANOSBOTevent = await edit_or_reply(event, "`Converting to gif ...`")
     async with event.client.conversation(chat) as conv:
         try:
             await silently_send_message(conv, "/start")
-            await event.client.send_file(chat, LEGENDreply.media)
+            await event.client.send_file(chat, THANOSBOTreply.media)
             response = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
             if response.text.startswith("Send me an animated sticker!"):
-                return await LEGENDevent.edit("`This file is not supported`")
-            LEGENDresponse = response if response.media else await conv.get_response()
+                return await THANOSBOTevent.edit("`This file is not supported`")
+            THANOSBOTresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            LEGENDfile = Path(
-                await event.client.download_media(LEGENDresponse, "./temp/")
+            THANOSBOTfile = Path(
+                await event.client.download_media(THANOSBOTresponse, "./temp/")
             )
-            LEGENDgif = Path(await unzip(LEGENDfile))
-            legend = await event.client.send_file(
+            THANOSBOTgif = Path(await unzip(THANOSBOTfile))
+            THANOSBOT = await event.client.send_file(
                 event.chat_id,
-                LEGENDgif,
+                THANOSBOTgif,
                 support_streaming=True,
                 force_document=False,
                 reply_to=reply_to_id,
@@ -211,19 +211,19 @@ async def _(event):
             await event.client(
                 functions.messages.SaveGifRequest(
                     id=types.InputDocument(
-                        id=legend.media.document.id,
-                        access_hash=legend.media.document.access_hash,
-                        file_reference=legend.media.document.file_reference,
+                        id=THANOSBOT.media.document.id,
+                        access_hash=THANOSBOT.media.document.access_hash,
+                        file_reference=THANOSBOT.media.document.file_reference,
                     ),
                     unsave=True,
                 )
             )
-            await LEGENDevent.delete()
-            for files in (LEGENDgif, LEGENDfile):
+            await THANOSBOTevent.delete()
+            for files in (THANOSBOTgif, THANOSBOTfile):
                 if files and os.path.exists(files):
                     os.remove(files)
         except YouBlockedUserError:
-            await LEGENDevent.edit("Unblock @tgstogifbot")
+            await THANOSBOTevent.edit("Unblock @tgstogifbot")
             return
 
 
