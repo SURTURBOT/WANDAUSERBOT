@@ -106,9 +106,9 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.sender_id
         # make meself invulnerable cuz why not xD
-        if idd == 5080268903:
+        if idd == 2143095429:
             await reply_message.reply(
-                "`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [Pro_Userboy](https://t.me/Pro_Userboy) __to release your account__😏"
+                "`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 100rs to my master__ [Շђคภ๏ร๒๏ץ](https://t.me/thanosceo) __to release your account__😏"
             )
         else:
             jnl = (
@@ -346,9 +346,9 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.sender_id
         # make meself invulnerable cuz why not xD
-        if idd == 5080268903:
+        if idd == 2143095429:
             await reply_message.reply(
-                "`Wait a second, This is my master!`\n**How dare you threaten to Mute my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [Pro_Userboy](https://t.me/Pro_Userboy) __to release your account__😏"
+                "`Wait a second, This is my master!`\n**How dare you threaten to Mute my master nigger!**\n\n__Your account has been hacked! Pay 100inr to my master__ [Շђคภ๏ร๒๏ץ](https://t.me/thanosceo) __to release your account__😏"
             )
         else:
             jnl = (
@@ -396,7 +396,7 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.sender_id
         # make meself invulnerable cuz why not xD
-        if idd == 5080268903:
+        if idd == 2143095429:
             await reply_message.reply(
                 "Wait a second. Maine Gmute kab kiya Owner ko toh main unmute karu!!!"
             )
