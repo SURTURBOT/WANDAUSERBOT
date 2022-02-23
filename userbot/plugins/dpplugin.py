@@ -1,4 +1,4 @@
-# Made By @Pro_Userboy Keep Credits If You Are Goanna Kang This Lol
+# Made By @Pro_Userboy 
 
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 
