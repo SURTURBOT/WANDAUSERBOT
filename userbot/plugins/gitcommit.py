@@ -26,9 +26,9 @@ async def download(event):
         await edit_or_reply(event, "`Please ADD Proper Access Token from github.com`")
         return
     if Var.GIT_REPO_NAME is None:
-        await edit_or_reply(event, "`Please ADD Proper Github Repo Name of LegendBot`")
+        await edit_or_reply(event, "`Please ADD Proper Github Repo Name of THANOSBOT`")
         return
-    LegendBot = await edit_or_reply(event, "Processing ...")
+    THANOSBOT = await edit_or_reply(event, "Processing ...")
     if not os.path.isdir(GIT_TEMP_DIR):
         os.makedirs(GIT_TEMP_DIR)
     start = datetime.now()
@@ -40,16 +40,16 @@ async def download(event):
             reply_message.media, GIT_TEMP_DIR
         )
     except Exception as e:
-        await LegendBot.edit(str(e))
+        await THANOSBOT.edit(str(e))
     else:
         end = datetime.now()
         ms = (end - start).seconds
         await event.delete()
-        await LegendBot.edit(
+        await THANOSBOT.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
-        await LegendBot.edit("Committing to Github....")
-        await git_commit(downloaded_file_name, LegendBot)
+        await THANOSBOT.edit("Committing to Github....")
+        await git_commit(downloaded_file_name, THANOSBOT)
 
 
 async def git_commit(file_name, LegendBot):
@@ -81,14 +81,14 @@ async def git_commit(file_name, LegendBot):
             print("Committed File")
             ccess = Var.GIT_REPO_NAME
             ccess = ccess.strip()
-            await LegendBot.edit(
+            await THANOSBOT.edit(
                 f"`Commited On Your Github Repo`\n\n[Your STDPLUGINS](https://github.com/{ccess}/tree/master/userbot/plugins/)"
             )
         except:
             print("Cannot Create Plugin")
-            await LegendBot.edit("Cannot Upload Plugin")
+            await THANOSBOT.edit("Cannot Upload Plugin")
     else:
-        return await LegendBot.edit("`Committed Suicide`")
+        return await THANOSBOT.edit("`Committed Suicide`")
 
 
 CmdHelp("github").add_command(
