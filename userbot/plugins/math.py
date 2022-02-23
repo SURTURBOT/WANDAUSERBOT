@@ -1,8 +1,8 @@
-# PLUGIN MADE BY DANGEROUSJATT
+# PLUGIN MADE BY Legendx
 # KEEP CREDIT
-# MADE FOR LegendBot
-# BY TEAM LegendBot
-# NOW IN LegendBot
+# MADE FOR thanospro
+# BY TEAM thanospro
+# NOW IN thanospro
 import math
 
 from userbot import CmdHelp
