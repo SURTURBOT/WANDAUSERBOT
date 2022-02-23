@@ -11,13 +11,13 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 PICS_STR = []
 
 
-@bot.on(admin_cmd(pattern=r"logo ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"logo ?(.*)", allow_sudo=True))
-async def lg1(LEGENDevent):
-    event = await edit_or_reply(LEGENDevent, "`Processing.....`")
-    fnt = await get_font_file(event.client, "@LegendFonts")
-    if LEGENDevent.reply_to_msg_id:
-        rply = await LEGENDevent.get_reply_message()
+@bot.on(admin_cmd(pattern=r"logos ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"logos ?(.*)", allow_sudo=True))
+async def lg1(THANOSBOTevent):
+    event = await THANOSBOTevent, "`Processing.....`")
+    fnt = await get_font_file(event.client, "@legendfonts")
+    if THANOSBOTevent.reply_to_msg_id:
+        rply = await THANOSBOTevent.get_reply_message()
         logo_ = await rply.download_media()
     else:
         async for i in bot.iter_messages(
@@ -26,7 +26,7 @@ async def lg1(LEGENDevent):
             PICS_STR.append(i)
         pic = random.choice(PICS_STR)
         logo_ = await pic.download_media()
-    text = LEGENDevent.pattern_match.group(1)
+    text = THANOSBOTevent.pattern_match.group(1)
     if len(text) <= 8:
         font_size_ = 150
         strik = 10
@@ -57,7 +57,7 @@ async def lg1(LEGENDevent):
     draw.text(
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
-    file_name = "LegendBot.png"
+    file_name = "THANOSBOT.png"
     img.save(file_name, "png")
     await bot.send_file(
         LEGENDevent.chat_id,
