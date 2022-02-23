@@ -17,7 +17,7 @@ async def prmte(event):
     await event.get_chat()
     user, rank = await get_user_info(ult)
     if not rank:
-        rank = "ℓεɠεɳ∂"
+        rank = "Շђคภ๏ร"
     if not user:
         return await xx.edit("Reply to a user to promote him with all rights!")
     try:
