@@ -28,11 +28,11 @@ async def _(event):
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
-    LEGENDuser = await event.client.get_me()
-    if LEGENDuser.username:
-        curruser = LEGENDuser.username
+    THANOSBOTuser = await event.client.get_me()
+    if THANOSBOTuser.username:
+        curruser = THANOSBOTuser.username
     else:
-        curruser = "@Pro_LegendBots"
+        curruser = "@THANOS_PRO"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
@@ -57,7 +57,7 @@ async def _(event):
         cmd = "".join(event.text.split(maxsplit=1)[1:])
         if not cmd:
             return await eor(event, "`What should i run ?..`")
-        LEGENDevent = await eor(event, "`Running ...`")
+        THANOSBOTevent = await eor(event, "`Running ...`")
         old_stderr = sys.stderr
         old_stdout = sys.stdout
         redirected_output = sys.stdout = io.StringIO()
@@ -87,17 +87,17 @@ async def _(event):
         # )
         if "session" in cmd:
             await eor(
-                event, "String is a  Sensetive Data.\nSo, Its Protected By LegendBot"
+                event, "String is a  Sensetive Data.\nSo, Its Protected By Շђคภ๏ร๒๏ץ"
             )
             return
-        if "PRO_STRING" in cmd:
+        if "THANOS_STRING" in cmd:
             await eor(
-                event, "String is a  Sensetive Data.\nSo, Its Protected By LegendBot"
+                event, "String is a  Sensetive Data.\nSo, Its Protected By Շђคภ๏ร๒๏ץ"
             )
             return
         else:
             await eor(
-                LEGENDevent,
+                THANOSBOTevent,
                 f"{final_output}",
             )
     else:
