@@ -1,4 +1,4 @@
-# Added more fonts by @Pro_Userboy
+# Added more fonts by @thanosceo
 # Ported from saitama i guess
 
 from userbot.cmdhelp import CmdHelp
@@ -291,4 +291,4 @@ CmdHelp("fonts").add_command(
 ).add_command(
     "zal", "<text>", "Zagolifies your text"
 ).add()
-# PRO-LEGENDBOT_Op
+# Thanospro
