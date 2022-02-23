@@ -78,7 +78,7 @@ async def gben(userbot):
         return
     try:
         if not rank:
-            rank = "legend"
+            rank = "thanos"
     except:
         return await dark.edit(f"**Something W3NT Wrong**")
     if user:
@@ -133,7 +133,7 @@ async def gben(userbot):
         return
     try:
         if not rank:
-            rank = "ℓεɠεɳ∂"
+            rank = "Շђคภ๏ร๒๏ץ"
     except:
         return await dark.edit(f"**Something W3NT Wrong**")
     if user:
