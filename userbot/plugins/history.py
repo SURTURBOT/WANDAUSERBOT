@@ -9,20 +9,20 @@ from userbot.utils import sudo_cmd
 
 @bot.on(admin_cmd(pattern="history ?(.*)"))
 @bot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
-async def _(LEGENDevent):
-    if LEGENDevent.fwd_from:
+async def _(THANOSBOTevent):
+    if THANOSBOTevent.fwd_from:
         return
-    if not LEGENDevent.reply_to_msg_id:
-        await eor(LEGENDevent, "`Please Reply To A User To Get This Module Work`")
+    if not THANOSBOTevent.reply_to_msg_id:
+        await eor(THANOSBOTevent, "`Please Reply To A User To Get This Module Work`")
         return
-    reply_message = await LEGENDevent.get_reply_message()
+    reply_message = await THANOSBOTevent.get_reply_message()
     chat = "Sangmatainfo_bot"
     victim = reply_message.sender.id
     if reply_message.sender.bot:
-        await eor(LEGENDevent, "Need actual users. Not Bots")
+        await eor(THANOSBOTevent, "Need actual users. Not Bots")
         return
-    await eor(LEGENDevent, "Checking...")
-    async with LEGENDevent.client.conversation(chat) as conv:
+    await eor(THANOSBOTevent, "Checking...")
+    async with THANOSBOTevent.client.conversation(chat) as conv:
         try:
             response1 = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=461843263)
@@ -38,33 +38,33 @@ async def _(LEGENDevent):
             response2 = await response2
             response3 = await response3
         except YouBlockedUserError:
-            await LEGENDevent.reply("Please unblock ( @Sangmatainfo_bot ) ")
+            await THANOSBOTevent.reply("Please unblock ( @Sangmatainfo_bot ) ")
             return
         if response1.text.startswith("No records found"):
-            await eor(LEGENDevent, "User never changed his Username...")
+            await eor(THANOSBOTevent, "User never changed his Username...")
         else:
-            await LEGENDevent.delete()
-            await LEGENDevent.client.send_message(
-                LEGENDevent.chat_id, response2.message
+            await THANOSBOTevent.delete()
+            await THANOSBOTevent.client.send_message(
+                THANOSBOTevent.chat_id, response2.message
             )
 
 
 @bot.on(admin_cmd(pattern="unh ?(.*)"))
 @bot.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
-async def _(LEGENDevent):
-    if LEGENDevent.fwd_from:
+async def _(THANOSBOTevent):
+    if THANOSBOTevent.fwd_from:
         return
-    if not LEGENDevent.reply_to_msg_id:
-        await eor(LEGENDevent, "`Please Reply To A User To Get This Module Work`")
+    if not THANOSBOTevent.reply_to_msg_id:
+        await eor(THANOSBOTevent, "`Please Reply To A User To Get This Module Work`")
         return
     reply_message = await LEGENDevent.get_reply_message()
     chat = "Sangmatainfo_bot"
     victim = reply_message.sender.id
     if reply_message.sender.bot:
-        await eor(LEGENDevent, "Need actual users. Not Bots")
+        await eor(THANOSBOTevent, "Need actual users. Not Bots")
         return
-    await eor(LEGENDevent, "Checking...")
-    async with LEGENDevent.client.conversation(chat) as conv:
+    await eor(THANOSBOTevent, "Checking...")
+    async with THANOSBOTevent.client.conversation(chat) as conv:
         try:
             response1 = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=461843263)
@@ -80,14 +80,14 @@ async def _(LEGENDevent):
             response2 = await response2
             response3 = await response3
         except YouBlockedUserError:
-            await LEGENDevent.reply("Please unblock ( @Sangmatainfo_bot ) ")
+            await THANOSBOTevent.reply("Please unblock ( @Sangmatainfo_bot ) ")
             return
         if response1.text.startswith("No records found"):
-            await eor(LEGENDevent, "User never changed his Username...")
+            await eor(THANOSBOTevent, "User never changed his Username...")
         else:
-            await LEGENDevent.delete()
-            await LEGENDevent.client.send_message(
-                LEGENDevent.chat_id, response3.message
+            await THANOSBOTevent.delete()
+            await THANOSBOTevent.client.send_message(
+                THANOSBOTevent.chat_id, response3.message
             )
 
 
