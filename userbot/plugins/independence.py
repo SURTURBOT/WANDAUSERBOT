@@ -25,9 +25,9 @@ async def _(event):
         "**Independence means.. enjoying freedom and empowering others too to let them do so.**",
         "ͲϴᎠᎪᎽ ᏔᎬ ᎪᎡᎬ ҒᎡᎬᎬ ᏴᎬᏟᎪႮՏᎬ ᎷᎪΝᎽ ՏᎪᏟᎡᏆҒᏆᏟᎬᎠ ͲᎻᎬᎡᎬ ᏞᏆᏙᎬՏ ҒϴᎡ ᏆΝᎠᏆᎪ \nՏᎪᏞႮͲᎬ ͲᎻᎬ ᏀᎡᎬᎪͲ ՏϴႮᏞՏ",
         "[ƒοя υ](https://telegra.ph/file/66205f168d8c2a0bbaa43.jpg)",
-        "[нαρργ ιи∂ρєи∂єиϲє ∂αγ](https://t.me/LegendBot_Pros)",
+        "[нαρργ ιи∂ρєи∂єиϲє ∂αγ](https://t.me/+cJG1PbKtpPVmNDg5)",
     ]
-    for i in animation_ttl:  # By @Pro_Userboy LegendBot
+    for i in animation_ttl:  # By @THANOSUSER THANOSPRO
 
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 17], link_preview=True)
