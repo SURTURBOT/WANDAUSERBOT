@@ -25,16 +25,16 @@ X = (
 
 
 @borg.on(admin_cmd(pattern=r"baby"))
-async def legend(legend):
-    await legend.edit(S)
+async def THANOSBOT(THANOSBOT):
+    await THANOSBOT.edit(S)
 
 
-@borg.on(admin_cmd(pattern=r"thanks"))
+@borg.on(admin_cmd(pattern=r"thnk"))
 async def fox(fox):
     await fox.edit(X)
 
 
-@borg.on(admin_cmd(pattern=r"hbirthday ?(.*)"))
+@borg.on(admin_cmd(pattern=r"hbday ?(.*)"))
 async def hbd(event):
     "Happy birthday art."
     inpt = event.pattern_match.group(1)
@@ -56,7 +56,7 @@ async def gm(event):
     )
 
 
-@borg.on(admin_cmd(pattern=r"gooddnt ?(.*)"))
+@borg.on(admin_cmd(pattern=r"gdnt ?(.*)"))
 async def gn(event):
     "Good night art."
     await edit_or_reply(
@@ -104,13 +104,13 @@ CmdHelp("greetings").add_command("luck", None, "Try it yourself").add_command(
 ).add_command("chill", None, "Try it yourself").add_command(
     "gdnt2", None, "Try it yourself"
 ).add_command(
-    "goodnt", None, "Try it yourself"
+    "gdnt", None, "Try it yourself"
 ).add_command(
     "gm1", None, "Try it yourself"
 ).add_command(
     "baby", None, "Try it yourself"
 ).add_command(
-    "thanks", None, "Try it yourself"
+    "thnk", None, "Try it yourself"
 ).add_command(
     "gdnight", None, "Try it yourself"
 ).add()
