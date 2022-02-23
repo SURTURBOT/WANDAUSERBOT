@@ -30,7 +30,7 @@ pm_caption += f"**┣⚡ Linux-Mix  : {7.2}(t.me/legendhacker_iin)\n"
 pm_caption += f"**┣⚡ Շђคภ๏ร-קг๏ : {THANOSBOTversion}**\n"
 pm_caption += f"**┣⚡ 𝚂𝚞𝚍𝚘     : `{sudou}`**\n"
 pm_caption += f"**┣⚡ 𝙾𝚠𝚗𝚎𝚛     : [Շђคภ๏ร](https://t.me/thanosceo)**\n"
-pm_caption += f"**┗[💕𝙶𝚛𝚘𝚞𝚙💕](https://t.me/thanosbot_chats)┛**\n"
+pm_caption += f"**┗[💕𝙶𝚛𝚘𝚞𝚙💕](https://t.me/+cJG1PbKtpPVmNDg5)┛**\n"
 
 pm_caption += "    [✨яєρο✨](https://github.com/thanosuser/THANOS-PRO) "
 
