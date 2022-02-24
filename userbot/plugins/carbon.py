@@ -12,7 +12,7 @@ from userbot.Config import Config
 from userbot.helpers.funct import deEmojify
 from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT"
 
 CARBONLANG = "auto"
 LANG = "en"
