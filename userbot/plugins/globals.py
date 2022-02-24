@@ -62,35 +62,35 @@ async def get_user_from_id(user, event):
 
 @bot.on(admin_cmd(pattern="gpromote ?(.*)"))
 @bot.on(sudo_cmd(pattern="gpromote ?(.*)", allow_sudo=True))
-async def _(legendevent):
+async def _(thanosevent):
     i = 0
-    await legendevent.get_sender()
-    me = await legendevent.client.get_me()
-    legend = await eor(legendevent, "`Promoting globally...`")
+    await thanosevent.get_sender()
+    me = await thanosevent.client.get_me()
+    thanos = await eor(thanosevent, "`Promoting globally...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
-    await legendevent.get_chat()
-    if legendevent.is_private:
-        user = legendevent.chat
-        rank = legendevent.pattern_match.group(1)
+    await thanosevent.get_chat()
+    if thanosevent.is_private:
+        user = thanosevent.chat
+        rank = thanosevent.pattern_match.group(1)
     else:
-        legendevent.chat.title
+        thanosevent.chat.title
     try:
-        user, rank = await get_full_user(legendevent)
+        user, rank = await get_full_user(thanosevent)
     except:
         pass
     if me == user:
-        await legend.edit("You can't promote yourself...")
+        await thanos.edit("You can't promote yourself...")
         return
     try:
         if not rank:
-            rank = "ℓεɠεɳ∂"
+            rank = "THANOSBOY"
     except:
-        return await legend.edit("**ERROR !!**")
+        return await thanos.edit("**ERROR !!**")
     if user:
         telchanel = [
             d.entity.id
-            for d in await legendevent.client.get_dialogs()
+            for d in await thanosevent.client.get_dialogs()
             if (d.is_group or d.is_channel)
         ]
         rgt = ChatAdminRights(
@@ -103,14 +103,14 @@ async def _(legendevent):
         )
         for x in telchanel:
             try:
-                await legendevent.client(EditAdminRequest(x, user, rgt, rank))
+                await thanosevent.client(EditAdminRequest(x, user, rgt, rank))
                 i += 1
-                await legend.edit(f"**Promoting User in :**  `{i}` Chats...")
+                await thanos.edit(f"**Promoting User in :**  `{i}` Chats...")
             except:
                 pass
     else:
-        await legend.edit(f"**Reply to a user !!**")
-    await legend.edit(
+        await thanos.edit(f"**Reply to a user !!**")
+    await thanos.edit(
         f"[{user.first_name}](tg://user?id={user.id}) **Was Promoted Globally In** `{i}` **Chats !!**"
     )
     await bot.send_message(
