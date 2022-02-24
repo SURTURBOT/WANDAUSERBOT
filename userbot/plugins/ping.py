@@ -1,10 +1,11 @@
 import asyncio
-from datetime import datetime
+import datetime
+import os
 
-from ..sql_helper.globals import gvarstatus
-from . import hmention, THANOSBOT
-
-menu_category = "tools"
+from .. import ALIVE_NAME
+from ..cmdhelp import CmdHelp
+from ..utils import admin_cmd, edit_or_reply, sudo_cmd
+from . import *
 
 
 @bot.on(admin_cmd(pattern="ping$", outgoing=True))
