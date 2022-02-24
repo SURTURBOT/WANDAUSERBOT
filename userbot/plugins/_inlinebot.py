@@ -21,8 +21,8 @@ from . import *
 
 DEFAULTUSER = alive_name = Config.ALIVE_NAME
 THANOSBOT_row = Config.BUTTONS_IN_HELP
-THANOSBOT_emoji1 = Config.HELP_EMOJI1 or "✥"
-THANOSBOT_emoji2 = Config.HELP_EMOJI2 or "✥"
+THANOSBOT_emoji1 = Config.HELP_EMOJI1 or "𓆩"
+THANOSBOT_emoji2 = Config.HELP_EMOJI2 or "𓆪"
 mssge = cstm_pmp = (
     Config.PM_MSG
     or "I am Assistant Of My Owner\nI am Here To Protect My Owner From Scanner"
@@ -55,7 +55,7 @@ if about is not None:
             c.append(d)
     alive_emoji = random.choice(c)
 else:
-    alive_emoji = "✥"
+    alive_emoji = "𓆩"
 
 alive_txt = (
     os.environ.get("ALIVE_TEMPLATE", None)
@@ -139,7 +139,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 help_msg = random.choice(c)
             HELP_PIC = (
                 os.environ.get("HELP_PIC", None)
-                or "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+                or "https://telegra.ph/file/7eaaefe63542f68ab19f1.mp4"
             )
             if HELP_PIC is not None:
                 b = HELP_PIC.split()
@@ -182,7 +182,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+                ALV_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
             pp = Config.ALIVE_MSG
             if pp is not None:
                 b = pp.split(", ")
@@ -268,7 +268,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+                ALV_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
                 result = builder.article(
                     buttons=fsub_btn,
@@ -295,7 +295,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 THANOSBOT_pic = random.choice(c)
             else:
-                THANOSBOT_pic = "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+                THANOSBOT_pic = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
             result = builder.photo(
                 file=THANOSBOT_pic,
                 text=than_os,
@@ -350,7 +350,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+                ALV_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
