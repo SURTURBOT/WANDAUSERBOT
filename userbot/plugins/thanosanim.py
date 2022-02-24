@@ -128,7 +128,6 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-from . Import *
 
 @bot.on(admin_cmd("^right", incoming=True))
 async def piro(event):
