@@ -28,15 +28,15 @@ async def start(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     vent = event.chat_id
-    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy [➤ Master](tg://user?id={bot.uid}) \nI Can Deliver Message To My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [『Lêɠêɳ̃dẞø†』](https://t.me/Official_LegendBot)"
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, THANOS. \n\nMy [➤ Master](tg://user?id={bot.uid}) \nI Can Deliver Message To My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [THANOS-PRO](https://t.me/+cJG1PbKtpPVmNDg5)"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
             message=f"Hi Sir/Miss, It's Me {bot_id}, Your Assistant ! \nHow Can I help U?",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
-                    Button.url(" Updates ", "https://t.me/Official_LegendBot"),
+                    Button.url(" Support ", "https://t.me/+cJG1PbKtpPVmNDg5"),
+                    Button.url(" Updates ", "https://t.me/THANOS_PRO"),
                 ],
                 [
                     custom.Button.inline("Users", data="users"),
@@ -57,9 +57,9 @@ async def start(event):
             buttons=[
                 [
                     custom.Button.inline(" Rules ", data="rules"),
-                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
+                    Button.url(" Support ", "https://t.me/+cJG1PbKtpPVmNDg5"),
                 ],
-                [custom.Button.inline("Deploy Your LegendBot", data="deploy")],
+                [custom.Button.inline("Deploy Your THANOS-PRO", data="deploy")],
             ],
         )
 
@@ -70,12 +70,12 @@ async def help(event):
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="You Can Deploy LegendBot In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            message="You Can Deploy THANOS-PRO In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             link_preview=False,
             buttons=[
-                [custom.Button.inline("Deploy your LegendBot", data="fire")],
-                [Button.url("Help Me ❓", "https://t.me/LEGEND_USERBOT")],
-                [Button.url("Github Repo ❓", "github.com/LEGEND-OS/LEGENDBOT")],
+                [custom.Button.inline("Deploy your THANOS-PRO", data="fire")],
+                [Button.url("Help Me ❓", "https://t.me/+cJG1PbKtpPVmNDg5")],
+                [Button.url("Github Repo ❓", "https://t.me/+cJG1PbKtpPVmNDg5")],
             ],
         )
 
@@ -101,7 +101,7 @@ async def help(event):
     else:
         await tgbot.send_message(
             event.chat_id,
-            message="🔰Rᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Tᴏᴏ🔰\n\n🔹 Dᴏɴ'ᴛ Sᴩᴀᴍ\n🔹 ᴛᴀʟᴋ Fʀɪᴇɴᴅʟy\n🔹 Dᴏɴ'ᴛ Bᴇ Rᴜᴅᴇ\n🔹 Sᴇɴᴅ Uʀ Mᴇꜱꜱᴀɢᴇꜱ Hᴇʀᴇ\n🔹 Nᴏ Pᴏʀɴᴏɢʀᴀᴘʜʏ\n🔹 Dᴏɴ'ᴛ Wʀɪᴛᴇ Bᴀᴅ Wᴏʀᴅs.\n\nWʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I'ʟʟ Rᴇᴩʟy U 💯✅",
+            message="⚡Rᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Tᴏᴏ⚡\n\n✨ Dᴏɴ'ᴛ Sᴩᴀᴍ\n✨ ᴛᴀʟᴋ Fʀɪᴇɴᴅʟy\n✨ Dᴏɴ'ᴛ Bᴇ Rᴜᴅᴇ\n✨ Sᴇɴᴅ Uʀ Mᴇꜱꜱᴀɢᴇꜱ Hᴇʀᴇ\n✨ Nᴏ Pᴏʀɴᴏɢʀᴀᴘʜʏ\n✨ Dᴏɴ'ᴛ Wʀɪᴛᴇ Bᴀᴅ Wᴏʀᴅs.\n\nWʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I'ʟʟ Rᴇᴩʟy U 💯✅",
             buttons=[
                 [custom.Button.inline("Close", data="close")],
             ],
@@ -112,7 +112,7 @@ async def help(event):
 async def users(event):
     if event.query.user_id == bot.uid:
         total_users = get_all_users()
-        users_list = "⚜List Of Total Users In Bot.⚜ \n\n"
+        users_list = "⚡List Of Total Users In Bot.⚡ \n\n"
         for starked in total_users:
             users_list += ("==> {} \n").format(int(starked.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
