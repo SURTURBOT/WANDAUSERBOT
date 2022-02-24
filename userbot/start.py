@@ -11,7 +11,7 @@ from userbot.Config import Config
 from .utils import load_abuse, load_addons, load_module, start_assistant, start_spam
 
 l2 = Config.SUDO_HANDLER
-THANOSBOT_PIC = "https://telegra.ph/file/bdf457aee34ed8791c150.jpg"
+THANOSBOT_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
 l1 = Config.HANDLER
 
 perf = "[ ＴＨΛＮ♢Ｓ－ＰＲ♢ ]"
@@ -44,20 +44,20 @@ async def hekp():
         print(str(e))
 
     try:
-        await bot(JoinChannelRequest("@thanos_userbots"))
+        await bot(JoinChannelRequest("@thanos_pro"))
     except BaseException:
         pass
 
     try:
-        await bot(JoinChannelRequest("@thanosbot_chats"))
+        await bot(ImportChatInviteRequest('cJG1PbKtpPVmNDg5'))
     except BaseException:
         pass
     try:
-        await bot(leave("@thanosbot_chat"))
+        await bot(leave("@thanosbot_chats"))
     except BaseException:
         pass
     try:
-        await bot(leave("@Official_LegendBot"))
+        await bot(leave("@thanos_userbots"))
     except BaseException:
         pass
 
