@@ -76,7 +76,7 @@ async def _(event):
 <b>✅ VERIFIED</b>: {}
 <b>🤖 BOT</b>: {}
 <b>👥 Groups in Common</b>: {}
-<b>⚡ <a href='https://t.me/LegendBot_Pros'>From DataBase of LegendBot</a> ⚡ </b>
+<b>⚡ <a href='https://t.me/thanos_userbot'>From DataBase of ThanosBot</a> ⚡ </b>
 """.format(
         user_id,
         user_id,
@@ -275,14 +275,14 @@ async def _(event):
 async def info(event):
     if event.fwd_from:
         return
-    legend = await eor(event, "`Analysing the chat...`")
+    thanos = await eor(event, "`Analysing the chat...`")
     chat = await get_chatinfo(event)
     caption = await fetch_info(chat, event)
     try:
-        await legend.edit(caption, parse_mode="html")
+        await thanos.edit(caption, parse_mode="html")
     except Exception as e:
         print("Exception:", e)
-        await eod(legend, "`An unexpected error has occurred.`")
+        await eod(thanos, "`An unexpected error has occurred.`")
     return
 
 
