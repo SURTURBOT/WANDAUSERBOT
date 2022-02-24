@@ -1,4 +1,4 @@
-from import *
+from . import *
 import asyncio
 
 from userbot.cmdhelp import CmdHelp
