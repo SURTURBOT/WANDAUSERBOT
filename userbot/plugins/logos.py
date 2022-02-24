@@ -14,7 +14,7 @@ PICS_STR = []
 @bot.on(admin_cmd(pattern=r"logos ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"logos ?(.*)", allow_sudo=True))
 async def lg1(THANOSBOTevent):
-    event = await THANOSBOTevent, "`Processing.....`")
+    event = await eor(event, "`Processing.....`")
     fnt = await get_font_file(event.client, "@legendfonts")
     if THANOSBOTevent.reply_to_msg_id:
         rply = await THANOSBOTevent.get_reply_message()
