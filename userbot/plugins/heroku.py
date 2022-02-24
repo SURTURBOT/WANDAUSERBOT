@@ -13,7 +13,7 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from . import *
 
 USERID = bot.uid
-DEFAULTUSER = ALIVE_NAME or "ℓєgєи∂ϐοy"
+DEFAULTUSER = ALIVE_NAME or "Thanosϐοy"
 mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # =====================================
@@ -41,21 +41,21 @@ async def variable(var):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             return await eod(
                 var,
-                f"Go To @LegendBot_Pros\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
+                f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
                 link_preview=False,
             )
         await var.edit("`Getting information...`")
         await asyncio.sleep(1.5)
         try:
             variable = var.pattern_match.group(2).split()[0]
-            legend = "**ConfigVars**:" f"\n\n {variable} = `{heroku_var[variable]}`\n"
-            if "PRO_STRING" in variable:
+            thanos = "**ConfigVars**:" f"\n\n {variable} = `{heroku_var[variable]}`\n"
+            if "THANOS_STRING" in variable:
                 await eor(
-                    var, "Legend String is a Sensetive Data.\nProtected By LegendBot"
+                    var, "Thanos String is a Sensetive Data.\nProtected By ThanosBot"
                 )
                 return
             elif variable in heroku_var:
-                await eor(var, legend)
+                await eor(var, thanos)
             else:
                 return await var.edit(
                     "**ConfigVars**:" f"\n\n`Error:\n-> {variable} don't exists`"
@@ -86,7 +86,7 @@ async def variable(var):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             return await eod(
                 var,
-                f"Go To @LegendBot_Pros\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
+                f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
                 link_preview=False,
             )
         await var.edit("`Setting information...weit ser`")
@@ -101,7 +101,7 @@ async def variable(var):
             except IndexError:
                 return await var.edit(f"`.set var <VARS NAME> <value>`")
         await asyncio.sleep(1.5)
-        if "PRO_STRING" in variable:
+        if "THANOS_STRING" in variable:
             await eor(var, "Successfully Changed To {value}")
             return
         elif variable in heroku_var:
@@ -117,7 +117,7 @@ async def variable(var):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             return await eod(
                 var,
-                f"Go To @LegendBot_Pros\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
+                f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
                 link_preview=False,
             )
         await var.edit("`Getting information to deleting variable...`")
@@ -214,7 +214,7 @@ async def _(event):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
         return await eod(
             dyno,
-            f"Go To @LegendBot_Pros\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
+            f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
             link_preview=False,
         )
     try:
@@ -222,12 +222,12 @@ async def _(event):
         app = Heroku.app(HEROKU_APP_NAME)
     except BaseException:
         return await event.reply(
-            f"Go To @LegendBot_Pros\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
+            f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
             link_preview=False,
         )
     # event = await eor(dyno, "Downloading Logs...")
-    LEGEND_data = app.get_log()
-    await eor(event, LEGEND_data)
+    THANOS_data = app.get_log()
+    await eor(event, THANOS_data)
 
 
 CmdHelp("heroku").add_command(
