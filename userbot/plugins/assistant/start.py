@@ -11,8 +11,8 @@ from userbot.plugins.sql_helper.blacklist_assistant import (
     is_he_added,
     removenibba,
 )
-from userbot.plugins.sql_helper.bot_blacklists import check_is_black_list
-from userbot.plugins.sql_helper.botusers import add_me_in_db, his_userid
+
+# from userbot.plugins.sql_helper.botusers import add_me_in_db, his_userid
 from userbot.plugins.sql_helper.idadder import (
     add_usersid_in_db,
     already_added,
@@ -22,31 +22,21 @@ from userbot.plugins.sql_helper.idadder import (
 
 @tgbot.on(events.NewMessage(pattern="^/start"))
 async def start(event):
-    chat = await event.get_chat()
-    await tgbot.get_me()
-    if check_is_black_list(chat.id):
-        return
-    await reply_id(event)
-    mention = f"[{chat.first_name}](tg://user?id={chat.id})"
-    my_mention = f"[{user.first_name}](tg://user?id={user.id})"
-    chat.first_name
-    chat.last_name
-    my_first = user.first_name
-    my_last = user.last_name
-    f"{my_first} {my_last}" if my_last else my_first
-    f"@{user.username}" if user.username else my_mention
+    starkbot = await tgbot.get_me()
+    bot_id = starkbot.first_name
+    starkbot.username
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
-    replied_user.user.first_name
+    firstname = replied_user.user.first_name
     vent = event.chat_id
-    starttext = f"Hey! 👤{mention},\nI am {my_mention}'s assistant bot.\nYou can contact to my master from here.\n\nPowered By [THANOS-PRO](https://t.me/THANOSBOT_CHATS)"
+    starttext = f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy [➤ Master](tg://user?id={bot.uid}) \nI Can Deliver Message To My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [『Lêɠêɳ̃dẞø†』](https://t.me/Official_LegendBot)"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
             message=f"Hi Sir/Miss, It's Me {bot_id}, Your Assistant ! \nHow Can I help U?",
             buttons=[
                 [
-                    Button.url(" Support ", "https://t.me/THANOSBOT_CHATS"),
-                    Button.url(" Updates ", "https://t.me/THANOS_USERBOTS"),
+                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
+                    Button.url(" Updates ", "https://t.me/Official_LegendBot"),
                 ],
                 [
                     custom.Button.inline("Users", data="users"),
@@ -66,9 +56,54 @@ async def start(event):
             link_preview=False,
             buttons=[
                 [
-                    Button.url(" Repo ", "https://github.com/THANOSUSER/THANOS-PRO"),
-                    Button.url(" Support ", "https://t.me/THANOSBOT_CHATS"),
+                    custom.Button.inline(" Rules ", data="rules"),
+                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
                 ],
+                [custom.Button.inline("Deploy Your LegendBot", data="deploy")],
+            ],
+        )
+
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"deploy")))
+async def help(event):
+    await event.delete()
+    if event.query.user_id is not bot.uid:
+        await tgbot.send_message(
+            event.chat_id,
+            message="You Can Deploy LegendBot In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            link_preview=False,
+            buttons=[
+                [custom.Button.inline("Deploy your LegendBot", data="fire")],
+                [Button.url("Help Me ❓", "https://t.me/LEGEND_USERBOT")],
+                [Button.url("Github Repo ❓", "github.com/LEGEND-OS/LEGENDBOT")],
+            ],
+        )
+
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"fire")))
+async def help(event):
+    await event.delete()
+    if event.query.user_id is not bot.uid:
+        await tgbot.send_message(
+            event.chat_id,
+            message="🔰 Fork the Repo then follow template method given on the video.",
+            buttons=[
+                [custom.Button.inline("Back", data="osg")],
+            ],
+        )
+
+
+# Data's
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
+async def help(event):
+    if event.query.user_id == bot.uid:
+        await event.answer("This Is Not For U My Master", cache_time=0, alert=True)
+    else:
+        await tgbot.send_message(
+            event.chat_id,
+            message="🔰Rᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Tᴏᴏ🔰\n\n🔹 Dᴏɴ'ᴛ Sᴩᴀᴍ\n🔹 ᴛᴀʟᴋ Fʀɪᴇɴᴅʟy\n🔹 Dᴏɴ'ᴛ Bᴇ Rᴜᴅᴇ\n🔹 Sᴇɴᴅ Uʀ Mᴇꜱꜱᴀɢᴇꜱ Hᴇʀᴇ\n🔹 Nᴏ Pᴏʀɴᴏɢʀᴀᴘʜʏ\n🔹 Dᴏɴ'ᴛ Wʀɪᴛᴇ Bᴀᴅ Wᴏʀᴅs.\n\nWʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I'ʟʟ Rᴇᴩʟy U 💯✅",
+            buttons=[
+                [custom.Button.inline("Close", data="close")],
             ],
         )
 
@@ -77,7 +112,7 @@ async def start(event):
 async def users(event):
     if event.query.user_id == bot.uid:
         total_users = get_all_users()
-        users_list = "💞List Of Total Users In Bot.💔 \n\n"
+        users_list = "⚜List Of Total Users In Bot.⚜ \n\n"
         for starked in total_users:
             users_list += ("==> {} \n").format(int(starked.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
@@ -98,8 +133,6 @@ async def users(event):
 
 
 # Bot Permit.
-
-
 @tgbot.on(events.NewMessage(func=lambda e: e.is_private))
 async def all_messages_catcher(event):
     if is_he_added(event.sender_id):
@@ -112,8 +145,6 @@ async def all_messages_catcher(event):
         await event.get_sender()
         event.chat_id
         sed = await event.forward_to(bot.uid)
-        # Add User To Database ,Later For Broadcast Purpose
-        # (C) @SpecHide
         add_me_in_db(sed.id, event.sender_id, event.id)
 
 
@@ -169,7 +200,7 @@ async def starkisnoob(event):
 
 @tgbot.on(events.NewMessage(pattern="^/help", func=lambda e: e.sender_id == bot.uid))
 async def starkislub(event):
-    grabonx = "Hello Here Are Some Commands \n➤ /start - Check if THANOS IS ALIVE \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /hack- hack anyone through string session \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
+    grabonx = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /eval - Run any async code through bot\n➤ /hack- hack anyone through string session \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
     await event.reply(grabonx)
 
 
