@@ -60,43 +60,43 @@ def user_full_name(user):
 @bot.on(admin_cmd(pattern="inviteall ?(.*)"))
 @bot.on(sudo_cmd(pattern="inviteall ?(.*)", allow_sudo=True))
 async def get_users(event):
-    legen_ = event.text[11:]
-    legend_chat = legen_.lower
-    restricted = ["@LegendBot_Pros", "@Pro_LegendBots"]
-    legend = await eor(event, f"**Inviting members from** {legen_}")
-    if legend_chat in restricted:
+    thano_ = event.text[11:]
+    thanos_chat = thano_.lower
+    restricted = ["@thanos_userbot", "@thanos_userbot"]
+    thanos = await eor(event, f"**Inviting members from** {thano_}")
+    if thanos_chat in restricted:
         await event.edit("You can't Invite Members from there.")
         await bot.send_message(-1001344140905, "Sorry for inviting members from here.")
         return
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        LEGEND = await edit_or_reply(event, "`processing...`")
+        THANOS = await edit_or_reply(event, "`processing...`")
     else:
-        LEGEND = await edit_or_reply(event, "`processing...`")
-    legend = await get_chatinfo(event)
+        THANOS = await edit_or_reply(event, "`processing...`")
+    thanos = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await LEGEND.edit("`Sorry, Cant add users here`")
+        return await THANOS.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
 
-    await LEGEND.edit(
-        "**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/LegendBot_Pros)**\n\n`🔸Inviting Users.......`"
+    await THANOS.edit(
+        "**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/thanos_userbot)**\n\n`🔸Inviting Users.......`"
     )
-    async for user in event.client.iter_participants(legend.full_chat.id):
+    async for user in event.client.iter_participants(thanos.full_chat.id):
         try:
             await bot(InviteToChannelRequest(channel=chat, users=[user.id]))
             s = s + 1
-            await LEGEND.edit(
+            await THANOS.edit(
                 f"🤟**Inviting Users👇 **\n\n**⚜Invited :**  `{s}` users \n**🔰Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await LEGEND.edit(
-        f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/LegendBot_Pros) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
+    return await THANOS.edit(
+        f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/thanos_userbot) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
     )
 
 
@@ -106,35 +106,35 @@ async def get_users(event):
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        LEGEND = await edit_or_reply(event, "`processing...`")
+        THANOS = await edit_or_reply(event, "`processing...`")
     else:
-        LEGEND = await edit_or_reply(event, "`processing...`")
+        THANOS = await edit_or_reply(event, "`processing...`")
     aura = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await LEGEND.edit("`Sorry, Cant add users here`")
+        return await THANOS.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
 
-    await LEGEND.edit("**TerminalStatus**\n\n`Collecting Users.......`")
+    await THANOS.edit("**TerminalStatus**\n\n`Collecting Users.......`")
     async for user in event.client.iter_participants(aura.full_chat.id):
         try:
             if error.startswith("Too"):
-                return await LEGEND.edit(
+                return await THANOS.edit(
                     f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people"
                 )
             await event.client(
                 functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
             )
             s = s + 1
-            await LEGEND.edit(
+            await THANOS.edit(
                 f"**Terminal Running...**\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people\n\n**× LastError:** `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await LEGEND.edit(
+    return await THANOS.edit(
         f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
 
