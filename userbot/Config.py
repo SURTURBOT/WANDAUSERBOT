@@ -52,8 +52,8 @@ if ENV:
         MONGO_URI = os.environ.get("MONGO_URI", None)
         # alive
 
-        HELP_EMOJI1 = os.environ.get("HELP_EMOJI1", None) or "♡"
-        HELP_EMOJI2 = os.environ.get("HELP_EMOJI2", None) or "♡"
+        HELP_EMOJI1 = os.environ.get("HELP_EMOJI1", None) or "𓆩"
+        HELP_EMOJI2 = os.environ.get("HELP_EMOJI2", None) or "𓆪"
         ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", None) or "♡"
         ALIVE_PIC = (
             os.environ.get("ALIVE_PIC", None)
@@ -75,11 +75,11 @@ if ENV:
             os.environ.get("PING_PIC", None)
             or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
         )
-        ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "Lêɠêɳ̃dẞøt Is Online"
+        ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "Շђคภ๏ร Is Online"
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "OFF")
-        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@LegendBot_Pros")
-        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@Pro_LegendBots.")
+        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@thanos_pro")
+        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@thanos_pro.")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         # auto bio
         BIO_MSG = os.environ.get("ALIVE_MSG", None)
@@ -134,7 +134,7 @@ if ENV:
             "TMP_DOWNLOAD_DIRECTORY", "./userbot/DOWNLOADS/"
         )
         TELEGRAPH_SHORT_NAME = (
-            os.environ.get("TELEGRAPH_SHORT_NAME", None) or "LEGENDBOT"
+            os.environ.get("TELEGRAPH_SHORT_NAME", None) or "THANOSBOT"
         )
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
         # MIRROR ACE API KEY AND TOKEN
