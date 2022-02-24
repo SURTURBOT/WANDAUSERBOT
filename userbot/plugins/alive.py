@@ -18,8 +18,8 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 from . import *
 
-THANOSBOT_IMG = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
-CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@thanosbot_chats"
+THANOSBOT_IMG = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
+CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@thanos_pro"
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="thanos$"))
@@ -93,17 +93,17 @@ async def THANOSBOT_a(event):
         await eor(event, msg)
 
 
-file1 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
+file1 = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
 file2 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
 file3 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
-file4 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
-file5 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
+file4 = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
+file5 = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
 """=======================CONSTANTS====================== """
 pm_caption = f"**╭────⇌тнαησѕ⇋────**\n"
 pm_caption += f"◈┈˃̶ ๏ฬภєг   ~ {Config.ALIVE_NAME}\n"
 pm_caption += f"◈┈˃̶ тнαησѕ ~ {THANOSBOTversion}\n"
 pm_caption += f"◈┈˃̶ Շђคภ๏ร๒๏ץ   ~ [๏ฬภєг](https://t.me/THANOSCEO)\n"
-pm_caption += f"◈┈˃̶ รยקק๏гՇ ~ [Group](https://t.me/thanosbot_chats)\n"
+pm_caption += f"◈┈˃̶ รยקק๏гՇ ~ [Group](https://t.me/+cJG1PbKtpPVmNDg5)\n"
 pm_caption += f"◈┈˃̶ яєρσ   ~ [Repo](https://github.com/thanosuser/THANOS-PRO)\n"
 pm_caption += f"**╰────⇌тнαησѕ⇋────**\n"
 
