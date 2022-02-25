@@ -1,3 +1,4 @@
+![20220202_152537](https://user-images.githubusercontent.com/94896142/155646392-c4b9b9ee-5266-4ff1-a8be-767518a69cc0.gif)
 ![main](https://user-images.githubusercontent.com/94896142/155646213-f097aefd-edb2-406e-b1e0-939cac46d334.jpg)
 # Շђคภ๏ร-קг๏ [💞](https://telegra.ph/file/c8fe5de96a7968636edc4.mp4)
 #   Շђคภ๏ร-קг๏ PLUGIN MAKED BY
