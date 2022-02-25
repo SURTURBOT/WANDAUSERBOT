@@ -1,4 +1,4 @@
-# this plugin maked by @thanosceo for thanos pro kang whith credits 
+# this plugin maked by @thanosceo for thanos pro kang with credits 
 #thanos pro
 import asyncio
 from userbot import *
@@ -51,8 +51,51 @@ async def _(event):
 
 
 
+@borg.on(admin_cmd(outgoing=True, pattern="^Bc$"))
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 2
+    animation_ttl = range(0, 17)
+    await event.edit("⚡")
+    animation_chars = [
+        "Behanchod",
+        "Behanchod",
+        f"Behanchod",    
+    ]
+    for i in animation_ttl:  # By @thanosceo for thanos bot
+
+        await asyncio.sleep(animation_interval)
+        await event.edit(
+            animation_chars[i % 17], link_preview=True
+        ) 
+
+
+@borg.on(admin_cmd(outgoing=True, pattern="^Bsdk$"))
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 2
+    animation_ttl = range(0, 17)
+    await event.edit("⚡")
+    animation_chars = [
+        "Bhosdike",
+        "TUM Bhosdike  🤣🤣🤣 ",
+        f"tere MAA bhi  Bhosdike",    
+    ]
+    for i in animation_ttl:  # By @thanosceo for thanos bot
+
+        await asyncio.sleep(animation_interval)
+        await event.edit(
+            animation_chars[i % 17], link_preview=True
+        ) 
+
+
+
 from userbot.cmdhelp import CmdHelp
 
 CmdHelp("AGALI").add_command("^Mcb", None, "Use this plugin to boy and see").add_command( 
     "^Mc", None, "Use and see  girls"
-).add_command("pig", None, "Use and see").add_command(
+).add_command("^Bc", None, "Use and see").add_command(
+    "^Bsdk", None, "Use and see"
+).add()
