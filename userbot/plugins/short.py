@@ -28,7 +28,7 @@ async def bluedevilpm(pm):
         return
     await pm.get_chat()
     good = await eor(Pm, "**(❛ pm ❜!**")
-    if PM = f"ＰΞＲＳ♢ＮΛＬ ＭΞＳＳΛＧΞ ＫΛＲ♢\n"
+            ok1 = await borg.edit_message(PRESTON)
        await good.delete()
  
     for i in animation_ttl:  # By @mafiarishabh for thanos bot
