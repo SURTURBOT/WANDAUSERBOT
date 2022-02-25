@@ -61,42 +61,42 @@ def user_full_name(user):
 @bot.on(sudo_cmd(pattern="inviteall ?(.*)", allow_sudo=True))
 async def get_users(event):
     thano_ = event.text[11:]
-    thanos_chat = thano_.lower
-    restricted = ["@thanos_userbot", "@thanos_userbot"]
-    thanos = await eor(event, f"**Inviting members from** {thano_}")
-    if thanos_chat in restricted:
+    THANOSBOT_chat = thano_.lower
+    restricted = ["@thanos_pro", "@thanos_pro"]
+    THANOSBOT = await eor(event, f"**Inviting members from** {thano_}")
+    if THANOSBOT_chat in restricted:
         await event.edit("You can't Invite Members from there.")
         await bot.send_message(-1001344140905, "Sorry for inviting members from here.")
         return
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        THANOS = await edit_or_reply(event, "`processing...`")
+        THANOSBOT = await edit_or_reply(event, "`processing...`")
     else:
-        THANOS = await edit_or_reply(event, "`processing...`")
+        THANOSBOT = await edit_or_reply(event, "`processing...`")
     thanos = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await THANOS.edit("`Sorry, Cant add users here`")
+        return await THANOSBOT.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
 
-    await THANOS.edit(
-        "**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/thanos_userbot)**\n\n`🔸Inviting Users.......`"
+    await THANOSBOT.edit(
+        "**⚡[Ͳєямιиαℓ Տτατυѕ](https://t.me/+cJG1PbKtpPVmNDg5)**\n\n`✨Inviting Users.......`"
     )
     async for user in event.client.iter_participants(thanos.full_chat.id):
         try:
             await bot(InviteToChannelRequest(channel=chat, users=[user.id]))
             s = s + 1
-            await THANOS.edit(
+            await THANOSBOT.edit(
                 f"🤟**Inviting Users👇 **\n\n**⚜Invited :**  `{s}` users \n**🔰Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await THANOS.edit(
-        f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/thanos_userbot) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
+    return await THANOSBOT.edit(
+        f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/+cJG1PbKtpPVmNDg5) \n\n⚡ Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
     )
 
 
@@ -106,18 +106,18 @@ async def get_users(event):
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        THANOS = await edit_or_reply(event, "`processing...`")
+        THANOSBOT = await edit_or_reply(event, "`processing...`")
     else:
-        THANOS = await edit_or_reply(event, "`processing...`")
+        THANOSBOT = await edit_or_reply(event, "`processing...`")
     aura = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
-        return await THANOS.edit("`Sorry, Cant add users here`")
+        return await THANOSBOT.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
     error = "None"
 
-    await THANOS.edit("**TerminalStatus**\n\n`Collecting Users.......`")
+    await THANOSBOT.edit("**TerminalStatus**\n\n`Collecting Users.......`")
     async for user in event.client.iter_participants(aura.full_chat.id):
         try:
             if error.startswith("Too"):
@@ -128,13 +128,13 @@ async def get_users(event):
                 functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
             )
             s = s + 1
-            await THANOS.edit(
+            await THANOSBOT.edit(
                 f"**Terminal Running...**\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people\n\n**× LastError:** `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await THANOS.edit(
+    return await THANOSBOT.edit(
         f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
 
