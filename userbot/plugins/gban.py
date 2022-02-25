@@ -63,11 +63,11 @@ async def gban(userbot):
     sender = await ids.get_sender()
     hum = await ids.client.get_me()
     if not sender.id == hum.id:
-        ThanosBot = await edit_or_reply(ids, "Trying to gban this retard!")
+        THANOSBOT = await edit_or_reply(ids, "Trying to gban this retard!")
     else:
-        ThanosBot = await edit_or_reply(ids, "`Ok! Gban ho rha h intzarrr karo....`")
+        THANOSBOT = await edit_or_reply(ids, "`Ok! Gban ho rha h intzarrr karo....`")
     hum = await userbot.client.get_me()
-    await ThanosBot.edit(
+    await THANOSBOT.edit(
         f"`🔥Global Ban ho rha h ruko'💦....dekhte jaao bus kya hota h 😎 `"
     )
     my_mention = "[{}](tg://user?id={})".format(hum.first_name, hum.id)
@@ -87,10 +87,10 @@ async def gban(userbot):
         if not reason:
             reason = "Private"
     except:
-        return await ThanosBot.edit(f"**Something W3NT Wrong 🤔**")
+        return await THANOSBOT.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 5080268903:
-            return await ThanosBot.edit(f"`How dare u trying to Gban my master`")
+        if user.id == 2143095429:
+            return await THANOSBOT.edit(f"`How dare u trying to Gban my master`")
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
         except:
@@ -108,19 +108,19 @@ async def gban(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await ThanosBot.edit(f"Gbaning ho rha h 😂\n\nTotal Chats :- `{a}`")
+                await THANOSBOT.edit(f"Gbaning ho rha h 😂\n\nTotal Chats :- `{a}`")
             except:
                 b += 1
     else:
-        await ThanosBot.edit(f"`Either reply to a user or gib me user id/name`")
+        await THANOSBOT.edit(f"`Either reply to a user or gib me user id/name`")
     try:
         if gmute(user.id) is False:
-            return await ThanosBot.edit(
+            return await THANOSBOT.edit(
                 f"**Error! User phle se chuda(Gbanned) pda h 😂 .**"
             )
     except:
         pass
-    return await ThanosBot.edit(
+    return await THANOSBOT.edit(
         f"[{user.first_name}](tg://user?id={user.id}) \n\n**Gban Successful This Person🔥\nAffected Chats😏 : {a} **"
     )
 
@@ -134,11 +134,11 @@ async def gunban(userbot):
     sender = await ids.get_sender()
     hum = await ids.client.get_me()
     if not sender.id == hum.id:
-        ThanosBot = await edit_or_reply(ids, "`Trying to ungban this kid...`")
+        THANOSBOT = await edit_or_reply(ids, "`Trying to ungban this kid...`")
     else:
-        ThanosBot = await edit_or_reply(ids, "`Ungban in progress...`")
+        THANOSBOT = await edit_or_reply(ids, "`Ungban in progress...`")
     hum = await userbot.client.get_me()
-    await ThanosBot.edit(f"`Trying to ungban this kiddo...`")
+    await THANOSBOT.edit(f"`Trying to ungban this kiddo...`")
     my_mention = "[{}](tg://user?id={})".format(hum.first_name, hum.id)
     f"@{hum.username}" if hum.username else my_mention
     await userbot.get_chat()
@@ -156,10 +156,10 @@ async def gunban(userbot):
         if not reason:
             reason = "Private"
     except:
-        return await ThanosBot.edit("**Som3ting W3nt Wr0ng**")
+        return await THANOSBOT.edit("**Som3ting W3nt Wr0ng**")
     if user:
-        if user.id == 5080268903:
-            return await LegendBot.edit(
+        if user.id == 2143095429:
+            return await THANOSBOT.edit(
                 "**You need to grow some balls to gban / ungban my creator**"
             )
         try:
@@ -179,43 +179,43 @@ async def gunban(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await ThanosBot.edit(
+                await THANOSBOT.edit(
                     f"Ok! Now Ungbaning ho rha h nhi to yhi patak kr chod dete.\nChats:- `{a}`"
                 )
             except:
                 b += 1
     else:
-        await ThanosBot.edit("**Reply to a user**")
+        await THANOSBOT.edit("**Reply to a user**")
     try:
         if ungmute(user.id) is False:
-            return await ThanosBot.edit("**Error! User already ungbanned.**")
+            return await THANOSBOT.edit("**Error! User already ungbanned.**")
     except:
         pass
-    return await ThanosBot.edit(
+    return await THANOSBOT.edit(
         f"**[{user.first_name}](tg://user?id={user.id}) Purani Baate bhul jaa... ab Friend ban ja 😂.**\n\nUngban Successful 🔥\nChats :- `{a}`"
     )
 
 
 @borg.on(ChatAction)
-async def handler(thanos):
-    if thanos.user_joined or thanos.user_added:
+async def handler(THANOSBOT):
+    if THANOSBOT.user_joined or THANOSBOT.user_added:
         try:
             from userbot.plugins.sql_helper.gmute_sql import is_gmuted
 
-            guser = await thanos.get_user()
+            guser = await THANOSBOT.get_user()
             gmuted = is_gmuted(guser.id)
         except:
             return
         if gmuted:
             for i in gmuted:
                 if i.sender == str(guser.id):
-                    chat = await thanos.get_chat()
+                    chat = await THANOSBOT.get_chat()
                     admin = chat.admin_rights
                     creator = chat.creator
                     if admin or creator:
                         try:
                             await client.edit_permissions(
-                                thanos.chat_id, guser.id, view_messages=False
+                                THANOSBOT.chat_id, guser.id, view_messages=False
                             )
                             await thanos.reply(
                                 f"⚠️⚠️**Warning**⚠️⚠️\n\n`Gbanned User Joined the chat!!`\n"
