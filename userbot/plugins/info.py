@@ -275,7 +275,7 @@ async def _(event):
 async def info(event):
     if event.fwd_from:
         return
-    thanos = await eor(event, "`Analysing the chat...`")
+    THANOSBOT = await eor(event, "`Analysing the chat...`")
     chat = await get_chatinfo(event)
     caption = await fetch_info(chat, event)
     try:
