@@ -41,7 +41,7 @@ async def variable(var):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             return await eod(
                 var,
-                f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
+                f"Go To [THANOS](https://t.me/+cJG1PbKtpPVmNDg5)\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
                 link_preview=False,
             )
         await var.edit("`Getting information...`")
@@ -51,11 +51,11 @@ async def variable(var):
             thanos = "**ConfigVars**:" f"\n\n {variable} = `{heroku_var[variable]}`\n"
             if "THANOS_STRING" in variable:
                 await eor(
-                    var, "Thanos String is a Sensetive Data.\nProtected By ThanosBot"
+                    var, "Thanos String is a Sensetive Data.\nProtected By RISHABH_AI"
                 )
                 return
             elif variable in heroku_var:
-                await eor(var, thanos)
+                await eor(var, THANOSBOT)
             else:
                 return await var.edit(
                     "**ConfigVars**:" f"\n\n`Error:\n-> {variable} don't exists`"
@@ -86,7 +86,7 @@ async def variable(var):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             return await eod(
                 var,
-                f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
+                f"Go To [THANOS](https://t.me/+cJG1PbKtpPVmNDg5)\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
                 link_preview=False,
             )
         await var.edit("`Setting information...weit ser`")
@@ -117,7 +117,7 @@ async def variable(var):
         if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
             return await eod(
                 var,
-                f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
+                f"Go To [THANOS](https://t.me/+cJG1PbKtpPVmNDg5)\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
                 link_preview=False,
             )
         await var.edit("`Getting information to deleting variable...`")
@@ -197,12 +197,12 @@ async def dyno_usage(dyno):
 
     return await dyno.edit(
         " **Dyno Usage** :\n\n"
-        f" 🥇`Dyno usage for`  **{Var.HEROKU_APP_NAME}** 🥇:\n"
-        f"     🔰  `{AppHours}`**h**  `{AppMinutes}`**m**  "
+        f" ✨`Dyno usage for`  **{Var.HEROKU_APP_NAME}** ✨:\n"
+        f"     ⚡  `{AppHours}`**h**  `{AppMinutes}`**m**  "
         f"**|**  [`{AppPercentage}`**%**]"
         "\n\n"
         " ➠ `Dyno hours quota remaining this month`:\n"
-        f"     🔰 `{hours}`**h**  `{minutes}`**m**  "
+        f"     ⚡ `{hours}`**h**  `{minutes}`**m**  "
         f"**|**  [`{percentage}`**%**]"
         f"** ➠ Total Space: __GB**"
     )
@@ -214,7 +214,7 @@ async def _(event):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
         return await eod(
             dyno,
-            f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
+            f"Go To [THANOS](https://t.me/+cJG1PbKtpPVmNDg5)\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly",
             link_preview=False,
         )
     try:
@@ -222,12 +222,12 @@ async def _(event):
         app = Heroku.app(HEROKU_APP_NAME)
     except BaseException:
         return await event.reply(
-            f"Go To @thanos_userbot\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
+            f"Go To [THANOS](https://t.me/+cJG1PbKtpPVmNDg5)\n Type #reveal Then click on Img \n Then Check HEROKU_APP_NAME OR HEROKU_API_KEY Are Filled Correctly.",
             link_preview=False,
         )
     # event = await eor(dyno, "Downloading Logs...")
-    THANOS_data = app.get_log()
-    await eor(event, THANOS_data)
+    THANOSBOT_data = app.get_log()
+    await eor(event, THANOSBOT_data)
 
 
 CmdHelp("heroku").add_command(
