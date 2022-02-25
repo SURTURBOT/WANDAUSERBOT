@@ -1,4 +1,4 @@
-# Շђคภ๏ร-קг๏ 
+# Շђคภ๏ร-קг๏ [💞](https://telegra.ph/file/c8fe5de96a7968636edc4.mp4)
 #   Շђคภ๏ร-קг๏ PLUGIN MAKED BY
 
 # OWNER [Շђคภ๏ร๒๏ץ](https://github.com/thanosuser)
