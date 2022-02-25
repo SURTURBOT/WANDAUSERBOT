@@ -30,4 +30,4 @@ async def _(event):
 
 from userbot.cmdhelp import CmdHelp
 
-CmdHelp("PERSONAL").add_command("Pm", None, "PM FULL FORM").add()
+CmdHelp("PERSONAL").add_command("^Pm", None, "PM FULL FORM").add()
