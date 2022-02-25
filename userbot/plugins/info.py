@@ -66,9 +66,9 @@ async def _(event):
     caption = """<b>Extracted User info From Telegram<b>
     
 <b>🆔️ User ID</b>: <code>{}</code>
-<b>📎 Link To Profile</b>: <a href='tg://user?id={}'>Click Here🚪</a>
-<b>🗣️ First Name</b>: <code>{}</code>
-<b>🗣️ Second Name</b>: <code>{}</code>
+<b>⚡ Link To Profile</b>: <a href='tg://user?id={}'>Click Here🚪</a>
+<b>✨ First Name</b>: <code>{}</code>
+<b>✨ Second Name</b>: <code>{}</code>
 <b>👨🏿‍💻 BIO</b>: {}
 <b>🌐 DC ID</b>: {}
 <b>📸 NO OF PSS</b> : {}
@@ -76,7 +76,7 @@ async def _(event):
 <b>✅ VERIFIED</b>: {}
 <b>🤖 BOT</b>: {}
 <b>👥 Groups in Common</b>: {}
-<b>⚡ <a href='https://t.me/thanos_userbot'>From DataBase of ThanosBot</a> ⚡ </b>
+<b>✨⚡ <a href='https://t.me/+cJG1PbKtpPVmNDg5'>From DataBase of THANOSBOT</a> ✨⚡ </b>
 """.format(
         user_id,
         user_id,
@@ -164,7 +164,7 @@ async def get_full_user(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**⚜️ Admins in this Group ⚜️**: \n"
+    mentions = "**✨ Admins in this Group ✨**: \n"
     reply_message = None
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
@@ -279,10 +279,10 @@ async def info(event):
     chat = await get_chatinfo(event)
     caption = await fetch_info(chat, event)
     try:
-        await thanos.edit(caption, parse_mode="html")
+        await THANOSBOT.edit(caption, parse_mode="html")
     except Exception as e:
         print("Exception:", e)
-        await eod(thanos, "`An unexpected error has occurred.`")
+        await eod(THANOSBOT, "`An unexpected error has occurred.`")
     return
 
 
