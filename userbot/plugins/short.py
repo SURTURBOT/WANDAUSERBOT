@@ -1,10 +1,10 @@
 import asyncio
 from userbot import *
-from REBELBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from THANOSBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "REBEL"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT"
 
 
 @borg.on(admin_cmd(outgoing=True, pattern="^Pm$"))
