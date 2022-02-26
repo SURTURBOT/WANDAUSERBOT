@@ -70,10 +70,10 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    event = await edit_or_reply(event, "**(❛ ᑭσɳց ❜!**")
+    event = await edit_or_reply(event, "**(❛⚡ ק๏ภﻮ⚡ ❜!**")
     if THANOSBOT_IMG:
         THANOSBOT_caption = (
-            f"**💞Pong💞**\n\n   🔸️ {ms}\n   🔹️ **𝙼𝚢** **𝙼𝚊𝚜𝚝𝚎𝚛** ~『{THANOSBOT_mention}』"
+            f"**✨⚡ק๏ภﻮ⚡✨**\n\n   ⚡ {ms}\n   ✨ **๓ץ** **๏ฬภєг** ~『{THANOSBOT_mention}』"
         )
         await event.client.send_file(event.chat_id, THANOSBOT_IMG, caption=THANOSBOT_caption)
         await event.delete()
