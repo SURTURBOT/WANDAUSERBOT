@@ -26,7 +26,7 @@ from . import *
 from telethon.errors.rpcerrorlist import ChatSendMediaForbiddenError, MessageIdInvalidError
 
 
-@vc_asst("play")
+@bot.on(admin_cmd(outgoing=True, pattern="play$"))
 async def play_music_(event):
     if "playfrom" in event.text.split()[0]:
         return  # For PlayFrom Conflict
@@ -112,7 +112,7 @@ async def play_music_(event):
         )
 
 
-@vc_asst("playfrom")
+@bot.on(admin_cmd(outgoing=True, pattern="playfrom$"))
 async def play_music_(event):
     msg = await event.eor(get_string("com_1"))
     chat = event.chat_id
@@ -176,7 +176,7 @@ async def play_music_(event):
                 send_message = False
 
 
-@vc_asst("radio")
+@bot.on(admin_cmd(outgoing=True, pattern="radio$"))
 async def radio_mirchi(e):
     xx = await e.eor(get_string("com_1"))
     if len(e.text.split()) <= 1:
@@ -204,7 +204,7 @@ async def radio_mirchi(e):
     await xx.delete()
 
 
-@vc_asst("(live|ytlive)")
+@bot.on(admin_cmd(outgoing=True, pattern="ytlive$"))
 async def live_stream(e):
     xx = await e.eor(get_string("com_1"))
     if len(e.text.split()) <= 1:
