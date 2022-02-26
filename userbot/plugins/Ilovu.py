@@ -1,3 +1,4 @@
+#plugin maked by @thanosceo for thanos pro kang with proper credits 
 import asyncio
 
 from userbot.cmdhelp import CmdHelp
