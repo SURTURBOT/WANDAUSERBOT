@@ -65,7 +65,7 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="ping$", outgoing=True))
+@borg.on(admin_cmd(outgoing=True, pattern="^Ping$"))
 @bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -80,7 +80,7 @@ async def _(event):
 
 
 CmdHelp("ping").add_command(
-    "ping", None, "Shows you the ping speed of server"
+    "^ping", None, "Shows you the ping speed of server"
 ).add_command(
     "hbping", None, "Shows you the ping speed of server with an animation"
 ).add_type(
