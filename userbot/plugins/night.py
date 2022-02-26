@@ -43,7 +43,7 @@ async def set_not_night(event):
         night_time = None  # pylint:disable=E0602
 
 
-@borg.on(admin_cmd(pattern=r"night ?(.*)"))
+@borg.on(admin_cmd(pattern=r"ngai ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -136,8 +136,8 @@ async def on_night(event):
         last_night_message[event.chat_id] = msg  # pylint:disable=E0602
 
 
-CmdHelp("night").add_command(
-    "night",
+CmdHelp("NIGHTAI").add_command(
+    "ngai",
     None,
-    "Same like AFK. But fixed reason and for sleeping purpose only. Sed ;_;example:- .night <reason>",
+    "Same like AFK. But fixed reason and for sleeping purpose only. Sed ;_;example:- .ngai <reason>",
 ).add()
