@@ -1,17 +1,5 @@
-pytube
-
-pillow
 
 spotipy
-
-aiohttp
-
-aiofiles
-
-pyrogram
-
-tgcrypto
-
 python-dotenv
 py-tgcalls==0.8.2
 youtube-search-python
