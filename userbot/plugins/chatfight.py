@@ -8,7 +8,6 @@ import asyncio
 
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
-from userbot.plugins.sql_helper.gvar_sql import *
 from userbot.utils import admin_cmd, sudo_cmd
 
 from . import THANOSBOT_mention
@@ -24,8 +23,8 @@ lg_id = Config.LOGGER_ID
 @bot.on(admin_cmd("chatf (.*)"))
 @bot.on(sudo_cmd(pattern="chatf (.*)", allow_sudo=True))
 async def spam(event):
-    wspam = str("".join(event.text.split(maxsplit=1)[1:]))
-    message = wspam.split()
+    chatf = str("".join(event.text.split(maxsplit=1)[2:]))
+    message = chatf.split()
     await event.delete()
     for word in message:
         await event.respond(word)
