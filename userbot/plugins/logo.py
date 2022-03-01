@@ -1,4 +1,3 @@
-import datetime
 import os
 import random
 import time
@@ -8,32 +7,25 @@ from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocu
 
 from . import *
 
+
 PICS_STR = []
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT"
+aura = borg.uid
 
-
-@borg.on(admin_cmd(pattern=r"logo"))
-async def _(event):
-    hell = await eor(event, "`Processing.....`")
-    text = event.text[6:]
-    if text == "":
-        await eod(THANOSBOT, "**Give some text to make a logo !!**")
-        return
-    cid = await client_id(event)
-    THANOSBOT_mention = cid[2]
-    start = datetime.datetime.now()
-    fnt = await get_font_file(event.client, "@HELL_FRONTS")
-    if event.reply_to_msg_id:
-        rply = await event.get_reply_message()
-        try:
-            logo_ = await rply.download_media()
-        except:
-            pass
+@bot.on(admin_cmd(pattern="logo (.*)"))
+@bot.on(sudo_cmd(pattern="logo (.*)", allow_sudo=True))
+async def lg1(THANOSBOT):
+    event = await edit_or_reply(THANOSBOT, "`Processing.....`")
+    fnt = await get_font_file(THANOSBOT.client, "@VegaFonts")
+    if THANOSBOT.reply_to_msg_id:
+        rply = await THANOSBOT.get_reply_message()
+        logo_ = await rply.download_media()
     else:
-        await THANOSBOT.edit("Picked a Logo BG...")
-        async for i in event.client.iter_messages("@HELLBOT_LOGOS", filter=InputMessagesFilterPhotos):
-            PICS_STR.append(i)
+        async for i in bot.iter_messages("@VegaLogos", filter=InputMessagesFilterPhotos):
+    	    PICS_STR.append(i)
         pic = random.choice(PICS_STR)
         logo_ = await pic.download_media()
+    text = THANOSBOT.pattern_match.group(1)
     if len(text) <= 8:
         font_size_ = 150
         strik = 10
@@ -43,7 +35,9 @@ async def _(event):
     else:
         font_size_ = 130
         strik = 20
-    await THANOSBOT.edit("THANOS Making Logo...")
+    if not text:
+        await eod(event, "**Give some text to make a logo !!**")
+        return
     img = Image.open(logo_)
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype(fnt, font_size_)
@@ -63,21 +57,19 @@ async def _(event):
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
     file_name = "THANOSBOT.png"
-    end = datetime.datetime.now()
-    ms = (end - start).seconds
     img.save(file_name, "png")
-    await event.client.send_file(
-        event.chat_id,
+    await bot.send_file(
+        THANOSBOT.chat_id,
         file_name,
-        caption=f"**Made By :** ✨⚡{THANOSBOT_mention}⚡✨ \n**Time Taken :** `{ms} seconds`",
+        caption=f"**Made By :** [{DEFAULTUSER}](tg://user?id={aura})",
     )
-    await hell.delete()
+    await event.delete()
     try:
         os.remove(file_name)
         os.remove(fnt)
         os.remove(logo_)
     except:
-        pass
+    	pass
 
 
 async def get_font_file(client, channel_id):
@@ -94,7 +86,5 @@ async def get_font_file(client, channel_id):
 CmdHelp("logos").add_command(
   "logo", "<reply to pic + text> or <text>", "Makes a logo with the given text. If replied to a picture makes logo on that else gets random BG."
 ).add_info(
-  "Logo Maker.\n**🙋🏻‍♂️ Note :**  Currently only supports custom pics. Fonts are choosen randomly."
-).add_warning(
-  "✅ Harmless Module."
+  "Logo Maker.\n** Note :**  Currently only supports custom pics. Fonts are choosen randomly."
 ).add()
