@@ -199,7 +199,7 @@ async def upstream(event):
             "\n**😎 THANOS-PRO is UP-TO-DATE.**"
             f"\n\n**Version :**  {THANOSBOTversion}"
             f"\n**Owner :**  {THANOSBOT_mention}"
-            "\nRelease Date : 16 December 2021"
+            "\nRelease Date :1 March 2022"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
         )
         return repo.__del__()
@@ -215,7 +215,7 @@ async def upstream(event):
             "\n**😎 THANOS-PRO is UP-TO-DATE.**"
             f"\n\n**Version :**  {THANOSBOTversion}"
             f"\n**Owner :**  {THANOSBOT_mention}"
-            "\nRelease Date : 16 December 2021"
+            "\nRelease Date : 1 March 2022"
             f"\n**Git Branch :**  {UPSTREAM_REPO_BRANCH}\n"
         )
     if conf == "now":
