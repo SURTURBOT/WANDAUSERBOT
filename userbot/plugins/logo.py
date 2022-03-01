@@ -16,12 +16,12 @@ aura = borg.uid
 @bot.on(sudo_cmd(pattern="logo (.*)", allow_sudo=True))
 async def lg1(THANOSBOT):
     event = await edit_or_reply(THANOSBOT, "`Processing.....`")
-    fnt = await get_font_file(THANOSBOT.client, "@VegaFonts")
+    fnt = await get_font_file(THANOSBOT.client, "@thanosfonts")
     if THANOSBOT.reply_to_msg_id:
         rply = await THANOSBOT.get_reply_message()
         logo_ = await rply.download_media()
     else:
-        async for i in bot.iter_messages("@VegaLogos", filter=InputMessagesFilterPhotos):
+        async for i in bot.iter_messages("@thanoslogo", filter=InputMessagesFilterPhotos):
     	    PICS_STR.append(i)
         pic = random.choice(PICS_STR)
         logo_ = await pic.download_media()
