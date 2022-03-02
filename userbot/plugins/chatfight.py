@@ -23,7 +23,7 @@ lg_id = Config.LOGGER_ID
 @bot.on(admin_cmd("chatf (.*)"))
 @bot.on(sudo_cmd(pattern="chatf (.*)", allow_sudo=True))
 async def spam(event):
-    chatf = str("".join(event.text.split(maxsplit=1)[2:]))
+    chatf = str("".join(event.text.split(maxsplit=1)[1:]))
     message = chatf.split()
     await event.delete()
     for word in message:
