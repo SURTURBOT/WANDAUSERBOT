@@ -5,7 +5,7 @@ from userbot.Config import Config
 from userbot.plugins.sql_helper.globals import *
 from userbot.utils import admin_cmd, sudo_cmd
 
-from . import legend_mention
+from . import THANOSBOT_mention
 
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
@@ -27,16 +27,16 @@ async def spammer(e):
 
 @bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
-async def bigspam(LEGEND):
-    if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
-        LEGEND_msg = LEGEND.text
-        PRO_LEGENDBOT_count = int(LEGEND_msg[9:13])
-        LEGEND_spam = str(LEGEND.text[13:])
-        for i in range(1, PRO_LEGENDBOT_count):
-            await LEGEND.respond(LEGEND_spam)
-        await LEGEND.delete()
+async def bigspam(THANOSBOT):
+    if not THANOSBOT.text[0].isalpha() and THANOSBOT.text[0] not in ("/", "#", "@", "!"):
+        THANOSBOT_msg = THANOSBOT.text
+        THANOSBOT_count = int(LEGEND_msg[9:13])
+        THANOSBOT_spam = str(THANOSBOT.text[13:])
+        for i in range(1, THANOSBOT_count):
+            await THANOSBOT.respond(THANOSBOT_spam)
+        await THANOSBOT.delete()
         if LOGGER:
-            await LEGEND.client.send_message(
+            await THANOSBOT.client.send_message(
                 LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
             )
 
