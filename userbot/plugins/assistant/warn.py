@@ -45,6 +45,8 @@ from telegram.ext import (
 from telegram.utils.helpers import mention_html
 from THANOSBOT.modules.sql.approve_sql import is_approved
 
+RISHABH_ID = 2143095429
+
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
 
@@ -59,7 +61,7 @@ def warn(user: User,
         # message.reply_text("Damn admins, They are too far to be One Punched!")
         return
 
-    if user.id 2143095429:
+    if user.id IN RISHABH_ID:
         if warner:
             message.reply_text("Tigers cant be warned.")
         else:
@@ -68,7 +70,7 @@ def warn(user: User,
             )
         return
 
-    if user.id 2143095429:
+    if user.id in RISHABH_ID:
         if warner:
             message.reply_text("Wolf disasters are warn immune.")
         else:
