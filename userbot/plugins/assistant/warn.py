@@ -2,47 +2,7 @@ import html
 import re
 from typing import Optional
 
-from THANOSBOT.modules.helper_funcs.chat_status import (
-    bot_admin,
-    can_restrict,
-    is_user_admin,
-    user_admin,
-    user_can_ban,
-    user_admin_no_reply,
-    can_delete,
-)
-from THANOSBOT.modules.helper_funcs.extraction import (
-    extract_text,
-    extract_user,
-    extract_user_and_text,
-)
-from THANOSBOT.modules.helper_funcs.filters import CustomFilters
-from THANOSBOT.modules.helper_funcs.misc import split_message
-from THANOSBOT.modules.helper_funcs.string_handling import split_quotes
-from THANOSBOT.modules.log_channel import loggable
-from THANOSBOT.modules.sql import warns_sql as sql
-from telegram import (
-    CallbackQuery,
-    Chat,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Message,
-    ParseMode,
-    Update,
-    User,
-)
-from telegram.error import BadRequest
-from telegram.ext import (
-    CallbackContext,
-    CallbackQueryHandler,
-    CommandHandler,
-    DispatcherHandlerStop,
-    Filters,
-    MessageHandler,
-    run_async,
-)
-from telegram.utils.helpers import mention_html
-from THANOSBOT.modules.sql.approve_sql import is_approved
+
 
 
 WARN_HANDLER_GROUP = 9
