@@ -2,7 +2,6 @@ import html
 import re
 from typing import Optional
 
-from THANOSBOT.modules.disable import DisableAbleCommandHandler
 from THANOSBOT.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
