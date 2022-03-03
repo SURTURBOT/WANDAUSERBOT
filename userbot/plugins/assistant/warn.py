@@ -2,7 +2,6 @@ import html
 import re
 from typing import Optional
 
-import telegram
 from THANOSBOT import owner_id, SUDO_USERS, dispatcher
 from THANOSBOT.modules.disable import DisableAbleCommandHandler
 from THANOSBOT.modules.helper_funcs.chat_status import (
