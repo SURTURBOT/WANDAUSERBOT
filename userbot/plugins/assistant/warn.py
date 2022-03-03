@@ -2,7 +2,7 @@ import html
 import re
 from typing import Optional
 
-from THANOSBOT import owner_id, SUDO_USERS, dispatcher
+from THANOSBOT import  SUDO_USERS, dispatcher
 from THANOSBOT.modules.disable import DisableAbleCommandHandler
 from THANOSBOT.modules.helper_funcs.chat_status import (
     bot_admin,
@@ -60,7 +60,7 @@ def warn(user: User,
         # message.reply_text("Damn admins, They are too far to be One Punched!")
         return
 
-    if user.id in owner_id:
+    if user.id in SUDO_USERS:
         if warner:
             message.reply_text("Tigers cant be warned.")
         else:
