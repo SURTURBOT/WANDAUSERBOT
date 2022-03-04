@@ -79,7 +79,7 @@ def load_module(shortname):
 
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("💥⚡ＴＨΛＮ♢Ｓ－ＰＲ♢⚡💥 ~ " + shortname)
+        LOGS.info("💥⚡Շђคภ๏ร~קг๏⚡💥 ~ " + shortname)
 
 
 def start_assistant(shortname):
