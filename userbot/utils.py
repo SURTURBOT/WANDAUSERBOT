@@ -131,7 +131,7 @@ def start_spam(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["Spam" + shortname] = mod
-        print("[💥тнαησѕ Spam💥 4.0] ~ HAS ~ 🇮🇳Installed🇮🇳 ~" + shortname)
+        print("[💥тнαησѕ Spam💥 5.0] ~ HAS ~ 🇮🇳Installed🇮🇳 ~" + shortname)
 
 
 def load_addons(shortname):
@@ -242,7 +242,7 @@ def load_abuse(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Abuse." + shortname] = mod
-        LOGS.info("⚡☄THANOS-PRO-Abuse☄⚡ ~ " + shortname)
+        LOGS.info("⚡☄THANOS-Abuse-V1☄⚡ ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
