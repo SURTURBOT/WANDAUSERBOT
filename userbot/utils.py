@@ -71,15 +71,15 @@ def load_module(shortname):
         # support for PRO-THANOSBOT originals
         sys.modules["THANOSBOT.utils"] = userbot.utils
         sys.modules["THANOSBOT"] = userbot
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT"] = userbot
+        sys.modules["THANOSBOT.utils"] = userbot.utils
+        sys.modules["THANOSBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
 
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("💥⚡✨ＴＨΛＮ♢Ｓ－ＰＲ♢✨⚡💥 ~ " + shortname)
+        LOGS.info("💥⚡ＴＨΛＮ♢Ｓ－ＰＲ♢⚡💥 ~ " + shortname)
 
 
 def start_assistant(shortname):
@@ -101,7 +101,7 @@ def start_assistant(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
-        print("[💥✨тнαησѕ Assistant✨⚡ 4.0] ~ HAS ~ ✨Installed✨ ~" + shortname)
+        print("[💥тнαησѕ Assistant⚡ 5.0] ~ HAS ~ ☄Installed☄ ~" + shortname)
 
 
 def start_spam(shortname):
@@ -131,7 +131,7 @@ def start_spam(shortname):
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
         sys.modules["Spam" + shortname] = mod
-        print("[💥тнαησѕ Spam💥 4.0] ~ HAS ~ ⚡Installed⚡ ~" + shortname)
+        print("[💥тнαησѕ Spam💥 4.0] ~ HAS ~ 🇮🇳Installed🇮🇳 ~" + shortname)
 
 
 def load_addons(shortname):
@@ -149,7 +149,7 @@ def load_addons(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("💥✨тнαησѕ Extra Plugin✨💥 ~ " + shortname)
+        LOGS.info("💥⚡тнαησѕ Extra Plugin⚡💥 ~ " + shortname)
     else:
         import importlib
         import sys
@@ -242,7 +242,7 @@ def load_abuse(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Abuse." + shortname] = mod
-        LOGS.info("⚡✨THANOS-PRO-Abuse✨⚡ ~ " + shortname)
+        LOGS.info("⚡☄THANOS-PRO-Abuse☄⚡ ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
