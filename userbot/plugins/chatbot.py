@@ -9,11 +9,11 @@ from . import *
 NUMBER = ["0", "1"]
 
 tired_response = [
-    "I am little tired, Please give me some rest",
-    "Who are you to ask me questions Continuously",
-    "Leave me alone for some times",
-    "Time to Sleep, I will get back to you soon",
-    "I have a job to do, Come back later",
+    "Hey I am thanos , my boss is off",
+    "Wo sab choro apna name bolo",
+    "Konse class me ho",
+    "Shadi ho gyi ya nhi hua",
+    "Oh OK",
     "I need to rest, leave me alone for some times",
     "I am not feeling well, Please Come back later",
 ]
@@ -50,15 +50,15 @@ async def _(event):
         e = b.id
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
-        event = await edit_or_reply(event, "Adding ai to user")
+        event = await edit_or_reply(event, "Adding assistant to user")
         que[e] = []
         qeue = que.get(e)
         appendable = [e]
         qeue.append(appendable)
-        await event.edit(f"Added Ai To User")
+        await event.edit(f"Added assistant To User")
     else:
         user = event.pattern_match.group(1)
-        event = await edit_or_reply(event, "adding ai to user")
+        event = await edit_or_reply(event, "adding assistant to user")
         a = await event.client.get_entity(user)
         e = a.id
         c = a.first_name
@@ -67,11 +67,11 @@ async def _(event):
         qeue = que.get(e)
         appendable = [e]
         qeue.append(appendable)
-        await event.edit(f"added ai to user")
+        await event.edit(f"added assistant to user")
 
 
-@bot.on(admin_cmd(pattern="rmvai(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="rmvai(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rmas?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="rmas(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -82,13 +82,13 @@ async def _(event):
         e = b.id
         c = b.first_name
         username = f"[{c}](tg://user?id={e})"
-        event = await edit_or_reply(event, "Removin Ai From user")
+        event = await edit_or_reply(event, "Removin assistant From user")
         queue = que.get(e)
         queue.pop(0)
         await event.edit(f"Removed successfully")
     else:
         user = event.pattern_match.group(1)
-        event = await edit_or_reply(event, "Removing Ai From User")
+        event = await edit_or_reply(event, "Removing assistant From User")
         a = await event.client.get_entity(user)
         e = a.id
         c = a.first_name
@@ -99,8 +99,8 @@ async def _(event):
 
 
 CmdHelp("chatbot").add_command(
-    "adai", "<reply to a user message>", "add ai bot"
-).add_command("rmvai", "<reply to same user>", "remove ai").add_info(
+    "addas", "<reply to a user message>", "add ai bot"
+).add_command("rmas", "<reply to same user>", "remove ai").add_info(
     "auto reply chatbot"
 ).add_warning(
     "Harmless Module✅"
