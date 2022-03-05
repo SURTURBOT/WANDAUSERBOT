@@ -70,7 +70,7 @@ async def _(event):
         await event.edit(f"added assistant to user")
 
 
-@bot.on(admin_cmd(pattern="rmas?: |$)(.*)"))
+@bot.on(admin_cmd(pattern="rmas(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="rmas(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
