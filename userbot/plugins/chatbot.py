@@ -38,8 +38,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="adai(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="adai(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="addas(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="addas(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
