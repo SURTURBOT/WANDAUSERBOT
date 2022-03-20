@@ -80,8 +80,8 @@ msg = (
 botname = Config.BOT_USERNAME
 
 
-@bot.on(admin_cmd(pattern="fuck$"))
-@bot.on(admin_cmd(pattern="fuck$", allow_sudo=True))
+@rishabh.on(admin_cmd(pattern="fuck$"))
+@rishabh.on(admin_cmd(pattern="fuck$", allow_sudo=True))
 async def THANOSBOT_a(event):
     try:
         THANOSBOT = await bot.inline_query(botname, "alive")
