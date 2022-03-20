@@ -22,8 +22,8 @@ THANOSBOT_IMG = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
 CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@thanos_pro"
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="thanos$"))
-@bot.on(sudo_cmd(pattern="thanos$", allow_sudo=True))
+@rishabh.on(admin_cmd(outgoing=True, pattern="thanos$"))
+@rishabh.on(sudo_cmd(pattern="thanos$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
