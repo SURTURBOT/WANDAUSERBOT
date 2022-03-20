@@ -52,7 +52,7 @@ def load_module(shortname):
         mod = importlib.util.module_from_spec(spec)
         mod.bot = THANOSBOT
         mod.borg = bot
-        mod.borg = rishabh
+        mod.rishabh = bot
         mod.THANOSBOT = THANOSBOT
         mod.tbot = THANOSBOT
         mod.THANOSBOT = THANOSBOT
@@ -165,7 +165,7 @@ def load_addons(shortname):
         mod.THANOSBOT = THANOSBOT
         mod.bot = THANOSBOT
         mod.bot = bot
-        mod.borg = rishabh
+        mod.rishabh = bot
         mod.borg = bot
         mod.THANOS = THANOS
         mod.tbot = THANOS
