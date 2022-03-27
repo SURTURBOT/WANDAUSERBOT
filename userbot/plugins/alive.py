@@ -18,12 +18,12 @@ from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 from . import *
 
-THANOSBOT_IMG = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
-CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@thanos_pro"
+THANOSBOT_IMG = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
+CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@friendshipgroup4"
 
 
-@rishabh.on(admin_cmd(outgoing=True, pattern="thanos$"))
-@rishabh.on(sudo_cmd(pattern="thanos$", allow_sudo=True))
+@rishabh.on(admin_cmd(outgoing=True, pattern="alive$"))
+@rishabh.on(sudo_cmd(pattern="alive$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
@@ -93,19 +93,19 @@ async def THANOSBOT_a(event):
         await eor(event, msg)
 
 
-file1 = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
-file2 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
-file3 = "https://telegra.ph/file/19a2f441d5b8f37657a21.mp4"
-file4 = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
-file5 = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
+file1 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
+file2 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
+file3 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
+file4 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
+file5 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
 """=======================CONSTANTS====================== """
-pm_caption = f"**╭────⇌тнαησѕ⇋────**\n"
+pm_caption = f"**╭────⇌ฬคภ๔ค⇋────**\n"
 pm_caption += f"◈┈˃̶ ๏ฬภєг   ~ {Config.ALIVE_NAME}\n"
-pm_caption += f"◈┈˃̶ тнαησѕ ~ {THANOSBOTversion}\n"
-pm_caption += f"◈┈˃̶ Շђคภ๏ร๒๏ץ   ~ [๏ฬภєг](https://t.me/THANOSCEO)\n"
-pm_caption += f"◈┈˃̶ รยקק๏гՇ ~ [Group](https://t.me/+cJG1PbKtpPVmNDg5)\n"
-pm_caption += f"◈┈˃̶ яєρσ   ~ [Repo](https://github.com/thanosuser/THANOS-PRO)\n"
-pm_caption += f"**╰────⇌тнαησѕ⇋────**\n"
+pm_caption += f"◈┈˃̶ wanda ~ {THANOSBOTversion}\n"
+pm_caption += f"◈┈˃̶ קгเץค   ~ [๏ฬภєг](https://t.me/Crazy_babeee)\n"
+pm_caption += f"◈┈˃̶ รยקק๏гՇ ~ [Group](https://t.me/friendshipgroup4)\n"
+pm_caption += f"◈┈˃̶ яєρσ   ~ [Repo](https://github.com/surturbot/wanda)\n"
+pm_caption += f"**╰────⇌ฬคภ๔ค⇋────**\n"
 
 
 @borg.on(admin_cmd(pattern=r"wanda"))
