@@ -39,9 +39,9 @@ async def amireallyalive(alive):
                 c.append(d)
         alive_emoji = random.choice(c)
     if THANOSBOT_IMG:
-        THANOSBOT_caption = f"**тнαησѕ-ρяσ ιѕ αℓινє**\n\n"
-        THANOSBOT_caption += f"      💞тнαησѕ ѕтαтυѕ💞 \n"
-        THANOSBOT_caption += f"{alive_emoji} **тнαησs version**   ~ {THANOSBOTversion}\n"
+        THANOSBOT_caption = f"**WANDA ιѕ αℓινє**\n\n"
+        THANOSBOT_caption += f"      💞WANDA ѕтαтυѕ💞 \n"
+        THANOSBOT_caption += f"{alive_emoji} **WANDA version**   ~ {THANOSBOTversion}\n"
         THANOSBOT_caption += (
             f"{alive_emoji} **Telethon version**   ~ `{version.__version__}`\n"
         )
@@ -64,7 +64,7 @@ async def amireallyalive(alive):
 msg = (
     gvarstatus("ALIVE_TEMPLATE")
     or f"""
-**  ⚜️ тнαησѕ  is Online ⚜️**
+**  ⚜️ WANDA  is Online ⚜️**
      {Config.ALIVE_MSG}
     ** Bot Status **
 **🔰 Owner   :** **{Config.ALIVE_NAME}**
@@ -84,7 +84,7 @@ botname = Config.BOT_USERNAME
 @rishabh.on(admin_cmd(pattern="fuck$", allow_sudo=True))
 async def THANOSBOT_a(event):
     try:
-        THANOSBOT = await bot.inline_query(botname, "alive")
+        THANOSBOT = await bot.inline_query(botname, "fuck")
         await THANOSBOT[0].click(event.chat_id)
         await event.delete()
         if event.sender_id == THANOSCEO:
@@ -108,8 +108,8 @@ pm_caption += f"◈┈˃̶ яєρσ   ~ [Repo](https://github.com/thanosuser/THA
 pm_caption += f"**╰────⇌тнαησѕ⇋────**\n"
 
 
-@borg.on(admin_cmd(pattern=r"alive"))
-@borg.on(sudo_cmd(pattern="alive$", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"wanda"))
+@borg.on(sudo_cmd(pattern="wanda$", allow_sudo=True))
 async def amireallyalive(yes):
     edit_time = 12
     reply_to_id = await reply_id(yes)
@@ -158,19 +158,19 @@ async def amireallyalive(yes):
 
     await yes.delete()
 
-    """ For .alive command, check if the bot is running.  """
+    """ For .wanda command, check if the bot is running.  """
     await borg.send_file(alive.chat_id, PM_IMG, caption=pm_caption)
     await alive.delete()
 
 
 CmdHelp("alive").add_command("bot", None, "υѕє αи∂ ѕєє").add_command(
-    "Thanos", None, "Its Same Like Alive"
+    "thanos", None, "Its Same Like Alive"
 ).add_command("about", None, "BEST alive command").add_command(
-    "alive", None, "Its Show ur Alive Template"
+    "wanda", None, "Its Show ur Alive Template"
 ).add_warning(
     "Harmless Module✅"
 ).add_info(
-    "Checking Alive"
+    "Checking wanda"
 ).add_type(
     "Official"
 ).add()
