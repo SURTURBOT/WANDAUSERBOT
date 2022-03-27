@@ -139,7 +139,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 help_msg = random.choice(c)
             HELP_PIC = (
                 os.environ.get("HELP_PIC", None)
-                or "https://telegra.ph/file/7eaaefe63542f68ab19f1.mp4"
+                or "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
             )
             if HELP_PIC is not None:
                 b = HELP_PIC.split()
@@ -166,7 +166,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 result = builder.article(
                     text="Check Group Inline Permission Or",
-                    title="ThanosPro-Bot Alive",
+                    title="wanda-Bot Alive",
                     buttons=veriler[1],
                     link_preview=False,
                 )
@@ -182,7 +182,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
+                ALV_PIC = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
             pp = Config.ALIVE_MSG
             if pp is not None:
                 b = pp.split(", ")
@@ -192,7 +192,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 Msg = random.choice(c)
             else:
-                Msg = " Pro ThanosBot Is Up"
+                Msg = " Pro wanda Is Up"
             tha_nos = alive_txt.format(
                 Msg,
                 alive_emoji,
@@ -236,14 +236,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=tha_nos,
-                    title="ThanosPro-Bot Alive",
+                    title="wanda-Bot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=tha_nos,
-                    title="ThanosPro-Bot Alive",
+                    title="wanda-Bot Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
@@ -268,7 +268,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
+                ALV_PIC = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
                 result = builder.article(
                     buttons=fsub_btn,
@@ -314,7 +314,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text=f"**⚜ Legendary Af Pro - ThanosPro-Bot ⚜**",
                 buttons=[
                     [Button.url("♥️ Tutorial ♥", "https://youtu.be/9dQgdUJfk_k")],
-                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/SURTURBOT/THANOS-USERBOT")],
+                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/SURTURBOT/wandauserbot")],
                     [
                         Button.url(
                             "💞 Deploy 💞",
@@ -334,7 +334,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             buttons = [
                 (
-                    Button.url("Sources", "https://github.com/SURTURBOT/THANOS-USERBOT"),
+                    Button.url("Sources", "https://github.com/SURTURBOT/wandauserbot"),
                     Button.url(
                         "Deploy",
                         "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FPROBOY-OP%2FPRO-LEGENDBOT&template=https%3A%2F%2Fgithub.com%2FPROBOY-OP%2FPRO-LEGENDBOT",
@@ -350,20 +350,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         c.append(d)
                 ALV_PIC = random.choice(c)
             else:
-                ALV_PIC = "https://telegra.ph/file/b4b1e6f42dec529c86011.mp4"
+                ALV_PIC = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
                 url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
             )
             text, msg_entities = await event.client._parse_message_text(
-                "𝗗𝗘𝗣𝗟𝗢𝗬 𝗬𝗢𝗨𝗥 𝗢𝗪𝗡 𝗣𝗥𝗢 THANOS 𝗕𝗢𝗧", "md"
+                "𝗗𝗘𝗣𝗟𝗢𝗬 𝗬𝗢𝗨𝗥 𝗢𝗪𝗡 WANDA 𝗕𝗢𝗧", "md"
             )
             result = types.InputBotInlineResult(
                 id=str(uuid4()),
                 type="photo",
-                title="THANOSPRO-BOT",
+                title="wanda-BOT",
                 description="Deploy yourself",
-                url="https://github.com/SURTURBOT/THANOS-USERBOT",
+                url="https://github.com/SURTURBOT/wandauserbot",
                 thumb=photo,
                 content=photo,
                 send_message=types.InputBotInlineMessageMediaAuto(
@@ -379,7 +379,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🔰 This is Pro-Thanosẞø† PM Security for {THANOSBOT_mention} to keep away unwanted retards from spamming PM..."
+                f"🔰 This is ฬคภ๔ค PM Security for {THANOSBOT_mention} to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
@@ -542,7 +542,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         else:
-            reply_pop_up_alert = "This Is For My Master Only.Dont Try To Touch Again. Deploy Ur Own ©Pro-THANOSBOT™"
+            reply_pop_up_alert = "This Is For My Master Only.Dont Try To Touch Again. Deploy Ur Own wanda™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
@@ -552,13 +552,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 f"{THANOSBOT_emoji1} OPEN MENU {THANOSBOT_emoji2}", data="reopen"
             )
             await event.edit(
-                f"My Master {Config.ALIVE_NAME} has Been Closed Menu\n\n               [©️ThanosPro-ẞø†]({chnl_link})",
+                f"My Master {Config.ALIVE_NAME} has Been Closed Menu\n\n               [@wanda]({chnl_link})",
                 buttons=veriler,
                 link_preview=False,
             )
         else:
             await event.answer(
-                "Deploy Ur Own     ©Pro-Thanosẞø†", cache_time=0, alert=True
+                "Deploy Ur Own     ©wanda", cache_time=0, alert=True
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
@@ -577,7 +577,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Deploy Ur Own  ©Pro-Thanosẞø†",
+                "Deploy Ur Own  wanda",
                 cache_time=0,
                 alert=True,
             )
@@ -666,7 +666,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Deploy Ur Own ©Pro-Thanosẞø†™ ",
+                "Deploy Ur Own wanda™ ",
                 cache_time=0,
                 alert=True,
             )
