@@ -10,7 +10,7 @@ from . import *
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "THANOSBOT"
 THANOSBOT = borg.uid
 THANOSBOT_IMG = os.environ.get(
-    "PING_PIC", "https://telegra.ph/file/bdf457aee34ed8791c150.jpg"
+    "PING_PIC", "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
 )
 
 start = datetime.datetime.now()
