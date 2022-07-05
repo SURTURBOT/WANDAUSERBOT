@@ -93,23 +93,23 @@ async def THANOSBOT_a(event):
         await eor(event, msg)
 
 
-file1 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
-file2 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
-file3 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
-file4 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
-file5 = "https://telegra.ph/file/34920ddeb9b9b9ae8b560.mp4"
+file1 = "https://telegra.ph/file/0064622708bd2fee3f251.jpg"
+file2 = "https://telegra.ph/file/0064622708bd2fee3f251.jpg"
+file3 = "https://telegra.ph/file/0064622708bd2fee3f251.jpg"
+file4 = "https://telegra.ph/file/0064622708bd2fee3f251.jpg"
+file5 = "https://telegra.ph/file/0064622708bd2fee3f251.jpg"
 """=======================CONSTANTS====================== """
-pm_caption = f"**╭────⇌ฬคภ๔ค⇋────**\n"
+pm_caption = f"**╭────⇌гเรђค๒ђ⇋────**\n"
 pm_caption += f"◈┈˃̶ ๏ฬภєг   ~ {Config.ALIVE_NAME}\n"
-pm_caption += f"◈┈˃̶ wanda ~ {THANOSBOTversion}\n"
-pm_caption += f"◈┈˃̶ קгเץค   ~ [๏ฬภєг](https://t.me/Crazy_babeee)\n"
-pm_caption += f"◈┈˃̶ รยקק๏гՇ ~ [Group](https://t.me/friendshipgroup4)\n"
+pm_caption += f"◈┈˃̶ гเรђค๒ђ ~ {THANOSBOTversion}\n"
+pm_caption += f"◈┈˃̶ гเรђค๒ђ   ~ [๏ฬภєг](https://t.me/thanosuser)\n"
+pm_caption += f"◈┈˃̶ รยקק๏гՇ ~ [Group](https://t.me/thanosuser)\n"
 pm_caption += f"◈┈˃̶ яєρσ   ~ [Repo](https://github.com/surturbot/wanda)\n"
-pm_caption += f"**╰────⇌ฬคภ๔ค⇋────**\n"
+pm_caption += f"**╰────⇌гเรђค๒ђ⇋────**\n"
 
 
-@borg.on(admin_cmd(pattern=r"wanda"))
-@borg.on(sudo_cmd(pattern="wanda$", allow_sudo=True))
+@borg.on(admin_cmd(pattern=r"rishabh"))
+@borg.on(sudo_cmd(pattern="rishabh$", allow_sudo=True))
 async def amireallyalive(yes):
     edit_time = 12
     reply_to_id = await reply_id(yes)
