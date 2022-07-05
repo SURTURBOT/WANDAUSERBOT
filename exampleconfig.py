@@ -9,8 +9,9 @@ class Development(Config):
 
   # the name to display in your alive message.
   # If not filled anything then default value is LEGEND User.
-  ALIVE_NAME = "Pro Boy"
-
+  ALIVE_NAME = "гเรђค๒ђ"
+  #pm data
+  PM_DATA = "ON"
   # create any PostgreSQL database.
   # I recommend to use elephantsql and paste that link here
   DB_URI = "Your value"
