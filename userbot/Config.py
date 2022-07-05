@@ -61,7 +61,7 @@ if ENV:
         )
         PM_PIC = (
             os.environ.get("PM_PIC", None)
-            or "https://telegra.ph/file/c8fe5de96a7968636edc4.mp4"
+            or "https://telegra.ph/file/0064622708bd2fee3f251.jpg"
         )
         AWAKE_PIC = (
             os.environ.get("AWAKE_PIC", None)
